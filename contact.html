@@ -55,9 +55,7 @@
       text-shadow: 0 0 20px rgba(140, 255, 180, 0.3);
     }
 
-    .brand-badge {
-      display: none;
-    }
+    /* Close button removed as requested */
 
     .about-container {
       max-width: 680px;
@@ -237,21 +235,20 @@
       margin: 28px 0 24px;
     }
 
-    /* ===== PREMIUM LED BACK TO TOP BUTTON ===== */
-    .back-to-top-led {
+    /* === PREMIUM LED BACK-TO-TOP BUTTON === */
+    .back-to-top {
       position: fixed;
       bottom: 28px;
       right: 24px;
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
-      background: rgba(10, 20, 16, 0.75);
+      background: rgba(10, 20, 16, 0.7);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 2px solid rgba(0, 255, 170, 0.35);
-      box-shadow: 0 0 30px rgba(0, 255, 170, 0.15), 0 0 60px rgba(0, 255, 170, 0.05), inset 0 0 20px rgba(0, 255, 170, 0.05);
+      border: 2px solid rgba(0, 255, 170, 0.4);
+      box-shadow: 0 0 30px rgba(0, 255, 170, 0.25), inset 0 0 20px rgba(0, 255, 170, 0.08);
       color: #b5ffd0;
-      font-size: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -260,78 +257,57 @@
       z-index: 99;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(20px) scale(0.85);
-      text-shadow: 0 0 30px #70f0a088;
+      transform: translateY(30px) scale(0.85);
+      text-shadow: 0 0 30px rgba(112, 240, 160, 0.5);
       line-height: 1;
-      animation: floatGlow 2.8s infinite ease-in-out;
+      animation: none;
     }
 
-    .back-to-top-led.visible {
+    .back-to-top.visible {
       opacity: 1;
       visibility: visible;
       transform: translateY(0) scale(1);
+      animation: floatGlow 2.8s infinite ease-in-out;
     }
 
-    .back-to-top-led:hover {
+    .back-to-top:hover {
       transform: scale(1.08);
       border-color: #70f0a0;
-      box-shadow: 0 0 50px rgba(0, 255, 170, 0.35), 0 0 80px rgba(0, 255, 170, 0.10);
-      background: rgba(12, 30, 22, 0.85);
+      box-shadow: 0 0 50px rgba(0, 255, 170, 0.5), inset 0 0 30px rgba(0, 255, 170, 0.15);
+      background: rgba(15, 35, 28, 0.85);
     }
 
-    .back-to-top-led:active {
+    .back-to-top:active {
       transform: scale(0.92);
     }
 
-    /* LED Arrow using pure CSS */
-    .led-arrow {
+    .back-to-top .arrow-up {
       display: inline-block;
-      width: 0;
-      height: 0;
-      border-left: 18px solid transparent;
-      border-right: 18px solid transparent;
-      border-bottom: 30px solid #70f0a0;
-      filter: drop-shadow(0 0 20px #70f0a0aa) drop-shadow(0 0 40px #70f0a044);
-      position: relative;
-      transition: all 0.3s ease;
-      animation: arrowPulse 2.4s ease-in-out infinite alternate;
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 200;
+      color: #70f0a0;
+      text-shadow: 0 0 30px rgba(112, 240, 160, 0.6), 0 0 60px rgba(112, 240, 160, 0.3);
+      transition: transform 0.3s ease;
     }
 
-    .led-arrow::after {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: -14px;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-bottom: 24px solid #70f0a0;
-      transform: rotate(180deg) scale(0.5);
-      filter: drop-shadow(0 0 15px #70f0a066);
-      opacity: 0.6;
-    }
-
-    .back-to-top-led:hover .led-arrow {
-      filter: drop-shadow(0 0 35px #70f0a0cc) drop-shadow(0 0 60px #70f0a066);
-      transform: translateY(-2px) scale(1.05);
-    }
-
-    @keyframes arrowPulse {
-      0% { filter: drop-shadow(0 0 10px #70f0a066); transform: translateY(0); }
-      100% { filter: drop-shadow(0 0 35px #70f0a0cc); transform: translateY(-4px); }
+    .back-to-top:hover .arrow-up {
+      transform: translateY(-3px);
+      text-shadow: 0 0 50px rgba(112, 240, 160, 0.9), 0 0 80px rgba(112, 240, 160, 0.4);
     }
 
     @keyframes floatGlow {
-      0% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.10), 0 0 40px rgba(0, 255, 170, 0.03); }
-      50% { box-shadow: 0 0 40px rgba(0, 255, 170, 0.25), 0 0 70px rgba(0, 255, 170, 0.08); }
-      100% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.10), 0 0 40px rgba(0, 255, 170, 0.03); }
+      0% { box-shadow: 0 0 25px rgba(0, 255, 170, 0.25), 0 0 50px rgba(0, 255, 170, 0.1); }
+      50% { box-shadow: 0 0 45px rgba(0, 255, 170, 0.45), 0 0 80px rgba(0, 255, 170, 0.2); }
+      100% { box-shadow: 0 0 25px rgba(0, 255, 170, 0.25), 0 0 50px rgba(0, 255, 170, 0.1); }
     }
 
-    /* ===== TOP THREE LED ICONS - Premium Modern Design ===== */
+    /* === TOP THREE PREMIUM LED ICONS === */
     .vertical-icons {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
+      gap: 38px;
       padding: 20px 0 12px 0;
     }
 
@@ -339,175 +315,114 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 72px;
-      height: 72px;
+      width: 76px;
+      height: 76px;
       position: relative;
     }
 
-    /* Icon 1: Premium Glowing Ring with Arrow */
-    .icon-ring-arrow {
-      position: relative;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .icon-ring-arrow .ring {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      border: 2.5px solid rgba(112, 240, 160, 0.5);
-      box-shadow: 0 0 25px rgba(112, 240, 160, 0.15), inset 0 0 25px rgba(112, 240, 160, 0.05);
-      animation: ringSpin 8s linear infinite;
-    }
-
-    .icon-ring-arrow .ring::before {
-      content: '';
-      position: absolute;
-      top: -4px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #70f0a0;
-      box-shadow: 0 0 20px #70f0a0aa;
-    }
-
-    .icon-ring-arrow .arrow-up-inner {
+    /* Icon 1: Premium Glowing Arrow - layered neon effect */
+    .icon-arrow-up {
       display: inline-block;
       width: 0;
       height: 0;
+      border-left: 24px solid transparent;
+      border-right: 24px solid transparent;
+      border-bottom: 42px solid #70f0a0;
+      filter: drop-shadow(0 0 25px rgba(112, 240, 160, 0.5)) drop-shadow(0 0 60px rgba(112, 240, 160, 0.2));
+      flex-shrink: 0;
+      position: relative;
+      animation: glowPulseGreen 2.4s infinite alternate;
+      transform: scale(1);
+    }
+    .icon-arrow-up::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -16px;
       border-left: 16px solid transparent;
       border-right: 16px solid transparent;
       border-bottom: 28px solid #70f0a0;
-      filter: drop-shadow(0 0 25px #70f0a0aa) drop-shadow(0 0 50px #70f0a044);
-      position: relative;
-      z-index: 2;
-      animation: arrowFloat 2.8s ease-in-out infinite alternate;
-    }
-
-    .icon-ring-arrow .arrow-up-inner::after {
-      content: '';
-      position: absolute;
-      top: 4px;
-      left: -12px;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-bottom: 20px solid #70f0a0;
       transform: rotate(180deg) scale(0.5);
-      filter: drop-shadow(0 0 15px #70f0a066);
-      opacity: 0.5;
+      filter: drop-shadow(0 0 20px rgba(112, 240, 160, 0.3));
+      opacity: 0.7;
+    }
+    @keyframes glowPulseGreen {
+      0% { filter: drop-shadow(0 0 10px rgba(112, 240, 160, 0.3)) drop-shadow(0 0 30px rgba(112, 240, 160, 0.1)); }
+      100% { filter: drop-shadow(0 0 40px rgba(112, 240, 160, 0.7)) drop-shadow(0 0 80px rgba(112, 240, 160, 0.3)); }
     }
 
-    @keyframes ringSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes arrowFloat {
-      0% { transform: translateY(0); filter: drop-shadow(0 0 15px #70f0a066); }
-      100% { transform: translateY(-5px); filter: drop-shadow(0 0 35px #70f0a0cc); }
-    }
-
-    /* Icon 2: Premium Glowing Diamond with Pulse */
-    .icon-diamond-premium {
-      width: 48px;
-      height: 48px;
+    /* Icon 2: Premium Glowing Diamond - with inner glow */
+    .icon-diamond {
+      display: inline-block;
+      width: 44px;
+      height: 44px;
       background: transparent;
       border: 3px solid #40e0d0;
       transform: rotate(45deg);
-      box-shadow: 0 0 40px #40e0d066, inset 0 0 30px #40e0d022, 0 0 80px #40e0d022;
-      animation: diamondPulse 3s ease-in-out infinite alternate;
+      box-shadow: 0 0 30px rgba(64, 224, 208, 0.4), inset 0 0 25px rgba(64, 224, 208, 0.15);
+      flex-shrink: 0;
+      animation: glowPulseCyan 2.8s infinite alternate;
       position: relative;
     }
-
-    .icon-diamond-premium::before {
+    .icon-diamond::before {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 20px;
-      height: 20px;
-      background: #40e0d0;
-      border-radius: 50%;
-      box-shadow: 0 0 30px #40e0d0aa, 0 0 60px #40e0d044;
-      opacity: 0.4;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      background: rgba(64, 224, 208, 0.08);
+      transform: rotate(0deg);
+      box-shadow: inset 0 0 20px rgba(64, 224, 208, 0.1);
+    }
+    @keyframes glowPulseCyan {
+      0% { box-shadow: 0 0 15px rgba(64, 224, 208, 0.2), inset 0 0 15px rgba(64, 224, 208, 0.05); }
+      100% { box-shadow: 0 0 50px rgba(64, 224, 208, 0.6), inset 0 0 35px rgba(64, 224, 208, 0.2); }
     }
 
-    @keyframes diamondPulse {
-      0% { box-shadow: 0 0 25px #40e0d044, inset 0 0 15px #40e0d011; transform: rotate(45deg) scale(0.95); }
-      100% { box-shadow: 0 0 55px #40e0d0aa, inset 0 0 30px #40e0d044; transform: rotate(45deg) scale(1.05); }
-    }
-
-    /* Icon 3: Premium Shield-Crown with Glow */
-    .icon-shield-premium {
+    /* Icon 3: Premium Shield with Crown - dual glow */
+    .icon-shield-crown {
+      display: inline-block;
       width: 46px;
       height: 52px;
       background: transparent;
       border: 3px solid #60b0ff;
       border-radius: 8px 8px 20px 20px;
-      box-shadow: 0 0 40px #60b0ff66, inset 0 0 20px #60b0ff22, 0 0 80px #60b0ff22;
+      box-shadow: 0 0 30px rgba(96, 176, 255, 0.4), inset 0 0 20px rgba(96, 176, 255, 0.1);
+      flex-shrink: 0;
       position: relative;
-      animation: shieldGlow 2.8s ease-in-out infinite alternate;
+      animation: glowPulseBlue 2.6s infinite alternate;
     }
-
-    .icon-shield-premium::before {
+    .icon-shield-crown::before {
       content: '';
       position: absolute;
       top: -18px;
-      left: 2px;
+      left: 6px;
       width: 0;
       height: 0;
       border-left: 14px solid transparent;
       border-right: 14px solid transparent;
       border-bottom: 22px solid #60b0ff;
-      box-shadow: 0 0 40px #60b0ff66, 0 0 80px #60b0ff33;
-      filter: drop-shadow(0 0 15px #60b0ff44);
+      filter: drop-shadow(0 0 20px rgba(96, 176, 255, 0.3));
     }
-
-    .icon-shield-premium::after {
+    .icon-shield-crown::after {
       content: '';
       position: absolute;
       top: -18px;
-      right: 2px;
+      right: 6px;
       width: 0;
       height: 0;
       border-left: 14px solid transparent;
       border-right: 14px solid transparent;
       border-bottom: 22px solid #60b0ff;
-      box-shadow: 0 0 40px #60b0ff66, 0 0 80px #60b0ff33;
-      filter: drop-shadow(0 0 15px #60b0ff44);
+      filter: drop-shadow(0 0 20px rgba(96, 176, 255, 0.3));
+    }
+    @keyframes glowPulseBlue {
+      0% { box-shadow: 0 0 15px rgba(96, 176, 255, 0.2), inset 0 0 15px rgba(96, 176, 255, 0.05); }
+      100% { box-shadow: 0 0 50px rgba(96, 176, 255, 0.6), inset 0 0 35px rgba(96, 176, 255, 0.2); }
     }
 
-    .icon-shield-premium .shield-dot {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: #60b0ff;
-      box-shadow: 0 0 30px #60b0ffaa, 0 0 60px #60b0ff44;
-      animation: dotPulse 2.4s ease-in-out infinite alternate;
-    }
-
-    @keyframes shieldGlow {
-      0% { box-shadow: 0 0 25px #60b0ff44, inset 0 0 10px #60b0ff11; }
-      100% { box-shadow: 0 0 55px #60b0ffaa, inset 0 0 25px #60b0ff44; }
-    }
-
-    @keyframes dotPulse {
-      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
-      100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
-    }
-
-    /* ===== PREMIUM LED HEADER ANIMATION ===== */
+    /* LED Header Bars */
     .led-header-wrap {
       background: rgba(8, 12, 11, 0.85);
       backdrop-filter: blur(8px);
@@ -609,66 +524,45 @@
       h2 {
         font-size: 22px;
       }
-      .back-to-top-led {
-        width: 52px;
-        height: 52px;
+      .back-to-top {
+        width: 54px;
+        height: 54px;
         bottom: 20px;
         right: 16px;
       }
-      .led-arrow {
-        border-left-width: 15px;
-        border-right-width: 15px;
-        border-bottom-width: 26px;
-      }
-      .led-arrow::after {
-        top: 4px;
-        left: -11px;
-        border-left-width: 11px;
-        border-right-width: 11px;
-        border-bottom-width: 20px;
+      .back-to-top .arrow-up {
+        font-size: 30px;
       }
       .icon-wrap {
         width: 64px;
         height: 64px;
       }
-      .icon-ring-arrow {
-        width: 52px;
-        height: 52px;
+      .icon-arrow-up {
+        border-left-width: 20px;
+        border-right-width: 20px;
+        border-bottom-width: 36px;
       }
-      .icon-ring-arrow .arrow-up-inner {
+      .icon-arrow-up::after {
+        top: 5px;
+        left: -14px;
         border-left-width: 14px;
         border-right-width: 14px;
         border-bottom-width: 24px;
       }
-      .icon-ring-arrow .arrow-up-inner::after {
-        top: 2px;
-        left: -10px;
-        border-left-width: 10px;
-        border-right-width: 10px;
-        border-bottom-width: 18px;
+      .icon-diamond {
+        width: 38px;
+        height: 38px;
       }
-      .icon-diamond-premium {
-        width: 40px;
-        height: 40px;
-      }
-      .icon-diamond-premium::before {
-        width: 16px;
-        height: 16px;
-      }
-      .icon-shield-premium {
+      .icon-shield-crown {
         width: 40px;
         height: 46px;
       }
-      .icon-shield-premium::before,
-      .icon-shield-premium::after {
+      .icon-shield-crown::before,
+      .icon-shield-crown::after {
         top: -16px;
         border-left-width: 12px;
         border-right-width: 12px;
         border-bottom-width: 18px;
-      }
-      .icon-shield-premium .shield-dot {
-        width: 10px;
-        height: 10px;
       }
       .led-header-title {
         font-size: 22px;
@@ -691,7 +585,7 @@
   <div class="header-left">
     <span class="brand-name">YONO GAMES Shop</span>
   </div>
-  <!-- Close (✖) button removed as requested -->
+  <!-- Close button removed as requested -->
 </header>
 
 <main class="about-container">
@@ -707,26 +601,12 @@
     </div>
   </div>
 
-  <!-- ====== TOP PREMIUM LED ICONS (Modern CSS only) ====== -->
+  <!-- ====== TOP VERTICAL ICONS ====== -->
   <div class="glass-card" style="text-align:center;">
     <div class="vertical-icons">
-      <!-- Icon 1: Glowing Ring with Arrow -->
-      <div class="icon-wrap">
-        <div class="icon-ring-arrow">
-          <span class="ring"></span>
-          <span class="arrow-up-inner"></span>
-        </div>
-      </div>
-      <!-- Icon 2: Glowing Diamond with Pulse -->
-      <div class="icon-wrap">
-        <span class="icon-diamond-premium"></span>
-      </div>
-      <!-- Icon 3: Shield-Crown with Glow -->
-      <div class="icon-wrap">
-        <span class="icon-shield-premium">
-          <span class="shield-dot"></span>
-        </span>
-      </div>
+      <div class="icon-wrap"><span class="icon-arrow-up"></span></div>
+      <div class="icon-wrap"><span class="icon-diamond"></span></div>
+      <div class="icon-wrap"><span class="icon-shield-crown"></span></div>
     </div>
   </div>
 
@@ -849,15 +729,15 @@
 
 </main>
 
-<!-- ====== PREMIUM LED BACK TO TOP BUTTON ====== -->
-<div class="back-to-top-led" id="backToTopLed" aria-label="Back to top">
-  <span class="led-arrow"></span>
+<!-- ====== PREMIUM LED BACK-TO-TOP BUTTON ====== -->
+<div class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+  <span class="arrow-up">⬆</span>
 </div>
 
 <script>
   (function() {
-    const backBtn = document.getElementById('backToTopLed');
-
+    const backBtn = document.getElementById('backToTopBtn');
+    
     // Show/hide button on scroll
     window.addEventListener('scroll', function() {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -868,7 +748,7 @@
       }
     }, { passive: true });
 
-    // Smooth scroll to top on click
+    // Scroll to top on click with smooth behavior
     if (backBtn) {
       backBtn.addEventListener('click', function(e) {
         e.preventDefault();
