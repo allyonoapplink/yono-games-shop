@@ -1,3 +1,4 @@
+0000
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1316,11 +1317,7 @@
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
     function showInfoModal(title, contentHtml) {
-      modalTitle.innerText = title;
-      modalBody.innerHTML = contentHtml;
-      customModal.style.display = 'flex';
-      history.pushState({ modal: true }, '');
-      document.body.style.overflow = 'hidden';
+      // Intentionally empty: about/contact/disclaimer are cleared, no modal shown
     }
 
     function closeModalAndResetHistory() {
@@ -1527,27 +1524,21 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      showInfoModal('About - Yono Games Shop', `
-        <!-- about.html content cleared -->
-      `);
+      // about.html cleared: no content, no modal
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      showInfoModal('Contact Us - Yono Games Shop', `
-        <!-- contact.html content cleared -->
-      `);
+      // contact.html cleared: no content, no modal
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      showInfoModal('Disclaimer - Yono Games Shop', `
-        <!-- disclaimer.html content cleared -->
-      `);
+      // disclaimer.html cleared: no content, no modal
     });
 
     const darkToggle = document.getElementById('darkThemeToggle');
