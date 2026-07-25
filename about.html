@@ -59,38 +59,6 @@
       display: none;
     }
 
-    .close-led {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: #0d1210;
-      border: 1.5px solid rgba(255, 255, 255, 0.15);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      font-weight: 300;
-      color: #ffffff;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.15), inset 0 0 8px rgba(255, 255, 255, 0.03);
-      transition: all 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.2);
-      cursor: pointer;
-      backdrop-filter: blur(4px);
-      line-height: 1;
-      text-shadow: 0 0 18px rgba(255, 255, 240, 0.5);
-    }
-
-    .close-led:hover {
-      transform: rotate(90deg) scale(1.02);
-      border-color: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 0 30px rgba(200, 255, 220, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.15);
-      background: #111b17;
-    }
-
-    .close-led:active {
-      transform: scale(0.88) rotate(90deg);
-      box-shadow: 0 0 45px #b0ffd0;
-    }
-
     .about-container {
       max-width: 680px;
       margin: 0 auto;
@@ -269,58 +237,96 @@
       margin: 28px 0 24px;
     }
 
-    .back-to-top {
+    /* ===== PREMIUM LED BACK TO TOP BUTTON ===== */
+    .back-to-top-led {
       position: fixed;
       bottom: 28px;
       right: 24px;
-      width: 52px;
-      height: 52px;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: #0d1a14;
-      border: 1.5px solid rgba(0, 255, 170, 0.4);
-      box-shadow: 0 0 24px rgba(0, 255, 170, 0.25), inset 0 0 12px rgba(0, 255, 170, 0.05);
+      background: rgba(10, 20, 16, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 2px solid rgba(0, 255, 170, 0.35);
+      box-shadow: 0 0 30px rgba(0, 255, 170, 0.15), 0 0 60px rgba(0, 255, 170, 0.05), inset 0 0 20px rgba(0, 255, 170, 0.05);
       color: #b5ffd0;
-      font-size: 28px;
-      font-weight: 300;
+      font-size: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(8px);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
       z-index: 99;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(20px) scale(0.9);
-      text-shadow: 0 0 24px #70f0a088;
+      transform: translateY(20px) scale(0.85);
+      text-shadow: 0 0 30px #70f0a088;
       line-height: 1;
+      animation: floatGlow 2.8s infinite ease-in-out;
     }
 
-    .back-to-top.visible {
+    .back-to-top-led.visible {
       opacity: 1;
       visibility: visible;
       transform: translateY(0) scale(1);
     }
 
-    .back-to-top:hover {
-      transform: scale(1.06);
+    .back-to-top-led:hover {
+      transform: scale(1.08);
       border-color: #70f0a0;
-      box-shadow: 0 0 40px rgba(0, 255, 170, 0.4);
-      background: #11261e;
+      box-shadow: 0 0 50px rgba(0, 255, 170, 0.35), 0 0 80px rgba(0, 255, 170, 0.10);
+      background: rgba(12, 30, 22, 0.85);
     }
 
-    .back-to-top:active {
+    .back-to-top-led:active {
       transform: scale(0.92);
     }
 
-    .back-to-top .arrow-up {
+    /* LED Arrow using pure CSS */
+    .led-arrow {
       display: inline-block;
-      font-size: 30px;
-      line-height: 1;
-      font-weight: 200;
+      width: 0;
+      height: 0;
+      border-left: 18px solid transparent;
+      border-right: 18px solid transparent;
+      border-bottom: 30px solid #70f0a0;
+      filter: drop-shadow(0 0 20px #70f0a0aa) drop-shadow(0 0 40px #70f0a044);
+      position: relative;
+      transition: all 0.3s ease;
+      animation: arrowPulse 2.4s ease-in-out infinite alternate;
     }
 
-    /* ---- TOP VERTICAL ICON SECTION - 3 icons stacked vertically ---- */
+    .led-arrow::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -14px;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 24px solid #70f0a0;
+      transform: rotate(180deg) scale(0.5);
+      filter: drop-shadow(0 0 15px #70f0a066);
+      opacity: 0.6;
+    }
+
+    .back-to-top-led:hover .led-arrow {
+      filter: drop-shadow(0 0 35px #70f0a0cc) drop-shadow(0 0 60px #70f0a066);
+      transform: translateY(-2px) scale(1.05);
+    }
+
+    @keyframes arrowPulse {
+      0% { filter: drop-shadow(0 0 10px #70f0a066); transform: translateY(0); }
+      100% { filter: drop-shadow(0 0 35px #70f0a0cc); transform: translateY(-4px); }
+    }
+
+    @keyframes floatGlow {
+      0% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.10), 0 0 40px rgba(0, 255, 170, 0.03); }
+      50% { box-shadow: 0 0 40px rgba(0, 255, 170, 0.25), 0 0 70px rgba(0, 255, 170, 0.08); }
+      100% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.10), 0 0 40px rgba(0, 255, 170, 0.03); }
+    }
+
+    /* ===== TOP THREE LED ICONS - Premium Modern Design ===== */
     .vertical-icons {
       display: flex;
       flex-direction: column;
@@ -333,101 +339,175 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 70px;
-      height: 70px;
+      width: 72px;
+      height: 72px;
+      position: relative;
     }
 
-    /* Green LED Arrow (↑) */
-    .icon-arrow-up {
+    /* Icon 1: Premium Glowing Ring with Arrow */
+    .icon-ring-arrow {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-ring-arrow .ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2.5px solid rgba(112, 240, 160, 0.5);
+      box-shadow: 0 0 25px rgba(112, 240, 160, 0.15), inset 0 0 25px rgba(112, 240, 160, 0.05);
+      animation: ringSpin 8s linear infinite;
+    }
+
+    .icon-ring-arrow .ring::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #70f0a0;
+      box-shadow: 0 0 20px #70f0a0aa;
+    }
+
+    .icon-ring-arrow .arrow-up-inner {
       display: inline-block;
       width: 0;
       height: 0;
-      border-left: 22px solid transparent;
-      border-right: 22px solid transparent;
-      border-bottom: 38px solid #70f0a0;
-      box-shadow: 0 0 40px #70f0a066, 0 0 80px #70f0a033;
-      flex-shrink: 0;
+      border-left: 16px solid transparent;
+      border-right: 16px solid transparent;
+      border-bottom: 28px solid #70f0a0;
+      filter: drop-shadow(0 0 25px #70f0a0aa) drop-shadow(0 0 50px #70f0a044);
       position: relative;
-      animation: glowGreen 2.4s infinite alternate;
-      transform: scale(1);
-    }
-    .icon-arrow-up::after {
-      content: '';
-      position: absolute;
-      top: 8px;
-      left: -14px;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-bottom: 24px solid #70f0a0;
-      transform: rotate(180deg) scale(0.6);
-      box-shadow: 0 0 40px #70f0a066;
+      z-index: 2;
+      animation: arrowFloat 2.8s ease-in-out infinite alternate;
     }
 
-    /* Cyan LED Diamond */
-    .icon-diamond {
-      display: inline-block;
-      width: 40px;
-      height: 40px;
+    .icon-ring-arrow .arrow-up-inner::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: -12px;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-bottom: 20px solid #70f0a0;
+      transform: rotate(180deg) scale(0.5);
+      filter: drop-shadow(0 0 15px #70f0a066);
+      opacity: 0.5;
+    }
+
+    @keyframes ringSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes arrowFloat {
+      0% { transform: translateY(0); filter: drop-shadow(0 0 15px #70f0a066); }
+      100% { transform: translateY(-5px); filter: drop-shadow(0 0 35px #70f0a0cc); }
+    }
+
+    /* Icon 2: Premium Glowing Diamond with Pulse */
+    .icon-diamond-premium {
+      width: 48px;
+      height: 48px;
       background: transparent;
       border: 3px solid #40e0d0;
       transform: rotate(45deg);
-      box-shadow: 0 0 40px #40e0d066, inset 0 0 30px #40e0d022;
-      flex-shrink: 0;
-      animation: glowCyan 2.8s infinite alternate;
+      box-shadow: 0 0 40px #40e0d066, inset 0 0 30px #40e0d022, 0 0 80px #40e0d022;
+      animation: diamondPulse 3s ease-in-out infinite alternate;
+      position: relative;
     }
 
-    /* Blue LED Shield / Crown combination */
-    .icon-shield-crown {
-      display: inline-block;
-      width: 42px;
-      height: 48px;
+    .icon-diamond-premium::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background: #40e0d0;
+      border-radius: 50%;
+      box-shadow: 0 0 30px #40e0d0aa, 0 0 60px #40e0d044;
+      opacity: 0.4;
+    }
+
+    @keyframes diamondPulse {
+      0% { box-shadow: 0 0 25px #40e0d044, inset 0 0 15px #40e0d011; transform: rotate(45deg) scale(0.95); }
+      100% { box-shadow: 0 0 55px #40e0d0aa, inset 0 0 30px #40e0d044; transform: rotate(45deg) scale(1.05); }
+    }
+
+    /* Icon 3: Premium Shield-Crown with Glow */
+    .icon-shield-premium {
+      width: 46px;
+      height: 52px;
       background: transparent;
       border: 3px solid #60b0ff;
-      border-radius: 8px 8px 18px 18px;
-      box-shadow: 0 0 40px #60b0ff66, inset 0 0 20px #60b0ff22;
-      flex-shrink: 0;
+      border-radius: 8px 8px 20px 20px;
+      box-shadow: 0 0 40px #60b0ff66, inset 0 0 20px #60b0ff22, 0 0 80px #60b0ff22;
       position: relative;
-      animation: glowBlue 2.6s infinite alternate;
-    }
-    .icon-shield-crown::before {
-      content: '';
-      position: absolute;
-      top: -16px;
-      left: 4px;
-      width: 0;
-      height: 0;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-bottom: 20px solid #60b0ff;
-      box-shadow: 0 0 40px #60b0ff66;
-    }
-    .icon-shield-crown::after {
-      content: '';
-      position: absolute;
-      top: -16px;
-      right: 4px;
-      width: 0;
-      height: 0;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-bottom: 20px solid #60b0ff;
-      box-shadow: 0 0 40px #60b0ff66;
+      animation: shieldGlow 2.8s ease-in-out infinite alternate;
     }
 
-    @keyframes glowGreen {
-      0% { filter: drop-shadow(0 0 8px #70f0a044); }
-      100% { filter: drop-shadow(0 0 45px #70f0a0aa); }
-    }
-    @keyframes glowBlue {
-      0% { filter: drop-shadow(0 0 8px #60b0ff44); }
-      100% { filter: drop-shadow(0 0 45px #60b0ffaa); }
-    }
-    @keyframes glowCyan {
-      0% { filter: drop-shadow(0 0 8px #40e0d044); }
-      100% { filter: drop-shadow(0 0 45px #40e0d0aa); }
+    .icon-shield-premium::before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: 2px;
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 22px solid #60b0ff;
+      box-shadow: 0 0 40px #60b0ff66, 0 0 80px #60b0ff33;
+      filter: drop-shadow(0 0 15px #60b0ff44);
     }
 
-    /* ---- PREMIUM LED HEADER ANIMATION (Cyan, Green, Yellow) ---- */
+    .icon-shield-premium::after {
+      content: '';
+      position: absolute;
+      top: -18px;
+      right: 2px;
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 22px solid #60b0ff;
+      box-shadow: 0 0 40px #60b0ff66, 0 0 80px #60b0ff33;
+      filter: drop-shadow(0 0 15px #60b0ff44);
+    }
+
+    .icon-shield-premium .shield-dot {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #60b0ff;
+      box-shadow: 0 0 30px #60b0ffaa, 0 0 60px #60b0ff44;
+      animation: dotPulse 2.4s ease-in-out infinite alternate;
+    }
+
+    @keyframes shieldGlow {
+      0% { box-shadow: 0 0 25px #60b0ff44, inset 0 0 10px #60b0ff11; }
+      100% { box-shadow: 0 0 55px #60b0ffaa, inset 0 0 25px #60b0ff44; }
+    }
+
+    @keyframes dotPulse {
+      0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+      100% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    }
+
+    /* ===== PREMIUM LED HEADER ANIMATION ===== */
     .led-header-wrap {
       background: rgba(8, 12, 11, 0.85);
       backdrop-filter: blur(8px);
@@ -503,14 +583,22 @@
       100% { opacity: 1; transform: scaleX(1.4); }
     }
 
+    .author-credit {
+      margin-top: 12px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      font-size: 15px;
+      color: #8fb3a5;
+      letter-spacing: 0.3px;
+    }
+    .author-credit strong {
+      color: #b5ffd0;
+      font-weight: 600;
+    }
+
     @media (max-width: 480px) {
       .brand-name {
         font-size: 19px;
-      }
-      .close-led {
-        width: 40px;
-        height: 40px;
-        font-size: 22px;
       }
       .glass-card {
         padding: 20px 16px;
@@ -521,43 +609,66 @@
       h2 {
         font-size: 22px;
       }
-      .back-to-top {
-        width: 46px;
-        height: 46px;
-        font-size: 24px;
+      .back-to-top-led {
+        width: 52px;
+        height: 52px;
         bottom: 20px;
         right: 16px;
       }
-      .icon-wrap {
-        width: 60px;
-        height: 60px;
+      .led-arrow {
+        border-left-width: 15px;
+        border-right-width: 15px;
+        border-bottom-width: 26px;
       }
-      .icon-arrow-up {
-        border-left-width: 18px;
-        border-right-width: 18px;
-        border-bottom-width: 32px;
-      }
-      .icon-arrow-up::after {
-        top: 6px;
-        left: -12px;
-        border-left-width: 12px;
-        border-right-width: 12px;
+      .led-arrow::after {
+        top: 4px;
+        left: -11px;
+        border-left-width: 11px;
+        border-right-width: 11px;
         border-bottom-width: 20px;
       }
-      .icon-diamond {
-        width: 34px;
-        height: 34px;
+      .icon-wrap {
+        width: 64px;
+        height: 64px;
       }
-      .icon-shield-crown {
-        width: 36px;
-        height: 42px;
+      .icon-ring-arrow {
+        width: 52px;
+        height: 52px;
       }
-      .icon-shield-crown::before,
-      .icon-shield-crown::after {
-        top: -14px;
+      .icon-ring-arrow .arrow-up-inner {
+        border-left-width: 14px;
+        border-right-width: 14px;
+        border-bottom-width: 24px;
+      }
+      .icon-ring-arrow .arrow-up-inner::after {
+        top: 2px;
+        left: -10px;
         border-left-width: 10px;
         border-right-width: 10px;
-        border-bottom-width: 16px;
+        border-bottom-width: 18px;
+      }
+      .icon-diamond-premium {
+        width: 40px;
+        height: 40px;
+      }
+      .icon-diamond-premium::before {
+        width: 16px;
+        height: 16px;
+      }
+      .icon-shield-premium {
+        width: 40px;
+        height: 46px;
+      }
+      .icon-shield-premium::before,
+      .icon-shield-premium::after {
+        top: -16px;
+        border-left-width: 12px;
+        border-right-width: 12px;
+        border-bottom-width: 18px;
+      }
+      .icon-shield-premium .shield-dot {
+        width: 10px;
+        height: 10px;
       }
       .led-header-title {
         font-size: 22px;
@@ -572,38 +683,6 @@
       background: #1f6040;
       color: #f0fff5;
     }
-
-    .close-led.clicked {
-      animation: ledPulse 0.2s ease;
-    }
-
-    @keyframes ledPulse {
-      0% { box-shadow: 0 0 10px #fff, 0 0 30px #b0ffd0; }
-      100% { box-shadow: 0 0 20px #fff, 0 0 60px #b0ffd0; }
-    }
-
-    @keyframes floatGlow {
-      0% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.2); }
-      50% { box-shadow: 0 0 40px rgba(0, 255, 170, 0.35); }
-      100% { box-shadow: 0 0 20px rgba(0, 255, 170, 0.2); }
-    }
-
-    .back-to-top.visible {
-      animation: floatGlow 2.4s infinite ease-in-out;
-    }
-
-    .author-credit {
-      margin-top: 12px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.04);
-      font-size: 15px;
-      color: #8fb3a5;
-      letter-spacing: 0.3px;
-    }
-    .author-credit strong {
-      color: #b5ffd0;
-      font-weight: 600;
-    }
   </style>
 </head>
 <body>
@@ -612,9 +691,7 @@
   <div class="header-left">
     <span class="brand-name">YONO GAMES Shop</span>
   </div>
-  <div class="close-led" id="closeLedBtn" aria-label="Close and go back">
-    ✖
-  </div>
+  <!-- Close (✖) button removed as requested -->
 </header>
 
 <main class="about-container">
@@ -630,12 +707,26 @@
     </div>
   </div>
 
-  <!-- ====== TOP VERTICAL ICONS ====== -->
+  <!-- ====== TOP PREMIUM LED ICONS (Modern CSS only) ====== -->
   <div class="glass-card" style="text-align:center;">
     <div class="vertical-icons">
-      <div class="icon-wrap"><span class="icon-arrow-up"></span></div>
-      <div class="icon-wrap"><span class="icon-diamond"></span></div>
-      <div class="icon-wrap"><span class="icon-shield-crown"></span></div>
+      <!-- Icon 1: Glowing Ring with Arrow -->
+      <div class="icon-wrap">
+        <div class="icon-ring-arrow">
+          <span class="ring"></span>
+          <span class="arrow-up-inner"></span>
+        </div>
+      </div>
+      <!-- Icon 2: Glowing Diamond with Pulse -->
+      <div class="icon-wrap">
+        <span class="icon-diamond-premium"></span>
+      </div>
+      <!-- Icon 3: Shield-Crown with Glow -->
+      <div class="icon-wrap">
+        <span class="icon-shield-premium">
+          <span class="shield-dot"></span>
+        </span>
+      </div>
     </div>
   </div>
 
@@ -758,33 +849,16 @@
 
 </main>
 
-<div class="back-to-top" id="backToTopBtn" aria-label="Back to top">
-  <span class="arrow-up">▲</span>
+<!-- ====== PREMIUM LED BACK TO TOP BUTTON ====== -->
+<div class="back-to-top-led" id="backToTopLed" aria-label="Back to top">
+  <span class="led-arrow"></span>
 </div>
 
 <script>
   (function() {
-    const closeBtn = document.getElementById('closeLedBtn');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        this.classList.add('clicked');
-        setTimeout(() => { this.classList.remove('clicked'); }, 200);
-        if (window.history && window.history.length > 1) {
-          window.history.back();
-        } else {
-          window.location.href = '/';
-        }
-      });
-      closeBtn.addEventListener('touchstart', function() {
-        this.style.transform = 'scale(0.92)';
-      }, { passive: true });
-      closeBtn.addEventListener('touchend', function() {
-        this.style.transform = '';
-      }, { passive: true });
-    }
+    const backBtn = document.getElementById('backToTopLed');
 
-    const backBtn = document.getElementById('backToTopBtn');
+    // Show/hide button on scroll
     window.addEventListener('scroll', function() {
       const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
       if (currentScroll > 300) {
@@ -794,6 +868,7 @@
       }
     }, { passive: true });
 
+    // Smooth scroll to top on click
     if (backBtn) {
       backBtn.addEventListener('click', function(e) {
         e.preventDefault();
