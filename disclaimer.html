@@ -1,26 +1,129 @@
 <!-- disclaimer.html -->
 <div style="padding: 6px 4px; font-family: 'Segoe UI', 'Inter', sans-serif; max-width: 100%;">
 
-  <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" in heading -->
   <h4 style="font-size: 1.2rem; font-weight: 800; color: #1e562a; border-left: 4px solid #ff8c00; padding-left: 12px; margin-bottom: 16px;">
     Disclaimer - YONO GAMES Shop
   </h4>
 
-  <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" in first paragraph -->
+  <!-- ===== PREMIUM CSS ICON 1 (Gold Shield) ===== -->
+  <style>
+    .icon-shield-gold {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff7e0, #f5c842);
+      box-shadow: 0 0 15px rgba(245, 200, 66, 0.7), 0 0 40px rgba(245, 200, 66, 0.3), inset 0 -2px 4px rgba(0,0,0,0.1);
+      animation: glowPulseGold 2.8s ease-in-out infinite;
+    }
+    .icon-shield-gold::before {
+      content: "🛡";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 16px;
+      line-height: 1;
+      color: #5a3e0a;
+      text-shadow: 0 0 6px rgba(255,215,0,0.5);
+    }
+    @keyframes glowPulseGold {
+      0%, 100% { box-shadow: 0 0 15px rgba(245, 200, 66, 0.7), 0 0 40px rgba(245, 200, 66, 0.3); }
+      50% { box-shadow: 0 0 25px rgba(245, 200, 66, 0.9), 0 0 60px rgba(245, 200, 66, 0.5); }
+    }
+
+    /* ===== PREMIUM CSS ICON 2 (Cyan Diamond) ===== */
+    .icon-diamond-cyan {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      border-radius: 4px;
+      background: radial-gradient(circle at 30% 30%, #e0f7ff, #06b6d4);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.7), 0 0 40px rgba(6, 182, 212, 0.3), inset 0 -2px 4px rgba(0,0,0,0.08);
+      transform: rotate(45deg);
+      animation: glowPulseCyan 3.2s ease-in-out infinite;
+    }
+    .icon-diamond-cyan::before {
+      content: "◆";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      font-size: 18px;
+      line-height: 1;
+      color: #0a4a5a;
+      text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+    }
+    @keyframes glowPulseCyan {
+      0%, 100% { box-shadow: 0 0 15px rgba(6, 182, 212, 0.7), 0 0 40px rgba(6, 182, 212, 0.3); }
+      50% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.9), 0 0 60px rgba(6, 182, 212, 0.5); }
+    }
+
+    /* ===== PREMIUM CSS ICON 3 (Purple Star) ===== */
+    .icon-star-purple {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      vertical-align: middle;
+      position: relative;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #f0e6ff, #8b5cf6);
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.7), 0 0 40px rgba(139, 92, 246, 0.3), inset 0 -2px 4px rgba(0,0,0,0.08);
+      animation: glowPulsePurple 3.0s ease-in-out infinite;
+    }
+    .icon-star-purple::before {
+      content: "★";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      line-height: 1;
+      color: #3a1a6a;
+      text-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+    }
+    @keyframes glowPulsePurple {
+      0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.7), 0 0 40px rgba(139, 92, 246, 0.3); }
+      50% { box-shadow: 0 0 25px rgba(139, 92, 246, 0.9), 0 0 60px rgba(139, 92, 246, 0.5); }
+    }
+
+    /* icon wrapper to keep inline flow */
+    .icon-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+  </style>
+
+  <!-- Welcome section with Gold Shield icon -->
   <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6; margin-bottom: 14px;">
+    <span class="icon-wrap"><span class="icon-shield-gold"></span></span>
     <strong>Welcome to YONO GAMES Shop</strong><br>
     This extensive disclaimer applies to all users of the YONO GAMES Shop website and the wide array of applications (“Apps”) available on it. Our platform includes diverse apps such as Poker, Rummy, Ludo, fantasy sports, investment apps, and trading apps. By accessing YONO GAMES Shop, you acknowledge and agree to the terms outlined in this disclaimer.
   </p>
 
-  <!-- Understanding the Scope of Our Platform -->
+  <!-- Understanding the Scope with Cyan Diamond icon -->
   <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-    <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Understanding the Scope of Our Platform</h5>
+    <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">
+      <span class="icon-wrap"><span class="icon-diamond-cyan"></span></span> Understanding the Scope of Our Platform
+    </h5>
     <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">YONO GAMES Shop serves as a digital distribution platform for various third-party applications. Our role is limited to providing access to these apps. We do not develop, modify, or have any control over the content and functionality of these apps.</p>
   </div>
 
-  <!-- User Responsibility and Financial Risk -->
+  <!-- User Responsibility with Purple Star icon -->
   <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-    <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">User Responsibility and Financial Risk</h5>
+    <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">
+      <span class="icon-wrap"><span class="icon-star-purple"></span></span> User Responsibility and Financial Risk
+    </h5>
     <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Risk of Financial Activities:</strong> The Apps, particularly those involving financial transactions like betting games or investment platforms, may carry inherent risks including the potential for significant financial loss. You are solely responsible for any financial outcomes resulting from your use of these Apps.</p>
     <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Informed Decision-Making:</strong> We strongly encourage you to thoroughly research and understand each App, especially those involving financial risks, before participation. This includes seeking advice from financial experts or professionals as needed.</p>
     <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Endorsement of Financial Strategies:</strong> Our platform does not endorse any specific financial strategies, nor do we guarantee their success. Decisions made based on any App’s content are solely your responsibility.</p>
@@ -114,12 +217,12 @@
     <p style="font-size: 0.8rem; line-height: 1.6; color: #1e562a; margin-bottom: 0;">By using YONO GAMES Shop, users acknowledge and agree to this general disclaimer, affirming their understanding that the Apps are managed by respective third-party entities and that all interactions with these Apps are at their own risk and responsibility.</p>
   </div>
 
-  <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON ===== -->
+  <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON (BOTTOM-RIGHT) ===== -->
   <style>
     .back-to-top-led {
       position: fixed;
       bottom: 28px;
-      left: 28px;
+      right: 28px;
       z-index: 999;
       width: 58px;
       height: 58px;
@@ -166,7 +269,7 @@
         width: 52px;
         height: 52px;
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         font-size: 1.6rem;
       }
     }
@@ -175,7 +278,7 @@
         width: 46px;
         height: 46px;
         bottom: 16px;
-        left: 16px;
+        right: 16px;
         font-size: 1.4rem;
       }
     }
