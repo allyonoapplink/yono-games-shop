@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -870,6 +871,44 @@
       gap: 8px;
       margin-bottom: 4px;
     }
+
+    /* ===== WARNING SECTION STYLES ===== */
+    .warning-section-wrapper {
+      margin-bottom: 14px;
+    }
+    .warning-section-wrapper .warning-content {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: #856404;
+    }
+    body.dark-theme .warning-section-wrapper .warning-content {
+      background: #2a2a1a;
+      border-left-color: #ffc107;
+      color: #ffd970;
+    }
+
+    /* ===== FOOTER STYLES ===== */
+    .info-modal-footer {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 2px solid #ffcf8a;
+      text-align: center;
+      font-size: 0.7rem;
+      color: #6c7a5a;
+    }
+    .info-modal-footer strong {
+      color: #1e562a;
+    }
+    body.dark-theme .info-modal-footer {
+      border-top-color: #4a5a3a;
+      color: #8a9a8a;
+    }
+    body.dark-theme .info-modal-footer strong {
+      color: #8bc34a;
+    }
   </style>
 </head>
 <body>
@@ -1315,14 +1354,106 @@
     const modalBody = document.getElementById('modalBody');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-    function showInfoModal(title, contentHtml) {
-      modalTitle.innerText = title;
-      modalBody.innerHTML = contentHtml;
-      customModal.style.display = 'flex';
-      history.pushState({ modal: true }, '');
-      document.body.style.overflow = 'hidden';
+    // ===== FUNCTION: Load warning.html + page content + footer =====
+    function loadSectionWithWarning(pageFile, pageTitle) {
+      // First fetch warning.html
+      fetch('warning.html')
+        .then(res => {
+          if (!res.ok) throw new Error('warning.html not found');
+          return res.text();
+        })
+        .then(warningHtml => {
+          // Build final content: warning (if not empty) + page content + footer
+          let finalHtml = '';
+          
+          // Warning section (only if warning.html has content)
+          if (warningHtml.trim()) {
+            finalHtml += `<div class="warning-section-wrapper"><div class="warning-content">${warningHtml}</div></div>`;
+          }
+          
+          // Now fetch the actual page content
+          return fetch(pageFile)
+            .then(res => {
+              if (!res.ok) throw new Error(pageFile + ' not found');
+              return res.text();
+            })
+            .then(pageContent => {
+              // Append page content
+              finalHtml += pageContent;
+              
+              // Append footer
+              finalHtml += `
+                <div class="info-modal-footer">
+                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
+                </div>
+              `;
+              
+              // Show in modal
+              showInfoModal('', finalHtml);
+            });
+        })
+        .catch(() => {
+          // If warning.html doesn't exist or error, just load page content + footer
+          fetch(pageFile)
+            .then(res => {
+              if (!res.ok) throw new Error(pageFile + ' not found');
+              return res.text();
+            })
+            .then(pageContent => {
+              let finalHtml = pageContent;
+              finalHtml += `
+                <div class="info-modal-footer">
+                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
+                </div>
+              `;
+              showInfoModal('', finalHtml);
+            })
+            .catch(() => {
+              // If page file doesn't exist, show empty with just footer
+              showInfoModal('', `
+                <div class="info-modal-footer">
+                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
+                </div>
+              `);
+            });
+        });
     }
 
+    // ==== NAVIGATION HANDLERS ====
+    const homeNavLink = document.getElementById('homeNavLink');
+    const navAbout = document.getElementById('navAbout');
+    const navContact = document.getElementById('navContact');
+    const navDisclaimer = document.getElementById('navDisclaimer');
+
+    homeNavLink.addEventListener('click', (e) => { 
+      e.preventDefault(); 
+      resetToMainGrid(); 
+      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active')); 
+      homeNavLink.classList.add('active'); 
+    });
+
+    navAbout.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+      navAbout.classList.add('active');
+      loadSectionWithWarning('about.html', '');
+    });
+
+    navContact.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+      navContact.classList.add('active');
+      loadSectionWithWarning('contact.html', '');
+    });
+
+    navDisclaimer.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+      navDisclaimer.classList.add('active');
+      loadSectionWithWarning('disclaimer.html', '');
+    });
+
+    // ===== MODAL CLOSE =====
     function closeModalAndResetHistory() {
       customModal.style.display = 'none';
       document.body.style.overflow = 'auto';
@@ -1332,27 +1463,16 @@
     modalCloseBtn.addEventListener('click', closeModalAndResetHistory);
     window.addEventListener('click', (e) => { if (e.target === customModal) closeModalAndResetHistory(); });
 
-    // --- DYNAMIC LOAD FOR ABOUT/CONTACT/DISCLAIMER ---
-    function loadSectionHTML(fileName, title, containerId) {
-      fetch(fileName)
-        .then(res => {
-          if (!res.ok) throw new Error('File not found');
-          return res.text();
-        })
-        .then(html => {
-          // If the file is empty or only whitespace, show nothing
-          if (!html.trim()) {
-            showInfoModal('', '');
-          } else {
-            showInfoModal('', html);
-          }
-        })
-        .catch(() => {
-          // If file doesn't exist or error, show nothing
-          showInfoModal('', '');
-        });
+    // ===== SHOW INFO MODAL =====
+    function showInfoModal(title, contentHtml) {
+      modalTitle.innerText = title;
+      modalBody.innerHTML = contentHtml;
+      customModal.style.display = 'flex';
+      history.pushState({ modal: true }, '');
+      document.body.style.overflow = 'hidden';
     }
 
+    // ===== RENDER MAIN GRID =====
     function renderMainGrid() {
       const gridContainer = document.getElementById('allAppsGrid');
       if (!gridContainer) return;
@@ -1363,7 +1483,6 @@
         const colors = getColorClasses(idx);
         const spinDesc = getSpinWinDescription(app.name, displayBonus, app.category);
         const extraBenefits = getExtraBenefits(app.name, displayBonus, app.category);
-        const warningVal = getWarningValue(app.name);
         html += `
           <div class="app-card" data-app-index="${idx}">
             <div class="card-img">
@@ -1411,7 +1530,6 @@
       const bonusNum = 200 + (Math.abs(hash) % 101);
       const description = getSpinWinDescription(selectedApp.name, bonusNum, selectedApp.category);
       const extraBenefits = getExtraBenefits(selectedApp.name, bonusNum, selectedApp.category);
-      const warningVal = getWarningValue(selectedApp.name);
       const gridDiv = document.getElementById('allAppsGrid');
       const downloadContainer = document.getElementById('downloadPageContainer');
       gridDiv.classList.add('hidden');
@@ -1536,34 +1654,6 @@
       history.replaceState({ page: 'main' }, '', window.location.pathname);
       goToMainGrid();
     }
-
-    const homeNavLink = document.getElementById('homeNavLink');
-    const navAbout = document.getElementById('navAbout');
-    const navContact = document.getElementById('navContact');
-    const navDisclaimer = document.getElementById('navDisclaimer');
-
-    homeNavLink.addEventListener('click', (e) => { e.preventDefault(); resetToMainGrid(); document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active')); homeNavLink.classList.add('active'); });
-
-    navAbout.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
-      navAbout.classList.add('active');
-      loadSectionHTML('about.html', '');
-    });
-
-    navContact.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
-      navContact.classList.add('active');
-      loadSectionHTML('contact.html', '');
-    });
-
-    navDisclaimer.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
-      navDisclaimer.classList.add('active');
-      loadSectionHTML('disclaimer.html', '');
-    });
 
     const darkToggle = document.getElementById('darkThemeToggle');
     darkToggle.addEventListener('click', function(e) {
