@@ -1,4 +1,3 @@
-00000909099
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1317,11 +1316,6 @@
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
     function showInfoModal(title, contentHtml) {
-      // If the modal is for about, contact, or disclaimer, do nothing (empty)
-      if (title.includes('About') || title.includes('Contact') || title.includes('Disclaimer')) {
-        // Do not show the modal; simply return
-        return;
-      }
       modalTitle.innerText = title;
       modalBody.innerHTML = contentHtml;
       customModal.style.display = 'flex';
@@ -1533,21 +1527,24 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      // Do nothing – about is empty
+      // about.html content cleared – nothing displayed
+      showInfoModal('', '');
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      // Do nothing – contact is empty
+      // contact.html content cleared – nothing displayed
+      showInfoModal('', '');
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      // Do nothing – disclaimer is empty
+      // disclaimer.html content cleared – nothing displayed
+      showInfoModal('', '');
     });
 
     const darkToggle = document.getElementById('darkThemeToggle');
