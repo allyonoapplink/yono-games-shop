@@ -1,256 +1,334 @@
 <!-- disclaimer.html -->
 <div style="padding: 6px 4px; font-family: 'Segoe UI', 'Inter', sans-serif; max-width: 100%; position: relative;">
 
-  <!-- ===== PREMIUM GREEN LED VERTICAL LINE (left side) ===== -->
+  <!-- ===== PREMIUM AI-STYLE CSS ICONS AND LED INDICATORS ===== -->
   <style>
-    .disclaimer-green-line {
-      position: absolute;
-      top: 0;
-      left: 2px;
-      width: 4px;
-      height: 100%;
-      background: linear-gradient(to bottom, #22c55e, #16a34a, #22c55e, #16a34a, #22c55e);
-      background-size: 100% 300%;
-      animation: greenGlowLine 4s ease-in-out infinite;
-      border-radius: 4px;
-      box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34, 197, 94, 0.3), 0 0 60px rgba(34, 197, 94, 0.1);
-      z-index: 1;
+    /* ----- LED Indicator (green pulse) ----- */
+    .led-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4);
+      margin-right: 8px;
+      vertical-align: middle;
+      animation: ledPulse 2.2s ease-in-out infinite;
+      flex-shrink: 0;
     }
-    @keyframes greenGlowLine {
-      0% { background-position: 0% 0%; }
-      50% { background-position: 0% 100%; }
-      100% { background-position: 0% 0%; }
+    @keyframes ledPulse {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4); }
+      50% { opacity: 0.6; transform: scale(0.85); box-shadow: 0 0 20px #22c55e, 0 0 50px rgba(34,197,94,0.6); }
     }
-    /* add left padding to content to avoid overlap */
-    .disclaimer-content-wrapper {
-      padding-left: 14px;
+
+    /* ----- Icon 1: Shield (left aligned) ----- */
+    .ai-icon-shield-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(145deg, #22c55e, #16a34a);
+      border-radius: 10px 2px 10px 2px;
+      box-shadow: 0 0 20px rgba(34,197,94,0.5), 0 0 50px rgba(34,197,94,0.2);
+      margin-right: 10px;
+      vertical-align: middle;
+      animation: iconFloat1 3.4s ease-in-out infinite;
       position: relative;
-      z-index: 2;
+      flex-shrink: 0;
     }
+    .ai-icon-shield-lg::after {
+      content: "◆";
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    }
+    @keyframes iconFloat1 {
+      0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 0 20px rgba(34,197,94,0.5), 0 0 50px rgba(34,197,94,0.2); }
+      50% { transform: translateY(-4px) rotate(3deg); box-shadow: 0 0 30px rgba(34,197,94,0.8), 0 0 70px rgba(34,197,94,0.3); }
+    }
+
+    /* ----- Icon 2: Diamond (center aligned) ----- */
+    .ai-icon-diamond-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(145deg, #8b5cf6, #7c3aed);
+      border-radius: 50% 50% 50% 0;
+      box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 50px rgba(139,92,246,0.2);
+      margin-right: 10px;
+      vertical-align: middle;
+      animation: iconFloat2 3.8s ease-in-out infinite;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+    .ai-icon-diamond-lg::after {
+      content: "✦";
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+      transform: rotate(-45deg);
+    }
+    @keyframes iconFloat2 {
+      0%, 100% { transform: rotate(45deg) scale(1); box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 50px rgba(139,92,246,0.2); }
+      50% { transform: rotate(45deg) scale(1.08); box-shadow: 0 0 35px rgba(139,92,246,0.8), 0 0 70px rgba(139,92,246,0.3); }
+    }
+
+    /* ----- Icon 3: Star (right aligned) ----- */
+    .ai-icon-star-lg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(145deg, #f59e0b, #f97316);
+      border-radius: 2px 10px 2px 10px;
+      box-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 50px rgba(245,158,11,0.2);
+      margin-left: 10px;
+      vertical-align: middle;
+      animation: iconFloat3 4.0s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    .ai-icon-star-lg::after {
+      content: "★";
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      text-shadow: 0 0 14px rgba(255,255,255,0.6);
+    }
+    @keyframes iconFloat3 {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 50px rgba(245,158,11,0.2); }
+      50% { transform: scale(1.06); box-shadow: 0 0 35px rgba(245,158,11,0.8), 0 0 80px rgba(245,158,11,0.3); }
+    }
+
+    /* ----- Flex containers for icon + heading ----- */
+    .heading-with-icon-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .heading-with-icon-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .heading-with-icon-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .heading-with-led {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    /* ensure headings keep their style */
+    .heading-with-icon-left h5,
+    .heading-with-icon-center h5,
+    .heading-with-icon-right h5 {
+      margin: 0;
+      font-size: 1.0rem;
+      font-weight: 700;
+      color: #0a2e1d;
+      border-bottom: 2px solid #ffcf8a;
+      padding-bottom: 6px;
+      flex: 1;
+      min-width: 120px;
+    }
+    .heading-with-icon-left h5 { border-bottom-color: #22c55e; }
+    .heading-with-icon-center h5 { border-bottom-color: #8b5cf6; text-align: center; }
+    .heading-with-icon-right h5 { border-bottom-color: #f59e0b; text-align: right; }
+
+    /* responsive tweaks */
     @media (max-width: 480px) {
-      .disclaimer-green-line { left: 1px; width: 3px; }
-      .disclaimer-content-wrapper { padding-left: 10px; }
+      .ai-icon-shield-lg, .ai-icon-diamond-lg, .ai-icon-star-lg {
+        width: 30px;
+        height: 30px;
+      }
+      .ai-icon-shield-lg::after, .ai-icon-diamond-lg::after, .ai-icon-star-lg::after {
+        font-size: 14px;
+      }
+      .heading-with-icon-left, .heading-with-icon-center, .heading-with-icon-right {
+        gap: 4px;
+      }
     }
   </style>
 
-  <div class="disclaimer-green-line"></div>
+  <!-- ===== MAIN HEADING with LED and Icon (left) ===== -->
+  <div class="heading-with-icon-left">
+    <span class="ai-icon-shield-lg"></span>
+    <h5 style="font-size:1.2rem; font-weight:800; color:#1e562a; border-bottom:3px solid #22c55e; padding-bottom:4px; margin:0; flex:1; min-width:140px;">
+      <span class="led-indicator"></span> Disclaimer - YONO GAMES Shop
+    </h5>
+  </div>
 
-  <div class="disclaimer-content-wrapper">
+  <!-- Welcome paragraph (no icon, just LED in content) -->
+  <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6; margin-bottom: 14px;">
+    <span class="led-indicator" style="width:8px;height:8px;margin-right:6px;"></span>
+    <strong>Welcome to YONO GAMES Shop</strong><br>
+    This extensive disclaimer applies to all users of the YONO GAMES Shop website and the wide array of applications (“Apps”) available on it. Our platform includes diverse apps such as Poker, Rummy, Ludo, fantasy sports, investment apps, and trading apps. By accessing YONO GAMES Shop, you acknowledge and agree to the terms outlined in this disclaimer.
+  </p>
 
-    <!-- ===== PREMIUM AI-STYLE CSS ICON 1 ===== -->
-    <style>
-      .ai-icon-shield {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background: linear-gradient(145deg, #22c55e, #16a34a);
-        border-radius: 8px 2px 8px 2px;
-        box-shadow: 0 0 15px rgba(34, 197, 94, 0.6), 0 0 40px rgba(34, 197, 94, 0.2);
-        margin-right: 6px;
-        vertical-align: middle;
-        position: relative;
-        animation: iconPulse1 2.8s ease-in-out infinite;
-        transform: rotate(0deg);
-      }
-      .ai-icon-shield::after {
-        content: "◆";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5);
-      }
-      @keyframes iconPulse1 {
-        0%, 100% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.6), 0 0 40px rgba(34, 197, 94, 0.2); transform: rotate(0deg); }
-        50% { box-shadow: 0 0 25px rgba(34, 197, 94, 0.9), 0 0 60px rgba(34, 197, 94, 0.3); transform: rotate(4deg); }
-      }
-    </style>
-
-    <!-- ===== PREMIUM AI-STYLE CSS ICON 2 ===== -->
-    <style>
-      .ai-icon-diamond {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background: linear-gradient(145deg, #8b5cf6, #7c3aed);
-        border-radius: 50% 50% 50% 0;
-        box-shadow: 0 0 15px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.2);
-        margin-right: 6px;
-        vertical-align: middle;
-        position: relative;
-        animation: iconPulse2 3.2s ease-in-out infinite;
-        transform: rotate(45deg);
-      }
-      .ai-icon-diamond::after {
-        content: "✦";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
-        text-shadow: 0 0 10px rgba(255,255,255,0.5);
-      }
-      @keyframes iconPulse2 {
-        0%, 100% { box-shadow: 0 0 15px rgba(139, 92, 246, 0.6), 0 0 40px rgba(139, 92, 246, 0.2); transform: rotate(45deg) scale(1); }
-        50% { box-shadow: 0 0 28px rgba(139, 92, 246, 0.9), 0 0 60px rgba(139, 92, 246, 0.3); transform: rotate(45deg) scale(1.08); }
-      }
-    </style>
-
-    <!-- ===== PREMIUM AI-STYLE CSS ICON 3 ===== -->
-    <style>
-      .ai-icon-star {
-        display: inline-block;
-        width: 28px;
-        height: 28px;
-        background: linear-gradient(145deg, #f59e0b, #f97316);
-        border-radius: 2px 8px 2px 8px;
-        box-shadow: 0 0 15px rgba(245, 158, 11, 0.6), 0 0 40px rgba(245, 158, 11, 0.2);
-        margin-right: 6px;
-        vertical-align: middle;
-        position: relative;
-        animation: iconPulse3 3.6s ease-in-out infinite;
-      }
-      .ai-icon-star::after {
-        content: "★";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 16px;
-        font-weight: 700;
-        text-shadow: 0 0 12px rgba(255,255,255,0.6);
-      }
-      @keyframes iconPulse3 {
-        0%, 100% { box-shadow: 0 0 15px rgba(245, 158, 11, 0.6), 0 0 40px rgba(245, 158, 11, 0.2); transform: scale(1); }
-        50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.9), 0 0 70px rgba(245, 158, 11, 0.3); transform: scale(1.06); }
-      }
-    </style>
-
-    <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" in heading -->
-    <h4 style="font-size: 1.2rem; font-weight: 800; color: #1e562a; border-left: 4px solid #ff8c00; padding-left: 12px; margin-bottom: 16px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
-      <span>Disclaimer - YONO GAMES Shop</span>
-      <span style="display: inline-flex; gap: 4px; margin-left: 4px;">
-        <span class="ai-icon-shield"></span>
-        <span class="ai-icon-diamond"></span>
-        <span class="ai-icon-star"></span>
-      </span>
-    </h4>
-
-    <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" in first paragraph -->
-    <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6; margin-bottom: 14px;">
-      <strong>Welcome to YONO GAMES Shop</strong><br>
-      This extensive disclaimer applies to all users of the YONO GAMES Shop website and the wide array of applications (“Apps”) available on it. Our platform includes diverse apps such as Poker, Rummy, Ludo, fantasy sports, investment apps, and trading apps. By accessing YONO GAMES Shop, you acknowledge and agree to the terms outlined in this disclaimer.
-    </p>
-
-    <!-- Understanding the Scope of Our Platform -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Understanding the Scope of Our Platform</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">YONO GAMES Shop serves as a digital distribution platform for various third-party applications. Our role is limited to providing access to these apps. We do not develop, modify, or have any control over the content and functionality of these apps.</p>
+  <!-- ===== Understanding the Scope (icon: shield, left) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-left">
+      <span class="ai-icon-shield-lg"></span>
+      <h5><span class="led-indicator"></span> Understanding the Scope of Our Platform</h5>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">YONO GAMES Shop serves as a digital distribution platform for various third-party applications. Our role is limited to providing access to these apps. We do not develop, modify, or have any control over the content and functionality of these apps.</p>
+  </div>
 
-    <!-- User Responsibility and Financial Risk -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">User Responsibility and Financial Risk</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Risk of Financial Activities:</strong> The Apps, particularly those involving financial transactions like betting games or investment platforms, may carry inherent risks including the potential for significant financial loss. You are solely responsible for any financial outcomes resulting from your use of these Apps.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Informed Decision-Making:</strong> We strongly encourage you to thoroughly research and understand each App, especially those involving financial risks, before participation. This includes seeking advice from financial experts or professionals as needed.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Endorsement of Financial Strategies:</strong> Our platform does not endorse any specific financial strategies, nor do we guarantee their success. Decisions made based on any App’s content are solely your responsibility.</p>
+  <!-- ===== User Responsibility (icon: diamond, center) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-center">
+      <h5><span class="led-indicator"></span> User Responsibility and Financial Risk</h5>
+      <span class="ai-icon-diamond-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Risk of Financial Activities:</strong> The Apps, particularly those involving financial transactions like betting games or investment platforms, may carry inherent risks including the potential for significant financial loss. You are solely responsible for any financial outcomes resulting from your use of these Apps.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Informed Decision-Making:</strong> We strongly encourage you to thoroughly research and understand each App, especially those involving financial risks, before participation. This includes seeking advice from financial experts or professionals as needed.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Endorsement of Financial Strategies:</strong> Our platform does not endorse any specific financial strategies, nor do we guarantee their success. Decisions made based on any App’s content are solely your responsibility.</p>
+  </div>
 
-    <!-- Legal Age and Compliance -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Legal Age and Compliance</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Age Restrictions:</strong> Some Apps, particularly those involving gambling or financial investments, are designed for use by individuals above a certain age (usually 18 or 21 years). You must comply with these age restrictions.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Compliance with Local Laws:</strong> It is your responsibility to ensure that the use of any App complies with local laws and regulations. This includes understanding legal constraints related to gambling, investments, and other financial activities.</p>
+  <!-- ===== Legal Age (icon: star, right) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-right">
+      <h5><span class="led-indicator"></span> Legal Age and Compliance</h5>
+      <span class="ai-icon-star-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Age Restrictions:</strong> Some Apps, particularly those involving gambling or financial investments, are designed for use by individuals above a certain age (usually 18 or 21 years). You must comply with these age restrictions.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Compliance with Local Laws:</strong> It is your responsibility to ensure that the use of any App complies with local laws and regulations. This includes understanding legal constraints related to gambling, investments, and other financial activities.</p>
+  </div>
 
-    <!-- Critical Review of App-Specific Terms -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Critical Review of App-Specific Terms</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>User Due Diligence:</strong> Before signing up, registering, or engaging with any App on our platform, it is crucial that you thoroughly review and understand that App’s specific Terms and Conditions, disclaimers, and privacy policies.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Responsibility for Discrepancies:</strong> We are not responsible for any discrepancies or misunderstandings resulting from the App’s terms, conditions, or policies.</p>
+  <!-- ===== Critical Review (icon: shield, left) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-left">
+      <span class="ai-icon-shield-lg"></span>
+      <h5><span class="led-indicator"></span> Critical Review of App-Specific Terms</h5>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>User Due Diligence:</strong> Before signing up, registering, or engaging with any App on our platform, it is crucial that you thoroughly review and understand that App’s specific Terms and Conditions, disclaimers, and privacy policies.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Responsibility for Discrepancies:</strong> We are not responsible for any discrepancies or misunderstandings resulting from the App’s terms, conditions, or policies.</p>
+  </div>
 
-    <!-- No Liability for Losses -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">No Liability for Losses</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;">YONO GAMES Shop shall not be liable for any direct, indirect, incidental, consequential, or punitive damages, including financial losses, resulting from the use or inability to use any App listed on our website. Your engagement with these Apps is entirely at your own risk and discretion.</p>
+  <!-- ===== No Liability (icon: diamond, center) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-center">
+      <h5><span class="led-indicator"></span> No Liability for Losses</h5>
+      <span class="ai-icon-diamond-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;">YONO GAMES Shop shall not be liable for any direct, indirect, incidental, consequential, or punitive damages, including financial losses, resulting from the use or inability to use any App listed on our website. Your engagement with these Apps is entirely at your own risk and discretion.</p>
+  </div>
 
-    <!-- Awareness of Addiction Risks -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Awareness of Addiction Risks</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Risk of Addiction:</strong> Certain apps, especially games and those involving gambling or trading, can be addictive. We encourage responsible use of these apps and awareness of the potential for addictive behavior.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Seeking Help:</strong> If you or someone you know is struggling with addiction related to these apps, we advise seeking professional help.</p>
+  <!-- ===== Addiction Risks (icon: star, right) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-right">
+      <h5><span class="led-indicator"></span> Awareness of Addiction Risks</h5>
+      <span class="ai-icon-star-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Risk of Addiction:</strong> Certain apps, especially games and those involving gambling or trading, can be addictive. We encourage responsible use of these apps and awareness of the potential for addictive behavior.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Seeking Help:</strong> If you or someone you know is struggling with addiction related to these apps, we advise seeking professional help.</p>
+  </div>
 
-    <!-- Additional Disclaimers -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Additional Disclaimers</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Variability in App Functionality:</strong> The functionality and content of the Apps may change over time, and we do not guarantee their consistency or availability.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Non-Endorsement of App Content:</strong> Display of an App on our platform does not constitute an endorsement of its content or functionality.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Financial or Legal Advice:</strong> YONO GAMES Shop does not provide financial, legal, or investment advice. Any information obtained from our platform should not be treated as professional advice.</p>
+  <!-- ===== Additional Disclaimers (icon: shield, left) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-left">
+      <span class="ai-icon-shield-lg"></span>
+      <h5><span class="led-indicator"></span> Additional Disclaimers</h5>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Variability in App Functionality:</strong> The functionality and content of the Apps may change over time, and we do not guarantee their consistency or availability.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Non-Endorsement of App Content:</strong> Display of an App on our platform does not constitute an endorsement of its content or functionality.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>No Financial or Legal Advice:</strong> YONO GAMES Shop does not provide financial, legal, or investment advice. Any information obtained from our platform should not be treated as professional advice.</p>
+  </div>
 
-    <!-- Changes and Amendments -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px; margin-bottom: 10px;">Changes and Amendments</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;">We reserve the right to modify this disclaimer at any time. Such changes will be effective immediately upon posting on our website. It is your responsibility to regularly review this disclaimer.</p>
+  <!-- ===== Changes and Amendments (icon: diamond, center) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="heading-with-icon-center">
+      <h5><span class="led-indicator"></span> Changes and Amendments</h5>
+      <span class="ai-icon-diamond-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;">We reserve the right to modify this disclaimer at any time. Such changes will be effective immediately upon posting on our website. It is your responsibility to regularly review this disclaimer.</p>
+  </div>
 
-    <!-- Disclaimer for Rummy Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #22c55e;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">Disclaimer for Rummy Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is a brief and partial disclaimer. For full details, refer to the specific Rummy app’s own disclaimer. Rummy games are intended for users aged 18+ and involve elements of skill and chance. Play at your own risk and ensure compliance with local gambling laws. Adding money to these games is done at the user’s own risk.</p>
+  <!-- ===== Rummy Disclaimer (icon: star, right) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #22c55e;">
+    <div class="heading-with-icon-right">
+      <h5 style="border-bottom-color:#22c55e;"><span class="led-indicator"></span> Disclaimer for Rummy Apps on YONO GAMES Shop</h5>
+      <span class="ai-icon-star-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is a brief and partial disclaimer. For full details, refer to the specific Rummy app’s own disclaimer. Rummy games are intended for users aged 18+ and involve elements of skill and chance. Play at your own risk and ensure compliance with local gambling laws. Adding money to these games is done at the user’s own risk.</p>
+  </div>
 
-    <!-- Disclaimer for Ludo Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #06b6d4;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">Disclaimer for Ludo Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This disclaimer is concise and may not cover all aspects. Review the full disclaimer in the specific Ludo app. Ludo apps are for entertainment and suitable for users 18+. Play responsibly and at your own risk. Any financial transactions within the app are the responsibility of the user.</p>
+  <!-- ===== Ludo Disclaimer (icon: shield, left) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #06b6d4;">
+    <div class="heading-with-icon-left">
+      <span class="ai-icon-shield-lg"></span>
+      <h5 style="border-bottom-color:#06b6d4;"><span class="led-indicator"></span> Disclaimer for Ludo Apps on YONO GAMES Shop</h5>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This disclaimer is concise and may not cover all aspects. Review the full disclaimer in the specific Ludo app. Ludo apps are for entertainment and suitable for users 18+. Play responsibly and at your own risk. Any financial transactions within the app are the responsibility of the user.</p>
+  </div>
 
-    <!-- Disclaimer for Investment Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #8b5cf6;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">Disclaimer for Investment Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This disclaimer is partial. For complete information, review the specific investment app’s disclaimer. Investment apps are for users aged 18+ and involve financial risks, including potential loss of capital. Decisions should be made based on personal financial situations. Any investments are made at the user’s own risk.</p>
+  <!-- ===== Investment Disclaimer (icon: diamond, center) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #8b5cf6;">
+    <div class="heading-with-icon-center">
+      <h5 style="border-bottom-color:#8b5cf6;"><span class="led-indicator"></span> Disclaimer for Investment Apps on YONO GAMES Shop</h5>
+      <span class="ai-icon-diamond-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This disclaimer is partial. For complete information, review the specific investment app’s disclaimer. Investment apps are for users aged 18+ and involve financial risks, including potential loss of capital. Decisions should be made based on personal financial situations. Any investments are made at the user’s own risk.</p>
+  </div>
 
-    <!-- Disclaimer for Fantasy Sports Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">Disclaimer for Fantasy Sports Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is a summarized disclaimer. Refer to the full disclaimer in each Fantasy Sports app for comprehensive details. These apps are intended for users aged 18+ and involve an element of financial risk. There is no guarantee of winning, and losses incurred are the user’s responsibility. Play and engage in financial transactions at your own risk.</p>
+  <!-- ===== Fantasy Sports Disclaimer (icon: star, right) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #f59e0b;">
+    <div class="heading-with-icon-right">
+      <h5 style="border-bottom-color:#f59e0b;"><span class="led-indicator"></span> Disclaimer for Fantasy Sports Apps on YONO GAMES Shop</h5>
+      <span class="ai-icon-star-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is a summarized disclaimer. Refer to the full disclaimer in each Fantasy Sports app for comprehensive details. These apps are intended for users aged 18+ and involve an element of financial risk. There is no guarantee of winning, and losses incurred are the user’s responsibility. Play and engage in financial transactions at your own risk.</p>
+  </div>
 
-    <!-- Disclaimer for Other Earning Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #dc2626;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">Disclaimer for Other Earning Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is an abbreviated disclaimer. Consult the full disclaimer in each earning app for more details. These apps are suitable for users aged 18+ and may offer potential income opportunities with no guaranteed earnings. Any financial involvement or transactions within these apps are entirely at the user’s risk.</p>
+  <!-- ===== Other Earning Apps Disclaimer (icon: shield, left) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #dc2626;">
+    <div class="heading-with-icon-left">
+      <span class="ai-icon-shield-lg"></span>
+      <h5 style="border-bottom-color:#dc2626;"><span class="led-indicator"></span> Disclaimer for Other Earning Apps on YONO GAMES Shop</h5>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>General Notice:</strong> This is an abbreviated disclaimer. Consult the full disclaimer in each earning app for more details. These apps are suitable for users aged 18+ and may offer potential income opportunities with no guaranteed earnings. Any financial involvement or transactions within these apps are entirely at the user’s risk.</p>
+  </div>
 
-    <!-- General Disclaimer for Third-Party Apps -->
-    <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #b45900; background: #fffcf0;">
-      <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin-bottom: 8px;">General Disclaimer for Third-Party Apps on YONO GAMES Shop</h5>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Notice of Non-Affiliation and Disclaimer:</strong> YONO GAMES Shop does not operate, control, or manage any of the applications (Apps) listed on our platform, including Rummy, Ludo, Fantasy Sports, Investment Apps, Trading Apps, and other earning apps. These Apps are developed, owned, and operated by independent third parties.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Third-Party Apps:</strong> Each App available through YONO GAMES Shop is the sole responsibility of the respective third-party developers or companies. YONO GAMES Shop acts as a platform to provide access to these Apps but is not involved in their operation or management.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>User Discretion and Responsibility:</strong> Users are advised that any interaction, financial transaction, or participation in activities within these Apps is conducted at their own risk. YONO GAMES Shop does not endorse or assume responsibility for the functionality, content, or any aspect of these third-party Apps.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Age Restriction and Risk Acknowledgment:</strong> The Apps listed on our platform are intended for users aged 18+ and may involve various levels of risk, including financial risk. Users should play, invest, or engage in these Apps at their own discretion and risk.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Independent App Disclaimers:</strong> We strongly recommend that users review and understand the full disclaimer, terms and conditions, and privacy policy of each App they intend to use. The brief disclaimers provided here on YONO GAMES Shop are not exhaustive and may not encapsulate all the terms of use and risks associated with each App.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>No Liability:</strong> YONO GAMES Shop assumes no liability for any losses, damages, or issues arising from the use of these third-party Apps. Our role is limited to providing a platform for accessing these Apps, and we are not responsible for their operation, content, or any outcomes from their use.</p>
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Notice of Regional Legal Restrictions:</strong> Users are hereby informed that certain applications (Apps) available on YONO GAMES Shop, such as Rummy, Poker, and Fantasy Sports, may be subject to legal restrictions in certain states within India.</p>
+  <!-- ===== General Third-Party Disclaimer (icon: diamond, center) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #b45900; background: #fffcf0;">
+    <div class="heading-with-icon-center">
+      <h5 style="border-bottom-color:#b45900;"><span class="led-indicator"></span> General Disclaimer for Third-Party Apps on YONO GAMES Shop</h5>
+      <span class="ai-icon-diamond-lg"></span>
     </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Notice of Non-Affiliation and Disclaimer:</strong> YONO GAMES Shop does not operate, control, or manage any of the applications (Apps) listed on our platform, including Rummy, Ludo, Fantasy Sports, Investment Apps, Trading Apps, and other earning apps. These Apps are developed, owned, and operated by independent third parties.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Third-Party Apps:</strong> Each App available through YONO GAMES Shop is the sole responsibility of the respective third-party developers or companies. YONO GAMES Shop acts as a platform to provide access to these Apps but is not involved in their operation or management.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>User Discretion and Responsibility:</strong> Users are advised that any interaction, financial transaction, or participation in activities within these Apps is conducted at their own risk. YONO GAMES Shop does not endorse or assume responsibility for the functionality, content, or any aspect of these third-party Apps.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Age Restriction and Risk Acknowledgment:</strong> The Apps listed on our platform are intended for users aged 18+ and may involve various levels of risk, including financial risk. Users should play, invest, or engage in these Apps at their own discretion and risk.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>Independent App Disclaimers:</strong> We strongly recommend that users review and understand the full disclaimer, terms and conditions, and privacy policy of each App they intend to use. The brief disclaimers provided here on YONO GAMES Shop are not exhaustive and may not encapsulate all the terms of use and risks associated with each App.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;"><strong>No Liability:</strong> YONO GAMES Shop assumes no liability for any losses, damages, or issues arising from the use of these third-party Apps. Our role is limited to providing a platform for accessing these Apps, and we are not responsible for their operation, content, or any outcomes from their use.</p>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 0;"><strong>Notice of Regional Legal Restrictions:</strong> Users are hereby informed that certain applications (Apps) available on YONO GAMES Shop, such as Rummy, Poker, and Fantasy Sports, may be subject to legal restrictions in certain states within India.</p>
+  </div>
 
-    <!-- Final Acknowledgment -->
-    <div style="background: #f0f9f0; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border-left: 4px solid #22c55e;">
-      <p style="font-size: 0.8rem; line-height: 1.6; color: #1e562a; margin-bottom: 0;">By using YONO GAMES Shop, users acknowledge and agree to this general disclaimer, affirming their understanding that the Apps are managed by respective third-party entities and that all interactions with these Apps are at their own risk and responsibility.</p>
+  <!-- ===== Final Acknowledgment (icon: star, right) ===== -->
+  <div style="background: #f0f9f0; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border-left: 4px solid #22c55e;">
+    <div class="heading-with-icon-right">
+      <h5 style="border-bottom-color:#22c55e; color:#1e562a; font-size:0.95rem; border-bottom: 2px solid #22c55e; padding-bottom:4px; margin:0;"><span class="led-indicator"></span> Acknowledgment</h5>
+      <span class="ai-icon-star-lg"></span>
     </div>
-
-  </div> <!-- end disclaimer-content-wrapper -->
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #1e562a; margin-bottom: 0;">By using YONO GAMES Shop, users acknowledge and agree to this general disclaimer, affirming their understanding that the Apps are managed by respective third-party entities and that all interactions with these Apps are at their own risk and responsibility.</p>
+  </div>
 
   <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON (bottom-right) ===== -->
   <style>
