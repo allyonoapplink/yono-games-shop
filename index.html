@@ -1527,24 +1527,27 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      // about.html content cleared – nothing displayed
-      showInfoModal('', '');
+      showInfoModal('About - Yono Games Shop', `
+        <!-- about.html content cleared -->
+      `);
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      // contact.html content cleared – nothing displayed
-      showInfoModal('', '');
+      showInfoModal('Contact Us - Yono Games Shop', `
+        <!-- contact.html content cleared -->
+      `);
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      // disclaimer.html content cleared – nothing displayed
-      showInfoModal('', '');
+      showInfoModal('Disclaimer - Yono Games Shop', `
+        <!-- disclaimer.html content cleared -->
+      `);
     });
 
     const darkToggle = document.getElementById('darkThemeToggle');
