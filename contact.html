@@ -1,762 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>YONO GAMES Shop · About</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+<!-- contact.html -->
+<div style="padding: 6px 4px; font-family: 'Segoe UI', 'Inter', sans-serif; max-width: 100%;">
+
+  <!-- Main Heading -->
+  <h4 style="font-size: 1.2rem; font-weight: 800; color: #1e562a; border-left: 4px solid #ff8c00; padding-left: 12px; margin-bottom: 16px;">
+    Contact Us - YONO GAMES Shop
+  </h4>
+
+  <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" (first occurrence) -->
+  <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6;">
+    <strong>YONO GAMES Shop</strong> does not provide Customer Support for Listed Apps/Games. If you encounter any problems, please contact the support option within those games. Because the Listed Games/Apps are not ours. We do not own those games.
+  </p>
+
+  <!-- Advertisement Heading -->
+  <h5 style="font-size: 1.0rem; font-weight: 700; color: #0a2e1d; margin: 20px 0 10px 0; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px;">
+    Advertisement/Business Queries
+  </h5>
+  <p style="font-size: 0.8rem; line-height: 1.5; color: #334155; margin-bottom: 14px;">
+    If you are a game maker company, operator, or administrator, and you want to promote your application through our website, you can contact us through the contact details given below and discuss promotion and cooperation.
+  </p>
+
+  <!-- Contact Table -->
+  <div style="overflow-x: auto; margin: 12px 0; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.06);">
+    <table class="contact-table" style="width:100%; border-collapse: collapse; background: white; border-radius: 16px; overflow: hidden;">
+      <thead>
+        <tr style="background: #0a2e1d; color: white;">
+          <th style="padding: 10px 14px; text-align: left; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.3px;">Title</th>
+          <th style="padding: 10px 14px; text-align: left; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.3px;">Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px 14px; border-bottom: 1px solid #ffcf8a; font-weight: 600; font-size: 0.8rem;">Email :</td>
+          <td style="padding: 10px 14px; border-bottom: 1px solid #ffcf8a;">
+            <a href="mailto:info@yonogames.shop" class="contact-email" style="color: #d50000; font-weight: 700; text-decoration: none;">info@yonogames.shop</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px 14px; border-bottom: none; font-weight: 600; font-size: 0.8rem;">Telegram :</td>
+          <td style="padding: 10px 14px; border-bottom: none;">
+            <a href="https://t.me/yonogamestite" target="_blank" class="contact-telegram" style="color: #0088cc; font-weight: 700; text-decoration: none;">@yonogamestite</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Updated: "YONO GAMES Store" → "YONO GAMES Shop" (second occurrence) -->
+  <p style="font-size: 0.8rem; line-height: 1.5; color: #2d3e2b; background: #f0f9f0; padding: 12px 16px; border-radius: 12px; border-left: 4px solid #22c55e; margin: 12px 0 8px 0;">
+    You can directly contact us through <strong>Email</strong> as given in the <strong>Table</strong> above, and can deal with us.
+  </p>
+
+  <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON ===== -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background: #080c0b;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      padding: 0 0 80px 0;
-      color: #e2efe8;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .premium-header {
-      position: sticky;
-      top: 0;
-      z-index: 60;
-      background: rgba(8, 12, 11, 0.82);
-      backdrop-filter: blur(14px) saturate(180%);
-      -webkit-backdrop-filter: blur(14px) saturate(180%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
-    }
-
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .brand-name {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #f0fff5, #b3ffd9);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 20px rgba(140, 255, 180, 0.3);
-    }
-
-    /* Close button removed as requested */
-
-    .about-container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 18px 18px 40px;
-    }
-
-    .glass-card {
-      background: rgba(18, 28, 24, 0.5);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 32px;
-      padding: 24px 22px;
-      margin-bottom: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      box-shadow: 0 20px 40px -18px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 255, 180, 0.02) inset;
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .glass-card:hover {
-      box-shadow: 0 24px 48px -18px rgba(0, 255, 180, 0.10), 0 0 0 1px rgba(0, 255, 180, 0.06) inset;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 8px;
-      background: linear-gradient(145deg, #e5ffee, #b0f7d0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin: 0 0 16px 0;
-      color: #d4fae6;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      letter-spacing: -0.3px;
-    }
-
-    .led-icon-green {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background: #70f0a0;
-      border-radius: 50%;
-      box-shadow: 0 0 18px #70f0a066;
-      flex-shrink: 0;
-    }
-    .led-icon-blue {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background: #60b0ff;
-      border-radius: 50%;
-      box-shadow: 0 0 18px #60b0ff66;
-      flex-shrink: 0;
-    }
-    .led-icon-cyan {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background: #40e0d0;
-      border-radius: 50%;
-      box-shadow: 0 0 18px #40e0d066;
-      flex-shrink: 0;
-    }
-    .led-icon-purple {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background: #c084fc;
-      border-radius: 50%;
-      box-shadow: 0 0 18px #c084fc66;
-      flex-shrink: 0;
-    }
-    .led-icon-glow {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background: #a0f0c0;
-      border-radius: 50%;
-      box-shadow: 0 0 24px #70f0a088;
-      margin-right: 6px;
-    }
-
-    h3 {
-      font-size: 20px;
-      font-weight: 600;
-      margin: 18px 0 12px 0;
-      color: #c8f0db;
-    }
-
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      color: #d0dfd8;
-      margin-bottom: 18px;
-      line-height: 1.7;
-    }
-
-    .lead {
-      font-size: 17px;
-      font-weight: 400;
-      color: #e2f5eb;
-      border-left: 3px solid #50d68a;
-      padding-left: 16px;
-      background: rgba(0, 255, 150, 0.02);
-      border-radius: 0 12px 12px 0;
-    }
-
-    ul, ol {
-      padding-left: 22px;
-      margin: 12px 0 18px 0;
-    }
-
-    li {
-      font-size: 15.5px;
-      margin-bottom: 10px;
-      color: #c7dbd2;
-      padding-left: 6px;
-    }
-
-    li strong {
-      color: #bef5d0;
-      font-weight: 600;
-    }
-
-    .check-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .check-list li {
-      padding-left: 28px;
-      position: relative;
-      margin-bottom: 12px;
-    }
-
-    .check-list li::before {
-      content: "◆";
-      position: absolute;
-      left: 0;
-      color: #70f0a0;
-      font-size: 14px;
-      text-shadow: 0 0 12px #70f0a066;
-    }
-
-    .badge-glow {
-      background: rgba(0, 255, 170, 0.06);
-      border: 1px solid rgba(0, 255, 170, 0.12);
-      color: #b0f5cf;
-      padding: 2px 14px;
-      border-radius: 60px;
-      font-size: 12px;
-      font-weight: 600;
-      display: inline-block;
-      backdrop-filter: blur(4px);
-      margin-bottom: 8px;
-      letter-spacing: 0.3px;
-    }
-
-    hr {
-      border: none;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(0, 255, 180, 0.15), transparent);
-      margin: 28px 0 24px;
-    }
-
-    /* === PREMIUM LED BACK-TO-TOP BUTTON === */
-    .back-to-top {
+    .back-to-top-led {
       position: fixed;
       bottom: 28px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
+      left: 28px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
       border-radius: 50%;
-      background: rgba(10, 20, 16, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 2px solid rgba(0, 255, 170, 0.4);
-      box-shadow: 0 0 30px rgba(0, 255, 170, 0.25), inset 0 0 20px rgba(0, 255, 170, 0.08);
-      color: #b5ffd0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #ffffff, #f0f4ff);
+      border: none;
+      box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15);
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
-      z-index: 99;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(30px) scale(0.85);
-      text-shadow: 0 0 30px rgba(112, 240, 160, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #0a2e1d;
+      transition: all 0.25s ease;
+      animation: floatGlow 3s ease-in-out infinite, pulseGlow 2.8s ease-in-out infinite;
+      text-shadow: 0 0 12px rgba(255,255,255,0.9);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.6);
+      will-change: transform, box-shadow;
       line-height: 1;
-      animation: none;
     }
-
-    .back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0) scale(1);
-      animation: floatGlow 2.8s infinite ease-in-out;
+    .back-to-top-led:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 0 35px rgba(255,255,255,0.9), 0 0 70px rgba(180, 220, 255, 0.7), 0 0 120px rgba(150, 200, 255, 0.4), 0 12px 40px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #ffffff, #e8f0ff);
+      color: #0a2e1d;
     }
-
-    .back-to-top:hover {
-      transform: scale(1.08);
-      border-color: #70f0a0;
-      box-shadow: 0 0 50px rgba(0, 255, 170, 0.5), inset 0 0 30px rgba(0, 255, 170, 0.15);
-      background: rgba(15, 35, 28, 0.85);
-    }
-
-    .back-to-top:active {
+    .back-to-top-led:active {
       transform: scale(0.92);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(180, 220, 255, 0.5);
     }
-
-    .back-to-top .arrow-up {
-      display: inline-block;
-      font-size: 34px;
-      line-height: 1;
-      font-weight: 200;
-      color: #70f0a0;
-      text-shadow: 0 0 30px rgba(112, 240, 160, 0.6), 0 0 60px rgba(112, 240, 160, 0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .back-to-top:hover .arrow-up {
-      transform: translateY(-3px);
-      text-shadow: 0 0 50px rgba(112, 240, 160, 0.9), 0 0 80px rgba(112, 240, 160, 0.4);
-    }
-
     @keyframes floatGlow {
-      0% { box-shadow: 0 0 25px rgba(0, 255, 170, 0.25), 0 0 50px rgba(0, 255, 170, 0.1); }
-      50% { box-shadow: 0 0 45px rgba(0, 255, 170, 0.45), 0 0 80px rgba(0, 255, 170, 0.2); }
-      100% { box-shadow: 0 0 25px rgba(0, 255, 170, 0.25), 0 0 50px rgba(0, 255, 170, 0.1); }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
     }
-
-    /* === TOP THREE PREMIUM LED ICONS === */
-    .vertical-icons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 38px;
-      padding: 20px 0 12px 0;
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15); }
+      50% { box-shadow: 0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(180, 220, 255, 0.8), 0 0 100px rgba(150, 200, 255, 0.4), 0 8px 32px rgba(0,0,0,0.15); }
     }
-
-    .icon-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 76px;
-      height: 76px;
-      position: relative;
-    }
-
-    /* Icon 1: Premium Glowing Arrow - layered neon effect */
-    .icon-arrow-up {
-      display: inline-block;
-      width: 0;
-      height: 0;
-      border-left: 24px solid transparent;
-      border-right: 24px solid transparent;
-      border-bottom: 42px solid #70f0a0;
-      filter: drop-shadow(0 0 25px rgba(112, 240, 160, 0.5)) drop-shadow(0 0 60px rgba(112, 240, 160, 0.2));
-      flex-shrink: 0;
-      position: relative;
-      animation: glowPulseGreen 2.4s infinite alternate;
-      transform: scale(1);
-    }
-    .icon-arrow-up::after {
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: -16px;
-      border-left: 16px solid transparent;
-      border-right: 16px solid transparent;
-      border-bottom: 28px solid #70f0a0;
-      transform: rotate(180deg) scale(0.5);
-      filter: drop-shadow(0 0 20px rgba(112, 240, 160, 0.3));
-      opacity: 0.7;
-    }
-    @keyframes glowPulseGreen {
-      0% { filter: drop-shadow(0 0 10px rgba(112, 240, 160, 0.3)) drop-shadow(0 0 30px rgba(112, 240, 160, 0.1)); }
-      100% { filter: drop-shadow(0 0 40px rgba(112, 240, 160, 0.7)) drop-shadow(0 0 80px rgba(112, 240, 160, 0.3)); }
-    }
-
-    /* Icon 2: Premium Glowing Diamond - with inner glow */
-    .icon-diamond {
-      display: inline-block;
-      width: 44px;
-      height: 44px;
-      background: transparent;
-      border: 3px solid #40e0d0;
-      transform: rotate(45deg);
-      box-shadow: 0 0 30px rgba(64, 224, 208, 0.4), inset 0 0 25px rgba(64, 224, 208, 0.15);
-      flex-shrink: 0;
-      animation: glowPulseCyan 2.8s infinite alternate;
-      position: relative;
-    }
-    .icon-diamond::before {
-      content: '';
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      right: 4px;
-      bottom: 4px;
-      background: rgba(64, 224, 208, 0.08);
-      transform: rotate(0deg);
-      box-shadow: inset 0 0 20px rgba(64, 224, 208, 0.1);
-    }
-    @keyframes glowPulseCyan {
-      0% { box-shadow: 0 0 15px rgba(64, 224, 208, 0.2), inset 0 0 15px rgba(64, 224, 208, 0.05); }
-      100% { box-shadow: 0 0 50px rgba(64, 224, 208, 0.6), inset 0 0 35px rgba(64, 224, 208, 0.2); }
-    }
-
-    /* Icon 3: Premium Shield with Crown - dual glow */
-    .icon-shield-crown {
-      display: inline-block;
-      width: 46px;
-      height: 52px;
-      background: transparent;
-      border: 3px solid #60b0ff;
-      border-radius: 8px 8px 20px 20px;
-      box-shadow: 0 0 30px rgba(96, 176, 255, 0.4), inset 0 0 20px rgba(96, 176, 255, 0.1);
-      flex-shrink: 0;
-      position: relative;
-      animation: glowPulseBlue 2.6s infinite alternate;
-    }
-    .icon-shield-crown::before {
-      content: '';
-      position: absolute;
-      top: -18px;
-      left: 6px;
-      width: 0;
-      height: 0;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-bottom: 22px solid #60b0ff;
-      filter: drop-shadow(0 0 20px rgba(96, 176, 255, 0.3));
-    }
-    .icon-shield-crown::after {
-      content: '';
-      position: absolute;
-      top: -18px;
-      right: 6px;
-      width: 0;
-      height: 0;
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-bottom: 22px solid #60b0ff;
-      filter: drop-shadow(0 0 20px rgba(96, 176, 255, 0.3));
-    }
-    @keyframes glowPulseBlue {
-      0% { box-shadow: 0 0 15px rgba(96, 176, 255, 0.2), inset 0 0 15px rgba(96, 176, 255, 0.05); }
-      100% { box-shadow: 0 0 50px rgba(96, 176, 255, 0.6), inset 0 0 35px rgba(96, 176, 255, 0.2); }
-    }
-
-    /* LED Header Bars */
-    .led-header-wrap {
-      background: rgba(8, 12, 11, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border-radius: 28px;
-      padding: 28px 18px 30px;
-      margin-bottom: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      box-shadow: 0 20px 40px -18px rgba(0, 255, 180, 0.12), 0 0 0 1px rgba(0, 255, 180, 0.02) inset;
-      text-align: center;
-      transition: box-shadow 0.3s ease;
-    }
-
-    .led-header-wrap:hover {
-      box-shadow: 0 24px 48px -18px rgba(0, 255, 180, 0.20), 0 0 0 1px rgba(0, 255, 180, 0.06) inset;
-    }
-
-    .led-header-title {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, #f0fff5, #b3ffd9);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      display: inline-block;
-      margin-bottom: 6px;
-    }
-
-    .led-header-sub {
-      font-size: 15px;
-      font-weight: 400;
-      color: #b0cfc0;
-      letter-spacing: 0.6px;
-      opacity: 0.85;
-      margin-top: 2px;
-    }
-
-    .led-glow-bars {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      margin-top: 18px;
-      padding: 10px 0 4px;
-    }
-
-    .led-bar {
-      width: 48px;
-      height: 6px;
-      border-radius: 10px;
-      animation: ledGlowBar 2.8s ease-in-out infinite alternate;
-    }
-
-    .led-bar.cyan {
-      background: #40e0d0;
-      box-shadow: 0 0 28px #40e0d0aa, 0 0 60px #40e0d044;
-      animation-delay: 0s;
-    }
-    .led-bar.green {
-      background: #70f0a0;
-      box-shadow: 0 0 28px #70f0a0aa, 0 0 60px #70f0a044;
-      animation-delay: 0.7s;
-    }
-    .led-bar.yellow {
-      background: #f5d742;
-      box-shadow: 0 0 28px #f5d742aa, 0 0 60px #f5d74244;
-      animation-delay: 1.4s;
-    }
-
-    @keyframes ledGlowBar {
-      0% { opacity: 0.3; transform: scaleX(0.7); }
-      100% { opacity: 1; transform: scaleX(1.4); }
-    }
-
-    .author-credit {
-      margin-top: 12px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.04);
-      font-size: 15px;
-      color: #8fb3a5;
-      letter-spacing: 0.3px;
-    }
-    .author-credit strong {
-      color: #b5ffd0;
-      font-weight: 600;
-    }
-
+    /* Mobile responsive */
     @media (max-width: 480px) {
-      .brand-name {
-        font-size: 19px;
-      }
-      .glass-card {
-        padding: 20px 16px;
-      }
-      h1 {
-        font-size: 28px;
-      }
-      h2 {
-        font-size: 22px;
-      }
-      .back-to-top {
-        width: 54px;
-        height: 54px;
+      .back-to-top-led {
+        width: 52px;
+        height: 52px;
         bottom: 20px;
-        right: 16px;
-      }
-      .back-to-top .arrow-up {
-        font-size: 30px;
-      }
-      .icon-wrap {
-        width: 64px;
-        height: 64px;
-      }
-      .icon-arrow-up {
-        border-left-width: 20px;
-        border-right-width: 20px;
-        border-bottom-width: 36px;
-      }
-      .icon-arrow-up::after {
-        top: 5px;
-        left: -14px;
-        border-left-width: 14px;
-        border-right-width: 14px;
-        border-bottom-width: 24px;
-      }
-      .icon-diamond {
-        width: 38px;
-        height: 38px;
-      }
-      .icon-shield-crown {
-        width: 40px;
-        height: 46px;
-      }
-      .icon-shield-crown::before,
-      .icon-shield-crown::after {
-        top: -16px;
-        border-left-width: 12px;
-        border-right-width: 12px;
-        border-bottom-width: 18px;
-      }
-      .led-header-title {
-        font-size: 22px;
-      }
-      .led-bar {
-        width: 36px;
-        height: 5px;
+        left: 20px;
+        font-size: 1.6rem;
       }
     }
-
-    ::selection {
-      background: #1f6040;
-      color: #f0fff5;
+    @media (max-width: 380px) {
+      .back-to-top-led {
+        width: 46px;
+        height: 46px;
+        bottom: 16px;
+        left: 16px;
+        font-size: 1.4rem;
+      }
     }
   </style>
-</head>
-<body>
 
-<header class="premium-header">
-  <div class="header-left">
-    <span class="brand-name">YONO GAMES Shop</span>
-  </div>
-  <!-- Close button removed as requested -->
-</header>
+  <button class="back-to-top-led" id="backToTopBtn" aria-label="Back to Top" title="Back to Top">⬆</button>
 
-<main class="about-container">
-
-  <!-- ====== PREMIUM LED HEADER (Cyan, Green, Yellow) ====== -->
-  <div class="led-header-wrap">
-    <div class="led-header-title">YONO GAMES Shop</div>
-    <div class="led-header-sub">Explore · Discover · Play</div>
-    <div class="led-glow-bars">
-      <span class="led-bar cyan"></span>
-      <span class="led-bar green"></span>
-      <span class="led-bar yellow"></span>
-    </div>
-  </div>
-
-  <!-- ====== TOP VERTICAL ICONS ====== -->
-  <div class="glass-card" style="text-align:center;">
-    <div class="vertical-icons">
-      <div class="icon-wrap"><span class="icon-arrow-up"></span></div>
-      <div class="icon-wrap"><span class="icon-diamond"></span></div>
-      <div class="icon-wrap"><span class="icon-shield-crown"></span></div>
-    </div>
-  </div>
-
-  <div class="glass-card">
-    <div class="badge-glow"><span class="led-icon-glow"></span> ABOUT · YONO GAMES Shop</div>
-    <h1>About YONO GAMES Shop</h1>
-    <p class="lead" style="margin-top:6px;">Empowering Users Through Transparency</p>
-    <p>YONO GAMES Shop is built to help players navigate the digital gaming and earning landscape with structured information, not marketing noise. Our platform focuses on platform mechanics, market behavior, and performance comparisons across the gaming industry. The goal is simple: to show how digital systems work and where true value exists so our users can act with total clarity.</p>
-    <p>This is not a "get-rich-quick" portal. It is a research-driven system designed to demystify apps, explain how reward structures move, and help users understand exactly what they are engaging with. If you are trying to avoid blind decisions and impulse-driven guesswork, you are in the right place.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-green"></span> Why YONO GAMES Shop Exists</h2>
-    <p>Most users in the gaming and earning space lose momentum early and it rarely happens because they chose the wrong app. It happens because they don't understand pricing and probability.</p>
-    <p>Different platforms offer different Return to Player (RTP) percentages and reward margins for the same activities. These margins are often hidden. Beginners face a second problem: they jump in fast because a bonus looks attractive, and within a few sessions, their balance is gone. This isn't because success is impossible, but because the structure behind the system was never explained properly.</p>
-    <p>YONO GAMES Shop exists to fix that gap. Our focus isn't on telling users what to play; it's on showing how the ecosystem functions so your decisions improve over time.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-blue"></span> Who We Are</h2>
-    <p>YONO GAMES Shop is built by a team that has worked closely with gaming platforms, product architecture, and user behavior analytics. We've seen how users interact with digital rewards, where confusion happens, and how small misunderstandings turn into consistent losses.</p>
-    <p>That exposure shaped our structure. Instead of focusing on "luck," we focus on transparency, probability, and informed decision-making. We aren't here to position ourselves as gurus or claim perfect insight. Our goal is to translate complex gaming systems into a format that is clear, practical, and usable for the everyday user.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-cyan"></span> Data Integrity &amp; Two-Step Verification</h2>
-    <p>Transparency is our core metric. Every insight published on YONO GAMES Shop undergoes a rigorous Two-Step Verification Process:</p>
-    <ul class="check-list">
-      <li><strong>Quantitative Filter:</strong> Our system scans historical data and platform mechanics to ensure an app meets our strict "Integrity Criteria."</li>
-      <li><strong>Manual SME Review:</strong> A Subject Matter Expert (SME) with years of industry experience reviews the "contextual variables" (withdrawal speeds, license validity, and technical stability) that data alone might miss.</li>
-    </ul>
-    <p>We maintain an Internal Performance Database where we track "Platform Scenarios" to monitor long-term variance. This ensures our methodology remains accurate before any information reaches our users.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-purple"></span> The YONO GAMES Shop Editorial Standards</h2>
-    <ul class="check-list">
-      <li><strong>Collective Expertise:</strong> Analysis is authored by our Research Lab, composed of former risk management professionals and system analysts with decades of combined experience in global digital markets.</li>
-      <li><strong>Role-Based Accountability:</strong> While we protect the privacy of our individual analysts—many of whom still consult within the industry—every piece of content is signed off by our Lead Strategy Officer or Head of Technical Research.</li>
-      <li><strong>Editorial Friction:</strong> Every market scenario undergoes "Stress-Testing" to confirm statistical significance. This friction allows us to maintain Commercial Independence and provide users with normalized data they can trust.</li>
-    </ul>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-green"></span> Our Approach to Content</h2>
-    <p>Digital engagement is a probability system, not a guessing exercise.</p>
-    <p>Most platforms focus on outcomes. YONO GAMES Shop focuses on pricing. That shift changes how decisions are made. If you consistently choose platforms with better margins, your long-term results improve even if short-term outcomes fluctuate.</p>
-    <p>Our content is structured around logic, not emotion. Variance is part of the system; understanding the difference between a "good decision" and a "lucky outcome" is critical for long-term control.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-blue"></span> Our Commitment to Responsible Wagering</h2>
-    <p>At YONO GAMES Shop, we believe gaming should remain a form of entertainment, not a financial strategy. We strictly align our operations with global consumer protection standards.</p>
-    <ul class="check-list">
-      <li><strong>Player Protection:</strong> We fully support and encourage the use of self-exclusion registers and deposit limits.</li>
-      <li><strong>National Support:</strong> If you or someone you know is struggling with gaming habits, please reach out to recognized support organizations (such as Gambling Therapy or local 24/7 helplines) for free, confidential assistance.</li>
-    </ul>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-cyan"></span> Our Commitment to Responsible Gaming</h2>
-    <p>At YONO GAMES Shop, we believe that digital gaming should be a source of entertainment, not a source of stress or a financial strategy. Because we operate in a space involving real-money apps, we recognize our responsibility to protect our community from the risks associated with compulsive behavior.</p>
-    <h3>1. Understanding the House Edge</h3>
-    <p>Every game—whether it is Rummy, Slots, or Fantasy Sports—is designed with a mathematical advantage for the operator. While skill can play a role, the "house" always maintains a margin.</p>
-    <ul>
-      <li><strong>The Reality of Variance:</strong> Winning streaks can end abruptly, and losing streaks are a normal part of the statistical cycle.</li>
-      <li><strong>Entertainment Only:</strong> Never view gaming as a primary source of income or a way to pay off debt.</li>
-    </ul>
-    <h3>2. Identifying the Warning Signs</h3>
-    <p>Healthy gaming is controlled and fun. It becomes a problem when it begins to interfere with your daily life. Ask yourself the following:</p>
-    <ul>
-      <li>Are you spending money that was intended for essentials like rent or groceries?</li>
-      <li>Do you find yourself "chasing losses" by playing longer to win back what you lost?</li>
-      <li>Does gaming cause you to feel anxious, irritable, or secretive with your family?</li>
-      <li>Have you ever borrowed money or sold assets to fund your gaming account?</li>
-    </ul>
-    <p>If you answered "yes" to any of these, it may be time to take a step back.</p>
-    <h3>3. Practical Tools for Control</h3>
-    <p>We only list platforms that provide users with the tools necessary to maintain control. We strongly encourage every YONO GAMES Shop user to set the following limits before they start:</p>
-    <ul>
-      <li><strong>Deposit Limits:</strong> Cap the amount you can transfer daily, weekly, or monthly.</li>
-      <li><strong>Session Timers:</strong> Set alerts for play duration.</li>
-      <li><strong>Cool-off Periods:</strong> Take breaks when needed.</li>
-      <li><strong>Self-Exclusion:</strong> Block access for long-term control.</li>
-    </ul>
-    <h3>4. Regional Compliance &amp; Underage Protection</h3>
-    <p>YONO GAMES Shop is strictly for individuals aged 18 or older. We advocate for parental control software (such as Net Nanny or CyberPatrol) and respect regional laws, including restrictions in states like Telangana or Odisha.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-purple"></span> Affiliate Disclosure</h2>
-    <p>YONO GAMES Shop may earn a commission when users sign up through certain links on our platform. However, this does not influence how platforms are presented. Our objective remains the same: provide clear, structured information so users can decide independently. Users are always free to choose any platform they wish.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-green"></span> Who This Platform Is For</h2>
-    <p>YONO GAMES Shop is designed for users who want structure in how they approach digital apps.</p>
-    <p>If your goal is to understand reward mechanics, compare platform pricing, and make informed choices, we provide that framework.</p>
-    <p>If you are willing to slow down, learn the system, and build consistency, the value becomes clear.</p>
-    <p>It is not built for shortcuts. Users looking for "guaranteed wins" or instant profits will not find that here.</p>
-  </div>
-
-  <div class="glass-card">
-    <h2><span class="led-icon-blue"></span> Why Trust YONO GAMES Shop</h2>
-    <p>Clarity is the focus. Structure drives everything. We don't overcomplicate simple ideas, and we don't oversell outcomes. Information is presented so it can actually be used.</p>
-    <p>YONO GAMES Shop is built on a simple principle: Better understanding leads to better decisions. Not perfect results—but better decisions. And over time, that difference compounds.</p>
-  </div>
-
-  <div class="glass-card">
-    <p>Welcome to our platform, a comprehensive hub dedicated to enhancing digital experiences for everyone. At the heart of our mission lies the commitment to empower users with access to a wide range of applications, mirroring the global accessibility of platforms like the renowned app marketplaces, but with a unique focus on Indian users.</p>
-    <p>Our journey began with a simple yet powerful vision: to revolutionize the way people discover and download apps. We recognize the evolving needs of the digital age and strive to meet them by offering an extensive selection of applications. From utility and productivity apps to entertainment and lifestyle options, our platform is a one-stop destination for all your app needs.</p>
-    <p>We are not just about providing access to apps; we are about fostering a community where knowledge about the latest digital tools is shared and celebrated. Our platform is designed to be user-friendly, ensuring a seamless experience for everyone, from tech-savvy individuals to those just starting their digital journey.</p>
-    <p>Our focus on Indian applications sets us apart, reflecting our dedication to cater to the unique needs and preferences of our audience. We believe in the power of local solutions for local challenges, and our platform is a testament to this belief.</p>
-    <p>Join us in our endeavor to bring the best of digital innovations to your fingertips. Explore, download, and stay ahead in the ever-evolving world of apps with us.</p>
-    <div class="author-credit">
-      <span class="led-icon-glow" style="display:inline-block; margin-right:6px;"></span> 
-      <strong>YONO GAMES Shop</strong>
-    </div>
-  </div>
-
-</main>
-
-<!-- ====== PREMIUM LED BACK-TO-TOP BUTTON ====== -->
-<div class="back-to-top" id="backToTopBtn" aria-label="Back to top">
-  <span class="arrow-up">⬆</span>
-</div>
-
-<script>
-  (function() {
-    const backBtn = document.getElementById('backToTopBtn');
-    
-    // Show/hide button on scroll
-    window.addEventListener('scroll', function() {
-      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > 300) {
-        backBtn.classList.add('visible');
-      } else {
-        backBtn.classList.remove('visible');
+  <script>
+    (function() {
+      const btn = document.getElementById('backToTopBtn');
+      if (btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          // Smooth scroll to top of the contact page content
+          const target = document.querySelector('.info-modal-content') || document.documentElement;
+          target.scrollTo({ top: 0, behavior: 'smooth' });
+          // Also scroll window to top for safety
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
       }
-    }, { passive: true });
+    })();
+  </script>
 
-    // Scroll to top on click with smooth behavior
-    if (backBtn) {
-      backBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-  })();
-</script>
-
-</body>
-</html>
+</div>
