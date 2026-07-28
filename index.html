@@ -560,14 +560,12 @@
       return { ratingClass: 'rating-green', sizeClass: 'size-cyan', votesClass: 'votes-dark', bonusClass: 'bonus-red' };
     }
 
-    // ===== SIMPLIFIED TAG MODELS - Only app name + bonus, no extra title =====
     const tagModelList = [
       (n,b,bArr) => `<div class="tag-box"><div class="tag-content"><span class="icon-vector gold"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <strong>${n}</strong> – ₹${b} Bonus<br>Play Rummy, Teen Patti & slots. सुरक्षित निकासी ₹100 से। Start earning real cash!</div></div><div class="tag-divider"></div><div class="tag-box"><div class="tag-content"><span class="icon-vector blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg></span> <strong>${n}</strong> – ₹${bArr[1]} Bonus<br>रोमांचक गेम खेलें। Fast withdrawals via UPI. Trusted by millions!</div></div>`,
       (n,b,bArr) => `<div class="tag-box"><div class="tag-content"><span class="icon-vector green"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span> <strong>${n}</strong> – ₹${b} Welcome Bonus!<br>रोमांचक रम्मी टेबल, daily rewards, fast UPI withdrawals. ${n} gives free cash!</div></div><div class="tag-divider"></div><div class="tag-box"><div class="tag-content"><span class="icon-vector red"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg></span> <strong>${n}</strong> – ₹${bArr[1]} Bonus<br>Build sequences, join cash tournaments & daily mystery rewards. सुरक्षित गेमिंग!</div></div>`,
       (n,b,bArr) => `<div class="tag-box"><div class="tag-content"><span class="icon-vector purple"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span> <strong>${n}</strong> – ₹${b} Bonus!<br>Enjoy thrilling casino games, daily rewards update, and fast UPI withdrawals. ${n} gives you free cash on signup!</div></div><div class="tag-divider"></div><div class="tag-box"><div class="tag-content"><span class="icon-vector gold"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span> <strong>${n}</strong> – ₹${bArr[2]} Bonus<br>दैनिक लॉगिन बोनस, daily earnings, instant bank transfers. ${n} loyalty rewards.</div></div>`
     ];
 
-    // SIMPLIFIED - No extra title text, just app name
     const titleModels = [
       (n,b) => `${n} – ₹${b} Bonus | Download Now`,
       (n,b) => `${n} – ₹${b} Welcome Bonus`,
@@ -724,7 +722,6 @@
               }).join('')}
               <span class="opt-item" style="background:#22c55e;color:white;border-color:#22c55e;font-weight:700;">+ 5 More</span>
             </div>
-            <!-- PREMIUM TAGS GRID - Mobile optimized 2-column -->
             <div class="tag-grid-premium" id="tagGridContainerFull">${createTagsHTML(selectedApp.name, bonusNum, selectedIndex)}</div>
           </div>
           <div class="other-apps-title" style="margin-top:20px;">Other Yono Apps</div>
@@ -752,20 +749,24 @@
       `;
       downloadContainer.innerHTML = fullViewHtml;
 
+      // FIXED: Other apps download - no scroll to top!
+      document.querySelectorAll('#otherAppsGridFull .small-download').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          const otherIdx = this.getAttribute('data-other-index');
+          if (otherIdx !== null) {
+            navigateToDownloadPage(parseInt(otherIdx));
+          }
+        });
+      });
+
       document.querySelectorAll('#fiveOptionsFull .opt-item').forEach(el => {
         el.addEventListener('click', function() {
           const idx = this.getAttribute('data-opt-index');
           if (idx !== null) navigateToDownloadPage(parseInt(idx));
         });
       });
-      document.querySelectorAll('#otherAppsGridFull .small-download').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          const otherIdx = btn.getAttribute('data-other-index');
-          if (otherIdx !== null) navigateToDownloadPage(parseInt(otherIdx));
-          e.stopPropagation();
-        });
-      });
-      // NO window.scrollTo({ top: 0 }) - removed as requested!
     }
 
     function goToMainGrid() {
@@ -774,7 +775,6 @@
       if (gridDiv && downloadContainer) {
         gridDiv.classList.remove('hidden');
         downloadContainer.classList.add('hidden');
-        // NO scrollTo here either!
       }
       currentSelectedIndex = null;
     }
