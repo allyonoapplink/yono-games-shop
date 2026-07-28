@@ -440,17 +440,16 @@
     .info-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 300; justify-content: center; align-items: center; }
     .info-modal-content { 
       background: white; 
-      max-width: 100%;
-      width: 100%;
-      height: 100%;
-      border-radius: 0;
-      padding: 20px 16px;
-      text-align: left;
-      animation: fadeInUp 0.3s ease;
-      box-shadow: none;
-      border: none;
-      max-height: 100vh;
-      overflow-y: auto;
+      max-width: 400px; 
+      width: 92%; 
+      border-radius: 28px; 
+      padding: 20px 16px; 
+      text-align: left; 
+      animation: fadeInUp 0.3s ease; 
+      box-shadow: 0 30px 40px rgba(0,0,0,0.3); 
+      border: 1px solid #ffcf8a; 
+      max-height: 80vh; 
+      overflow-y: auto; 
       position: relative;
     }
     .info-modal-content h4 { 
@@ -460,7 +459,6 @@
       border-left: 4px solid #ff8c00; 
       padding-left: 12px; 
       padding-right: 30px;
-      display: none;
     }
     .info-modal-content p { font-size: 0.8rem; line-height: 1.5; margin: 10px 0; color: #2d3e2b; }
     .info-modal-content ul { margin-left: 16px; margin-top: 6px; }
@@ -485,83 +483,9 @@
       justify-content: center;
       line-height: 1;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 10;
     }
     .modal-close-btn:hover { transform: scale(1.1); background: #1a1a1a; }
     .modal-close-btn:active { transform: scale(0.92); }
-    
-    /* Mobile full view styles for About, Contact, Disclaimer */
-    .modal-full-content {
-      padding: 16px 0 30px 0;
-    }
-    .modal-full-content h2 {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: #1e562a;
-      margin-bottom: 12px;
-      border-left: 4px solid #ff8c00;
-      padding-left: 12px;
-    }
-    .modal-full-content h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #0a2e1d;
-      margin: 14px 0 8px 0;
-    }
-    .modal-full-content p {
-      font-size: 0.85rem;
-      line-height: 1.6;
-      color: #2d3e2b;
-      margin-bottom: 10px;
-    }
-    .modal-full-content ul {
-      margin-left: 20px;
-      margin-bottom: 10px;
-    }
-    .modal-full-content li {
-      font-size: 0.8rem;
-      line-height: 1.5;
-      color: #2d3e2b;
-      margin: 4px 0;
-    }
-    .modal-full-content .highlight-box {
-      background: #f0f9f0;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border-left: 4px solid #22c55e;
-      margin: 12px 0;
-    }
-    .modal-full-content .contact-card {
-      background: #f8fafc;
-      padding: 12px 16px;
-      border-radius: 12px;
-      margin: 8px 0;
-      border: 1px solid #e2e8f0;
-    }
-    .modal-full-content .contact-card strong {
-      color: #1e562a;
-    }
-    body.dark-theme .modal-full-content p,
-    body.dark-theme .modal-full-content li {
-      color: #c0d0c0;
-    }
-    body.dark-theme .modal-full-content h2 {
-      color: #8bc34a;
-    }
-    body.dark-theme .modal-full-content h3 {
-      color: #8bc34a;
-    }
-    body.dark-theme .modal-full-content .highlight-box {
-      background: #0f1a24;
-      border-left-color: #4caf50;
-    }
-    body.dark-theme .modal-full-content .contact-card {
-      background: #0f1a24;
-      border-color: #2a3a4a;
-    }
-    body.dark-theme .modal-full-content .contact-card strong {
-      color: #8bc34a;
-    }
     
     .premium-toggle-about, .premium-toggle-contact, .premium-toggle-disclaimer {
       border-radius: 12px;
@@ -1035,6 +959,7 @@
 <div id="customInfoModal" class="info-modal">
   <div class="info-modal-content">
     <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+    <h4 id="modalTitle">Information</h4>
     <div id="modalBody"></div>
   </div>
 </div>
@@ -1424,18 +1349,11 @@
 
     let currentSelectedIndex = null;
     const customModal = document.getElementById('customInfoModal');
+    const modalTitle = document.getElementById('modalTitle');
     const modalBody = document.getElementById('modalBody');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-    // ===== FUNCTION: Show full page content in modal =====
-    function showFullPageModal(contentHtml) {
-      modalBody.innerHTML = contentHtml;
-      customModal.style.display = 'flex';
-      history.pushState({ modal: true }, '');
-      document.body.style.overflow = 'hidden';
-    }
-
-    // ===== FUNCTION: Load warning.html + page content + footer (Full Mobile View) =====
+    // ===== FUNCTION: Load warning.html + page content + footer =====
     function loadSectionWithWarning(pageFile, pageTitle) {
       // First fetch warning.html
       fetch('warning.html')
@@ -1445,10 +1363,7 @@
         })
         .then(warningHtml => {
           // Build final content: warning (if not empty) + page content + footer
-          let finalHtml = '<div class="modal-full-content">';
-          
-          // Page title
-          finalHtml += `<h2>${pageTitle}</h2>`;
+          let finalHtml = '';
           
           // Warning section (only if warning.html has content)
           if (warningHtml.trim()) {
@@ -1471,10 +1386,9 @@
                   <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
                 </div>
               `;
-              finalHtml += '</div>';
               
               // Show in modal
-              showFullPageModal(finalHtml);
+              showInfoModal('', finalHtml);
             });
         })
         .catch(() => {
@@ -1485,29 +1399,21 @@
               return res.text();
             })
             .then(pageContent => {
-              let finalHtml = '<div class="modal-full-content">';
-              finalHtml += `<h2>${pageTitle}</h2>`;
-              finalHtml += pageContent;
+              let finalHtml = pageContent;
               finalHtml += `
                 <div class="info-modal-footer">
                   <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
                 </div>
               `;
-              finalHtml += '</div>';
-              showFullPageModal(finalHtml);
+              showInfoModal('', finalHtml);
             })
             .catch(() => {
               // If page file doesn't exist, show empty with just footer
-              let finalHtml = '<div class="modal-full-content">';
-              finalHtml += `<h2>${pageTitle}</h2>`;
-              finalHtml += `<p>Content coming soon...</p>`;
-              finalHtml += `
+              showInfoModal('', `
                 <div class="info-modal-footer">
                   <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
                 </div>
-              `;
-              finalHtml += '</div>';
-              showFullPageModal(finalHtml);
+              `);
             });
         });
     }
@@ -1529,35 +1435,41 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      loadSectionWithWarning('about.html', 'About Us');
+      loadSectionWithWarning('about.html', '');
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      loadSectionWithWarning('contact.html', 'Contact Us');
+      loadSectionWithWarning('contact.html', '');
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      loadSectionWithWarning('disclaimer.html', 'Disclaimer');
+      loadSectionWithWarning('disclaimer.html', '');
     });
 
     // ===== MODAL CLOSE =====
     function closeModalAndResetHistory() {
       customModal.style.display = 'none';
       document.body.style.overflow = 'auto';
-      // Only reset history if we're on a modal state
-      if (history.state && history.state.modal) {
-        history.back();
-      }
+      history.replaceState({ page: 'main' }, '', window.location.pathname);
     }
 
     modalCloseBtn.addEventListener('click', closeModalAndResetHistory);
     window.addEventListener('click', (e) => { if (e.target === customModal) closeModalAndResetHistory(); });
+
+    // ===== SHOW INFO MODAL =====
+    function showInfoModal(title, contentHtml) {
+      modalTitle.innerText = title;
+      modalBody.innerHTML = contentHtml;
+      customModal.style.display = 'flex';
+      history.pushState({ modal: true }, '');
+      document.body.style.overflow = 'hidden';
+    }
 
     // ===== RENDER MAIN GRID =====
     function renderMainGrid() {
