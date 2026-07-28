@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -440,15 +441,15 @@
     .info-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 300; justify-content: center; align-items: center; }
     .info-modal-content { 
       background: white; 
-      max-width: 400px; 
-      width: 92%; 
+      max-width: 500px;
+      width: 95%;
       border-radius: 28px; 
       padding: 20px 16px; 
       text-align: left; 
       animation: fadeInUp 0.3s ease; 
       box-shadow: 0 30px 40px rgba(0,0,0,0.3); 
       border: 1px solid #ffcf8a; 
-      max-height: 80vh; 
+      max-height: 90vh;
       overflow-y: auto; 
       position: relative;
     }
@@ -460,9 +461,10 @@
       padding-left: 12px; 
       padding-right: 30px;
     }
-    .info-modal-content p { font-size: 0.8rem; line-height: 1.5; margin: 10px 0; color: #2d3e2b; }
+    .info-modal-content p { font-size: 0.85rem; line-height: 1.6; margin: 10px 0; color: #2d3e2b; }
     .info-modal-content ul { margin-left: 16px; margin-top: 6px; }
-    .info-modal-content li { margin: 4px 0; font-size: 0.75rem; }
+    .info-modal-content li { margin: 4px 0; font-size: 0.8rem; }
+    .info-modal-content h5 { font-size: 1rem; margin-top: 12px; color: #1e562a; }
     
     .modal-close-btn {
       position: absolute;
@@ -768,10 +770,12 @@
       .telegram-nav-btn { font-size: 0.6rem; padding: 3px 12px 3px 10px; }
       .telegram-nav-btn img { width: 20px; height: 20px; }
       .dark-toggle-btn { font-size: 0.6rem; padding: 3px 12px 3px 10px; }
+      .info-modal-content { max-width: 600px; padding: 24px 20px; }
     }
     @media (min-width: 768px) {
       .app-card { max-width: 280px; }
       .full-view-card { max-width: 480px; }
+      .info-modal-content { max-width: 700px; padding: 30px 28px; }
     }
 
     .next-page-top-title {
@@ -908,6 +912,55 @@
     body.dark-theme .info-modal-footer strong {
       color: #8bc34a;
     }
+
+    /* ===== ABOUT/CONTACT/DISCLAIMER FULL VIEW STYLES ===== */
+    .page-full-content {
+      padding: 8px 4px;
+    }
+    .page-full-content h2 {
+      font-size: 1.2rem;
+      color: #1e562a;
+      border-left: 4px solid #ff8c00;
+      padding-left: 12px;
+      margin: 14px 0 10px 0;
+    }
+    .page-full-content h3 {
+      font-size: 1rem;
+      color: #2d3e2b;
+      margin: 12px 0 6px 0;
+    }
+    .page-full-content p {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      color: #2d3e2b;
+      margin: 8px 0;
+    }
+    .page-full-content ul {
+      margin-left: 18px;
+      margin-top: 6px;
+    }
+    .page-full-content ul li {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      margin: 4px 0;
+      color: #2d3e2b;
+    }
+    .page-full-content .highlight-box {
+      background: #f0f9f0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border-left: 4px solid #22c55e;
+      margin: 10px 0;
+    }
+    .page-full-content .highlight-box strong {
+      color: #1e562a;
+    }
+    body.dark-theme .page-full-content h2 { color: #8bc34a; }
+    body.dark-theme .page-full-content h3 { color: #b0d0b0; }
+    body.dark-theme .page-full-content p { color: #c0d0c0; }
+    body.dark-theme .page-full-content ul li { color: #c0d0c0; }
+    body.dark-theme .page-full-content .highlight-box { background: #0f1a24; border-left-color: #4caf50; }
+    body.dark-theme .page-full-content .highlight-box strong { color: #8bc34a; }
   </style>
 </head>
 <body>
@@ -1053,12 +1106,6 @@
         `Free daily spins • Quick UPI withdrawals • Round-the-clock support • Exclusive events • Cashback up to ₹${240 + (bonusNum % 50)} • Daily jackpot`
       ];
       return benefits[Math.abs(bonusNum * 3) % benefits.length];
-    }
-
-    function getWarningValue(appName) {
-      let h = 0;
-      for (let i = 0; i < appName.length; i++) { h = ((h << 5) - h) + appName.charCodeAt(i); h |= 0; }
-      return 100 + (Math.abs(h) % 51);
     }
 
     function populateAppTags() {
@@ -1353,69 +1400,226 @@
     const modalBody = document.getElementById('modalBody');
     const modalCloseBtn = document.getElementById('modalCloseBtn');
 
-    // ===== FUNCTION: Load warning.html + page content + footer =====
-    function loadSectionWithWarning(pageFile, pageTitle) {
-      // First fetch warning.html
-      fetch('warning.html')
-        .then(res => {
-          if (!res.ok) throw new Error('warning.html not found');
-          return res.text();
-        })
-        .then(warningHtml => {
-          // Build final content: warning (if not empty) + page content + footer
-          let finalHtml = '';
+    // ===== ABOUT, CONTACT, DISCLAIMER FULL CONTENT (inline) =====
+    function getAboutContent() {
+      return `
+        <div class="page-full-content">
+          <h2>📱 About yonogames.shop – Yono Games Shop</h2>
+          <p><strong>Welcome to yonogames.shop</strong> – your one-stop destination for the best Yono gaming apps in India!</p>
           
-          // Warning section (only if warning.html has content)
-          if (warningHtml.trim()) {
-            finalHtml += `<div class="warning-section-wrapper"><div class="warning-content">${warningHtml}</div></div>`;
+          <div class="highlight-box">
+            <strong>🌟 What We Offer:</strong>
+            <ul>
+              <li>55+ premium gaming apps including <strong>Max Rummy, Rani Slots, 777 Game, 1GO Plus, Rummy Ultra, 789 Jackpots, Jaiho Win, Slots Spin, Neta VIP, Jaiho 777 VIP, Dhan Game, Diwa Game, Bet 54, All Yono Apps, T989, 765 Club, Spin Crush, Spin Lucky, Bingo 101, MKM Bet, 101Z</strong> and many more!</li>
+              <li>Sign-up bonuses up to ₹45 on most apps</li>
+              <li>Minimum withdrawal of just ₹100 via UPI</li>
+              <li>Fast, secure, and trusted platform</li>
+            </ul>
+          </div>
+
+          <h3>🎯 Our Mission</h3>
+          <p>At yonogames.shop, we believe in providing Indian gamers with a reliable platform to discover and download the best real-money gaming apps. Our curated collection includes only the most trusted and popular apps that offer fair gameplay, secure transactions, and fast withdrawals.</p>
+
+          <h3>🛡️ Why Choose yonogames.shop?</h3>
+          <ul>
+            <li><strong>Curated Selection:</strong> We handpick only the best and most trusted gaming apps</li>
+            <li><strong>Exclusive Bonuses:</strong> Get access to special sign-up bonuses and promotional offers</li>
+            <li><strong>Fast Withdrawals:</strong> All apps support UPI withdrawals starting from ₹100</li>
+            <li><strong>24/7 Support:</strong> Dedicated support team to help with any issues</li>
+            <li><strong>Mobile Optimized:</strong> All apps are optimized for Android devices</li>
+          </ul>
+
+          <h3>📊 Our App Categories</h3>
+          <ul>
+            <li><strong>Rummy Apps:</strong> Max Rummy, Rummy Ultra, INR Rummy, ABC Rummy, Rummy 91, Love Rummy, Top Rummy, Hello Rummy, Rummy 365, Yono Rummy, GoGo Rummy, Joy Rummy, OK Rummy, Boss Rummy</li>
+            <li><strong>Slots Apps:</strong> Rani Slots, 789 Jackpots, Slots Spin, 567 Slots, Saga Slots, Good Slots, Diwa Slot, Hind 777, Yono 777, Diwa 777</li>
+            <li><strong>Casino Apps:</strong> 777 Game, 1GO Plus, Jaiho Win, Jaiho 777 VIP, Dhan Game, All Yono Apps, 101Z, MBM BET, Jaiho 91, SVIP 777</li>
+            <li><strong>Spin Apps:</strong> Spin Crush, Spin Lucky, Spin Gold, Yes Spin</li>
+            <li><strong>Card Games:</strong> Teen Patti Gold, Teen Patti Master</li>
+            <li><strong>Bingo & Arcade:</strong> Bingo 101, Yono Arcade</li>
+            <li><strong>VIP & Betting:</strong> Neta VIP, Diwa VIP, Bet 54, MKM Bet, Bet 213</li>
+          </ul>
+
+          <div class="highlight-box">
+            <strong>🔒 Safety First:</strong> All apps listed on yonogames.shop are verified for security and fair play. We recommend playing responsibly and setting personal limits.
+          </div>
+
+          <h3>📞 Get in Touch</h3>
+          <p>Have questions or need assistance? Contact us through our <a href="#" id="contactFromAbout" style="color:#0088cc;font-weight:700;">Contact page</a> or reach out on <a href="https://t.me/yonogamestite" target="_blank" style="color:#0088cc;font-weight:700;">Telegram</a>.</p>
+
+          <div style="margin-top:12px;padding:10px;background:#f0f5ff;border-radius:10px;border:1px solid #b3d4fc;">
+            <p style="font-size:0.7rem;color:#334155;margin:0;"><strong>📌 Disclaimer:</strong> yonogames.shop is an informational platform. All apps are third-party applications. Users are advised to read the terms and conditions of each app before downloading. 18+ only. Play responsibly.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function getContactContent() {
+      return `
+        <div class="page-full-content">
+          <h2>📞 Contact Us – yonogames.shop</h2>
+          <p>Have questions, feedback, or need assistance with any of our apps? We're here to help! Reach out to us through any of the channels below:</p>
+
+          <div class="highlight-box">
+            <strong>📱 Quick Support:</strong> We respond to all queries within 24 hours. For urgent issues, please reach out via Telegram for the fastest response.
+          </div>
+
+          <h3>📧 Email Support</h3>
+          <table class="contact-table">
+            <tr><th>Department</th><th>Email Address</th></tr>
+            <tr><td>General Support</td><td><a href="mailto:yonogames24@gmail.com" class="contact-email">yonogames24@gmail.com</a></td></tr>
+            <tr><td>Technical Issues</td><td><a href="mailto:yonogames24@gmail.com" class="contact-email">yonogames24@gmail.com</a></td></tr>
+            <tr><td>App Download Help</td><td><a href="mailto:yonogames24@gmail.com" class="contact-email">yonogames24@gmail.com</a></td></tr>
+          </table>
+
+          <h3>💬 Telegram Support</h3>
+          <p>Join our official Telegram channel for instant support, updates, and exclusive offers:</p>
+          <div style="text-align:center;margin:12px 0;padding:14px;background:#e8f4fd;border-radius:12px;border:2px solid #0088cc;">
+            <a href="https://t.me/yonogamestite" target="_blank" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-size:1.1rem;font-weight:700;color:#0088cc;">
+              <img src="https://i.ibb.co/S7P1xcCq/telegram-icon.jpg" alt="Telegram" style="width:40px;height:40px;border-radius:50%;border:2px solid #0088cc;">
+              @yonogamestite
+            </a>
+          </div>
+
+          <h3>🌐 Social Links</h3>
+          <ul>
+            <li><strong>Telegram:</strong> <a href="https://t.me/yonogamestite" target="_blank" class="contact-telegram">t.me/yonogamestite</a></li>
+            <li><strong>Email:</strong> <a href="mailto:yonogames24@gmail.com" class="contact-email">yonogames24@gmail.com</a></li>
+            <li><strong>Website:</strong> <a href="https://yonogames.shop" style="color:#1e562a;font-weight:700;">yonogames.shop</a></li>
+          </ul>
+
+          <h3>🕐 Response Times</h3>
+          <ul>
+            <li><strong>Email:</strong> 12-24 hours</li>
+            <li><strong>Telegram:</strong> 2-6 hours (fastest response)</li>
+            <li><strong>Urgent Issues:</strong> Please use Telegram for immediate assistance</li>
+          </ul>
+
+          <div style="margin-top:12px;padding:10px;background:#f0f5ff;border-radius:10px;border:1px solid #b3d4fc;">
+            <p style="font-size:0.7rem;color:#334155;margin:0;"><strong>📌 Note:</strong> For app-specific issues, please include the app name and a brief description of the problem in your message. This helps us assist you faster.</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function getDisclaimerContent() {
+      return `
+        <div class="page-full-content">
+          <h2>⚖️ Disclaimer – yonogames.shop</h2>
+          
+          <div class="highlight-box" style="border-left-color:#ef4444;">
+            <strong>⚠️ Important Legal Information:</strong> Please read this disclaimer carefully before using our platform.
+          </div>
+
+          <h3>📋 General Disclaimer</h3>
+          <p>yonogames.shop is an <strong>informational and promotional platform</strong> that provides links to third-party gaming applications. We do not host, own, or operate any of the games listed on our website. All apps are owned and operated by their respective developers and companies.</p>
+
+          <h3>🔗 Third-Party Links</h3>
+          <p>Our website contains links to external websites and applications that are not controlled or maintained by yonogames.shop. We are not responsible for the content, privacy policies, or practices of these third-party platforms. Users are advised to review the terms and conditions of each app before downloading or making any financial transactions.</p>
+
+          <h3>🎮 Age Restriction</h3>
+          <ul>
+            <li><strong>18+ Only:</strong> All gaming apps listed on yonogames.shop are strictly for users aged 18 and above.</li>
+            <li>Users are responsible for ensuring they meet the legal age requirements in their jurisdiction.</li>
+          </ul>
+
+          <h3>💰 Financial Responsibility</h3>
+          <ul>
+            <li>All financial transactions, including deposits and withdrawals, are handled by the respective third-party apps.</li>
+            <li>yonogames.shop does not process or store any payment information.</li>
+            <li>Users are advised to play responsibly and within their financial means.</li>
+            <li>Gambling can be addictive. If you or someone you know needs help, please seek professional assistance.</li>
+          </ul>
+
+          <h3>📱 App Availability</h3>
+          <ul>
+            <li>All apps listed on yonogames.shop are available for Android devices via APK download.</li>
+            <li>App availability may vary by region and device compatibility.</li>
+            <li>We recommend checking the app's official website for the most up-to-date information.</li>
+          </ul>
+
+          <h3>🎯 Bonus Offers</h3>
+          <ul>
+            <li>Bonus amounts and offers mentioned on yonogames.shop are subject to change by the respective app providers.</li>
+            <li>Terms and conditions apply to all bonus offers. Users should read the full terms on the app's official website.</li>
+            <li>We do not guarantee the availability or accuracy of any bonus offers.</li>
+          </ul>
+
+          <h3>🔒 Privacy Policy</h3>
+          <p>yonogames.shop does not collect, store, or process any personal data from users. However, when you click on links to third-party apps, those platforms may collect your data according to their own privacy policies. We recommend reviewing their privacy policies before providing any personal information.</p>
+
+          <h3>📌 Disclaimer of Warranties</h3>
+          <p>All information and links provided on yonogames.shop are for general informational purposes only. We make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on the website for any purpose.</p>
+
+          <div class="disclaimer-box" style="background:#fef4e6;border-color:#ffcf8a;">
+            <p style="font-size:0.8rem;margin:0;"><strong>📌 By using yonogames.shop, you acknowledge that:</strong></p>
+            <ul style="font-size:0.75rem;margin-top:4px;">
+              <li>You are 18+ years old</li>
+              <li>You accept full responsibility for your actions on third-party platforms</li>
+              <li>You play responsibly and within your financial means</li>
+              <li>You understand that we are not responsible for any losses or issues on third-party apps</li>
+            </ul>
+          </div>
+
+          <h3>📞 Contact for Concerns</h3>
+          <p>If you have any concerns about the content on our platform or need assistance with any app, please contact us at <a href="mailto:yonogames24@gmail.com" class="contact-email">yonogames24@gmail.com</a> or <a href="https://t.me/yonogamestite" target="_blank" class="contact-telegram">Telegram</a>.</p>
+
+          <div style="margin-top:12px;padding:10px;background:#f0f5ff;border-radius:10px;border:1px solid #b3d4fc;">
+            <p style="font-size:0.7rem;color:#334155;margin:0;"><strong>📌 Last Updated:</strong> July 2026</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function showInfoModal(title, contentHtml) {
+      modalTitle.innerText = title;
+      modalBody.innerHTML = contentHtml;
+      customModal.style.display = 'flex';
+      history.pushState({ modal: true }, '');
+      document.body.style.overflow = 'hidden';
+      // Scroll modal to top
+      setTimeout(() => {
+        const modalContent = document.querySelector('.info-modal-content');
+        if (modalContent) modalContent.scrollTop = 0;
+      }, 50);
+    }
+
+    // ===== FUNCTION: Load page content (About, Contact, Disclaimer) =====
+    function loadPageContent(pageType) {
+      let title = '';
+      let content = '';
+      
+      if (pageType === 'about') {
+        title = '📱 About Us – yonogames.shop';
+        content = getAboutContent();
+        // Add click handler for contact link inside about
+        setTimeout(() => {
+          const contactLink = document.getElementById('contactFromAbout');
+          if (contactLink) {
+            contactLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+              document.getElementById('navContact').classList.add('active');
+              loadPageContent('contact');
+            });
           }
-          
-          // Now fetch the actual page content
-          return fetch(pageFile)
-            .then(res => {
-              if (!res.ok) throw new Error(pageFile + ' not found');
-              return res.text();
-            })
-            .then(pageContent => {
-              // Append page content
-              finalHtml += pageContent;
-              
-              // Append footer
-              finalHtml += `
-                <div class="info-modal-footer">
-                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
-                </div>
-              `;
-              
-              // Show in modal
-              showInfoModal('', finalHtml);
-            });
-        })
-        .catch(() => {
-          // If warning.html doesn't exist or error, just load page content + footer
-          fetch(pageFile)
-            .then(res => {
-              if (!res.ok) throw new Error(pageFile + ' not found');
-              return res.text();
-            })
-            .then(pageContent => {
-              let finalHtml = pageContent;
-              finalHtml += `
-                <div class="info-modal-footer">
-                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
-                </div>
-              `;
-              showInfoModal('', finalHtml);
-            })
-            .catch(() => {
-              // If page file doesn't exist, show empty with just footer
-              showInfoModal('', `
-                <div class="info-modal-footer">
-                  <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
-                </div>
-              `);
-            });
-        });
+        }, 100);
+      } else if (pageType === 'contact') {
+        title = '📞 Contact Us – yonogames.shop';
+        content = getContactContent();
+      } else if (pageType === 'disclaimer') {
+        title = '⚖️ Disclaimer – yonogames.shop';
+        content = getDisclaimerContent();
+      }
+      
+      // Add footer
+      content += `
+        <div class="info-modal-footer">
+          <strong>2026/2030 yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
+        </div>
+      `;
+      
+      showInfoModal(title, content);
     }
 
     // ==== NAVIGATION HANDLERS ====
@@ -1435,41 +1639,38 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      loadSectionWithWarning('about.html', '');
+      loadPageContent('about');
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      loadSectionWithWarning('contact.html', '');
+      loadPageContent('contact');
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      loadSectionWithWarning('disclaimer.html', '');
+      loadPageContent('disclaimer');
     });
 
     // ===== MODAL CLOSE =====
     function closeModalAndResetHistory() {
       customModal.style.display = 'none';
       document.body.style.overflow = 'auto';
-      history.replaceState({ page: 'main' }, '', window.location.pathname);
+      // Reset to main state when modal closes
+      if (document.getElementById('allAppsGrid').classList.contains('hidden')) {
+        // If we're on a download page, keep download state
+        // Otherwise go to main
+      } else {
+        history.replaceState({ page: 'main' }, '', window.location.pathname);
+      }
     }
 
     modalCloseBtn.addEventListener('click', closeModalAndResetHistory);
     window.addEventListener('click', (e) => { if (e.target === customModal) closeModalAndResetHistory(); });
-
-    // ===== SHOW INFO MODAL =====
-    function showInfoModal(title, contentHtml) {
-      modalTitle.innerText = title;
-      modalBody.innerHTML = contentHtml;
-      customModal.style.display = 'flex';
-      history.pushState({ modal: true }, '');
-      document.body.style.overflow = 'hidden';
-    }
 
     // ===== RENDER MAIN GRID =====
     function renderMainGrid() {
@@ -1624,7 +1825,6 @@
           e.stopPropagation();
         });
       });
-      // SCROLL TO TOP OF THE DOWNLOAD PAGE
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1637,6 +1837,9 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
       currentSelectedIndex = null;
+      // Ensure nav highlights are correct
+      document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+      document.getElementById('homeNavLink').classList.add('active');
     }
 
     window.addEventListener('popstate', (event) => {
@@ -1644,7 +1847,6 @@
         closeModalAndResetHistory(); 
         return; 
       }
-      // If there's no state or state is main, go to main grid
       if (!event.state || event.state.page === 'main') {
         goToMainGrid();
       } else if (event.state && event.state.page === 'download') {
@@ -1654,12 +1856,10 @@
       }
     });
 
-    // Replace initial history state so that the back button can exit the site from home
     history.replaceState({ page: 'main' }, '', window.location.pathname);
 
     function resetToMainGrid() {
       if (customModal.style.display === 'flex') closeModalAndResetHistory();
-      // Replace history with main state so that going back from home exits the site
       history.replaceState({ page: 'main' }, '', window.location.pathname);
       goToMainGrid();
     }
