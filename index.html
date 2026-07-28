@@ -1640,17 +1640,26 @@
     }
 
     window.addEventListener('popstate', (event) => {
-      if (customModal.style.display === 'flex') { closeModalAndResetHistory(); return; }
-      if (event.state && event.state.page === 'download') {
+      if (customModal.style.display === 'flex') { 
+        closeModalAndResetHistory(); 
+        return; 
+      }
+      // If there's no state or state is main, go to main grid
+      if (!event.state || event.state.page === 'main') {
+        goToMainGrid();
+      } else if (event.state && event.state.page === 'download') {
         showDownloadPage(event.state.index);
       } else {
         goToMainGrid();
       }
     });
+
+    // Replace initial history state so that the back button can exit the site from home
     history.replaceState({ page: 'main' }, '', window.location.pathname);
 
     function resetToMainGrid() {
       if (customModal.style.display === 'flex') closeModalAndResetHistory();
+      // Replace history with main state so that going back from home exits the site
       history.replaceState({ page: 'main' }, '', window.location.pathname);
       goToMainGrid();
     }
