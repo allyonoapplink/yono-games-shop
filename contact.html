@@ -1,351 +1,78 @@
-<!-- contact.html -->
-<div style="padding: 6px 4px; font-family: 'Segoe UI', 'Inter', sans-serif; max-width: 100%; position: relative;">
+<section class="contact-section">
 
-  <!-- ===== PREMIUM AI-STYLE CSS ICONS ===== -->
-  <style>
-    /* ----- Icon 1: Gmail-style (red/white) ----- */
-    .ai-icon-gmail {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(145deg, #ea4335, #c5221f);
-      border-radius: 4px 12px 4px 12px;
-      box-shadow: 0 0 20px rgba(234, 67, 53, 0.5), 0 0 50px rgba(234, 67, 53, 0.2);
-      margin-right: 12px;
-      vertical-align: middle;
-      animation: iconFloatGmail 3.4s ease-in-out infinite;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .ai-icon-gmail::after {
-      content: "✉";
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      text-shadow: 0 0 12px rgba(255,255,255,0.5);
-    }
-    @keyframes iconFloatGmail {
-      0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 0 20px rgba(234,67,53,0.5), 0 0 50px rgba(234,67,53,0.2); }
-      50% { transform: translateY(-4px) rotate(3deg); box-shadow: 0 0 35px rgba(234,67,53,0.8), 0 0 80px rgba(234,67,53,0.3); }
-    }
+<h2>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+<path d="M2 4h20v16H2V4zm2 2v1l8 5 8-5V6l-8 5-8-5z"/>
+</svg>
+Contact Us
+</h2>
 
-    /* ----- Icon 2: Telegram-style (blue) ----- */
-    .ai-icon-telegram {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(145deg, #0088cc, #006699);
-      border-radius: 50%;
-      box-shadow: 0 0 20px rgba(0, 136, 204, 0.5), 0 0 50px rgba(0, 136, 204, 0.2);
-      margin-right: 12px;
-      vertical-align: middle;
-      animation: iconFloatTelegram 3.8s ease-in-out infinite;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .ai-icon-telegram::after {
-      content: "✈";
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      text-shadow: 0 0 12px rgba(255,255,255,0.5);
-    }
-    @keyframes iconFloatTelegram {
-      0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 0 20px rgba(0,136,204,0.5), 0 0 50px rgba(0,136,204,0.2); }
-      50% { transform: translateY(-5px) scale(1.06); box-shadow: 0 0 35px rgba(0,136,204,0.8), 0 0 80px rgba(0,136,204,0.3); }
-    }
-
-    /* ----- Icon 3: Briefcase (gold) - for Business Queries ----- */
-    .ai-icon-briefcase {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(145deg, #f59e0b, #d97706);
-      border-radius: 6px 2px 6px 2px;
-      box-shadow: 0 0 20px rgba(245, 158, 11, 0.5), 0 0 50px rgba(245, 158, 11, 0.2);
-      margin-right: 12px;
-      vertical-align: middle;
-      animation: iconFloatBriefcase 4.0s ease-in-out infinite;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .ai-icon-briefcase::after {
-      content: "⚙";
-      color: white;
-      font-size: 20px;
-      font-weight: 700;
-      text-shadow: 0 0 14px rgba(255,255,255,0.6);
-    }
-    @keyframes iconFloatBriefcase {
-      0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 50px rgba(245,158,11,0.2); }
-      50% { transform: translateY(-4px) rotate(5deg); box-shadow: 0 0 35px rgba(245,158,11,0.8), 0 0 80px rgba(245,158,11,0.3); }
-    }
-
-    /* ----- Icon 4: Handshake (purple) - for Cooperation ----- */
-    .ai-icon-handshake {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(145deg, #8b5cf6, #7c3aed);
-      border-radius: 50% 50% 0 50%;
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.5), 0 0 50px rgba(139, 92, 246, 0.2);
-      margin-right: 12px;
-      vertical-align: middle;
-      animation: iconFloatHandshake 3.6s ease-in-out infinite;
-      flex-shrink: 0;
-      position: relative;
-    }
-    .ai-icon-handshake::after {
-      content: "🤝";
-      color: white;
-      font-size: 18px;
-      font-weight: 700;
-      text-shadow: 0 0 12px rgba(255,255,255,0.5);
-    }
-    @keyframes iconFloatHandshake {
-      0%, 100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 50px rgba(139,92,246,0.2); }
-      50% { transform: scale(1.06) rotate(4deg); box-shadow: 0 0 35px rgba(139,92,246,0.8), 0 0 80px rgba(139,92,246,0.3); }
-    }
-
-    /* LED indicator */
-    .led-indicator-contact {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4);
-      margin-right: 8px;
-      vertical-align: middle;
-      animation: ledPulseContact 2.2s ease-in-out infinite;
-      flex-shrink: 0;
-    }
-    @keyframes ledPulseContact {
-      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4); }
-      50% { opacity: 0.6; transform: scale(0.85); box-shadow: 0 0 20px #22c55e, 0 0 50px rgba(34,197,94,0.6); }
-    }
-
-    /* Flex container for icon + heading */
-    .contact-heading-with-icon {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
-    }
-    .contact-heading-with-icon h4,
-    .contact-heading-with-icon h5 {
-      margin: 0;
-      font-weight: 700;
-      color: #0a2e1d;
-      flex: 1;
-      min-width: 100px;
-    }
-    .contact-heading-with-icon h4 {
-      font-size: 1.2rem;
-      border-bottom: 3px solid #ff8c00;
-      padding-bottom: 4px;
-    }
-    .contact-heading-with-icon h5 {
-      font-size: 1.0rem;
-      border-bottom: 2px solid #ffcf8a;
-      padding-bottom: 6px;
-    }
-    /* different border colors for each section */
-    .border-gold h5 { border-bottom-color: #f59e0b; }
-    .border-purple h5 { border-bottom-color: #8b5cf6; }
-
-    /* Table row with icon */
-    .contact-row-with-icon {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 0;
-      flex-wrap: wrap;
-    }
-    .contact-row-with-icon .label {
-      font-weight: 600;
-      font-size: 0.8rem;
-      min-width: 70px;
-      color: #0a2e1d;
-    }
-    .contact-row-with-icon .value {
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-    .contact-row-with-icon .value a {
-      color: #d50000;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    .contact-row-with-icon .value a:hover { text-decoration: underline; }
-    .contact-row-with-icon .value .telegram-link {
-      color: #0088cc;
-    }
-
-    @media (max-width: 480px) {
-      .ai-icon-gmail, .ai-icon-telegram, .ai-icon-briefcase, .ai-icon-handshake {
-        width: 30px;
-        height: 30px;
-      }
-      .ai-icon-gmail::after, .ai-icon-telegram::after, 
-      .ai-icon-briefcase::after, .ai-icon-handshake::after {
-        font-size: 14px;
-      }
-      .contact-row-with-icon .label { min-width: 60px; font-size: 0.7rem; }
-      .contact-row-with-icon .value { font-size: 0.7rem; }
-    }
-  </style>
-
-  <!-- ===== MAIN HEADING with LED ===== -->
-  <div class="contact-heading-with-icon">
-    <h4 style="font-size:1.2rem; font-weight:800; color:#1e562a; border-bottom:3px solid #ff8c00; padding-bottom:4px; margin:0; flex:1; min-width:140px;">
-      <span class="led-indicator-contact"></span> Contact YONO GAMES Shop
-    </h4>
-  </div>
-
-  <!-- ===== Platform Section (no icon, just text) ===== -->
-  <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6; margin-bottom: 14px;">
-    <span class="led-indicator-contact" style="width:8px;height:8px;margin-right:6px;"></span>
-    <strong>Platform</strong><br>
-    YONO GAMES Shop does not provide Customer Support for Listed Apps/Games. If you encounter any problems, please contact the support option within those games. Because the Listed Games/Apps are not ours. We do not own those games.
-  </p>
-
-  <!-- ===== Advertisement/Business Queries with Icon 3: Briefcase (gold) ===== -->
-  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-    <div class="contact-heading-with-icon border-gold">
-      <span class="ai-icon-briefcase"></span>
-      <h5><span class="led-indicator-contact"></span> Advertisement/Business Queries</h5>
-    </div>
-    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;">
-      If you are a game maker company, operator, or administrator, and you want to promote your application through our website, you can contact us through the contact details given below and discuss promotion and cooperation.
-    </p>
-  </div>
-
-  <!-- ===== Contact Table with Icons (Gmail + Telegram) ===== -->
-  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; border-bottom: 2px solid #ffcf8a; padding-bottom: 6px;">
-      <span class="ai-icon-handshake" style="width:28px;height:28px;"></span>
-      <h5 style="margin:0; font-size:0.95rem; font-weight:700; color:#0a2e1d;">Contact Details</h5>
-    </div>
-
-    <!-- Email row with Gmail icon -->
-    <div class="contact-row-with-icon">
-      <span class="ai-icon-gmail"></span>
-      <span class="label">Email :</span>
-      <span class="value"><a href="mailto:info@yonogames.shop">info@yonogames.shop</a></span>
-    </div>
-
-    <!-- Telegram row with Telegram icon -->
-    <div class="contact-row-with-icon">
-      <span class="ai-icon-telegram"></span>
-      <span class="label">Telegram :</span>
-      <span class="value"><a href="https://t.me/yonogamestite" target="_blank" class="telegram-link">@yonogamestite</a></span>
-    </div>
-  </div>
-
-  <!-- ===== Final Note with Icon 4: Handshake (purple) ===== -->
-  <div style="background: #f0f9f0; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border-left: 4px solid #22c55e;">
-    <div class="contact-heading-with-icon border-purple">
-      <span class="ai-icon-handshake"></span>
-      <h5 style="border-bottom-color:#8b5cf6; font-size:0.9rem; margin:0; border-bottom:2px solid #8b5cf6; padding-bottom:4px;">
-        <span class="led-indicator-contact"></span> Cooperation
-      </h5>
-    </div>
-    <p style="font-size: 0.8rem; line-height: 1.6; color: #1e562a; margin-bottom: 0;">
-      You can directly contact us through <strong>Email</strong> as given in the <strong>Table</strong> above, and can deal with us.
-    </p>
-  </div>
-
-  <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON (bottom-right) ===== -->
-  <style>
-    .back-to-top-led-contact {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ffffff, #f0f4ff);
-      border: none;
-      box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #0a2e1d;
-      transition: all 0.25s ease;
-      animation: floatGlowContact 3s ease-in-out infinite, pulseGlowContact 2.8s ease-in-out infinite;
-      text-shadow: 0 0 12px rgba(255,255,255,0.9);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255,255,255,0.6);
-      will-change: transform, box-shadow;
-      line-height: 1;
-    }
-    .back-to-top-led-contact:hover {
-      transform: scale(1.08) translateY(-3px);
-      box-shadow: 0 0 35px rgba(255,255,255,0.9), 0 0 70px rgba(180, 220, 255, 0.7), 0 0 120px rgba(150, 200, 255, 0.4), 0 12px 40px rgba(0,0,0,0.2);
-      background: linear-gradient(135deg, #ffffff, #e8f0ff);
-      color: #0a2e1d;
-    }
-    .back-to-top-led-contact:active {
-      transform: scale(0.92);
-      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(180, 220, 255, 0.5);
-    }
-    @keyframes floatGlowContact {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-6px); }
-    }
-    @keyframes pulseGlowContact {
-      0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15); }
-      50% { box-shadow: 0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(180, 220, 255, 0.8), 0 0 100px rgba(150, 200, 255, 0.4), 0 8px 32px rgba(0,0,0,0.15); }
-    }
-    /* Mobile responsive */
-    @media (max-width: 480px) {
-      .back-to-top-led-contact {
-        width: 52px;
-        height: 52px;
-        bottom: 20px;
-        right: 20px;
-        font-size: 1.6rem;
-      }
-    }
-    @media (max-width: 380px) {
-      .back-to-top-led-contact {
-        width: 46px;
-        height: 46px;
-        bottom: 16px;
-        right: 16px;
-        font-size: 1.4rem;
-      }
-    }
-  </style>
-
-  <button class="back-to-top-led-contact" id="backToTopBtnContact" aria-label="Back to Top" title="Back to Top">⬆</button>
-
-  <script>
-    (function() {
-      const btn = document.getElementById('backToTopBtnContact');
-      if (btn) {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          const target = document.querySelector('.info-modal-content') || document.documentElement;
-          target.scrollTo({ top: 0, behavior: 'smooth' });
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      }
-    })();
-  </script>
-
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7z"/>
+</svg>
+<span>Support Available 24/7</span>
 </div>
+
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M4 4h16v16H4z"/>
+</svg>
+<span>Fast Response</span>
+</div>
+
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2l10 4v6c0 5-3.5 9.7-10 10-6.5-.3-10-5-10-10V6z"/>
+</svg>
+<span>Secure Communication</span>
+</div>
+
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+</svg>
+<span>Trusted Support</span>
+</div>
+
+<div class="contact-item">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+<path d="M12 3v18M3 12h18"/>
+</svg>
+<span>Quick Help</span>
+</div>
+
+<div class="contact-tags">
+<span>Contact</span>
+<span>Support</span>
+<span>Help Center</span>
+<span>Customer Support</span>
+<span>Online Help</span>
+<span>Fast Assistance</span>
+<span>Website Support</span>
+<span>Technical Support</span>
+<span>User Help</span>
+<span>Email Support</span>
+<span>Live Assistance</span>
+<span>24×7 Support</span>
+<span>Feedback</span>
+<span>Suggestions</span>
+<span>Report Issue</span>
+<span>Bug Report</span>
+<span>Contact Form</span>
+<span>Support Team</span>
+<span>Safe Contact</span>
+<span>Secure Support</span>
+<span>Quick Response</span>
+<span>Customer Care</span>
+<span>Help Desk</span>
+<span>Support Center</span>
+<span>Reach Us</span>
+<span>Get in Touch</span>
+<span>Website Contact</span>
+<span>Online Support</span>
+<span>User Assistance</span>
+<span>Premium Support</span>
+</div>
+
+</section>
