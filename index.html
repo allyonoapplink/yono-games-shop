@@ -798,22 +798,17 @@
 
     // ===== POPSTATE HANDLER - Back button step by step =====
     window.addEventListener('popstate', (event) => {
-      // If modal is open, close it first
       if (customModal.style.display === 'flex') {
         closeModalAndResetHistory();
         return;
       }
-      
-      // If we have a page state with index, show that app
       if (event.state && event.state.page === 'download' && event.state.index !== undefined) {
         showDownloadPage(event.state.index);
       } else {
-        // Otherwise go back to main grid
         goToMainGrid();
       }
     });
 
-    // Initialize with main page
     history.replaceState({ page: 'main' }, '', window.location.pathname);
 
     function resetToMainGrid() {
