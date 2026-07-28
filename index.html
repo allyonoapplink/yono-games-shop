@@ -471,8 +471,8 @@
       background: #000000;
       color: white;
       border: none;
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       font-size: 1.2rem;
       font-weight: 700;
@@ -486,6 +486,17 @@
     }
     .modal-close-btn:hover { transform: scale(1.1); background: #1a1a1a; }
     .modal-close-btn:active { transform: scale(0.92); }
+    
+    /* Premium SVG Close Icon */
+    .modal-close-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
     
     .premium-toggle-about, .premium-toggle-contact, .premium-toggle-disclaimer {
       border-radius: 12px;
@@ -958,7 +969,9 @@
 
 <div id="customInfoModal" class="info-modal">
   <div class="info-modal-content">
-    <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+    <button class="modal-close-btn" id="modalCloseBtn">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
     <h4 id="modalTitle">Information</h4>
     <div id="modalBody"></div>
   </div>
@@ -1435,21 +1448,21 @@
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navAbout.classList.add('active');
-      loadSectionWithWarning('about.html', '');
+      loadSectionWithWarning('about.html', 'About');
     });
 
     navContact.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navContact.classList.add('active');
-      loadSectionWithWarning('contact.html', '');
+      loadSectionWithWarning('contact.html', 'Contact');
     });
 
     navDisclaimer.addEventListener('click', (e) => {
       e.preventDefault();
       document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
       navDisclaimer.classList.add('active');
-      loadSectionWithWarning('disclaimer.html', '');
+      loadSectionWithWarning('disclaimer.html', 'Disclaimer');
     });
 
     // ===== MODAL CLOSE =====
@@ -1469,6 +1482,8 @@
       customModal.style.display = 'flex';
       history.pushState({ modal: true }, '');
       document.body.style.overflow = 'hidden';
+      // Scroll to top of modal content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // ===== RENDER MAIN GRID =====
