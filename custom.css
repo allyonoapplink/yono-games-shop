@@ -1,45 +1,1041 @@
-/* 1. HD Glass Card Design with Cyan Glow */
-.game-card, .card-container {
-    background: #ffffff;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.12), 
-                0 2px 8px rgba(0, 0, 0, 0.04);
-    border: 1px solid rgba(0, 229, 255, 0.25);
-    transition: all 0.3s ease-in-out;
+/* ============================================================
+   custom.css – PREMIUM WHITE LED THEME
+   Only colors, gradients, shadows & visual tweaks.
+   Layout, spacing, and functionality remain unchanged.
+   ============================================================ */
+
+/* ----- ROOT VARIABLES (change these to customize) ----- */
+:root {
+  /* Main background & surface */
+  --bg-body: #f0f2f8;
+  --bg-card: #ffffff;
+  --bg-surface: #f8faff;
+  --bg-header: #ffffff;
+  --bg-input: #f5f7fc;
+
+  /* Text colors */
+  --text-primary: #0a1628;
+  --text-secondary: #2d3a4f;
+  --text-muted: #7a8a9e;
+  --text-white: #ffffff;
+
+  /* Accent colors – LED theme */
+  --accent-cyan: #00d4ff;
+  --accent-blue: #4a8aff;
+  --accent-purple: #7c5cbf;
+  --accent-pink: #ff5e94;
+  --accent-green: #00e676;
+  --accent-gold: #ffc107;
+  --accent-red: #ff3d3d;
+  --accent-orange: #ff9100;
+
+  /* Glow effects */
+  --glow-cyan: 0 0 20px rgba(0, 212, 255, 0.3);
+  --glow-blue: 0 0 20px rgba(74, 138, 255, 0.25);
+  --glow-pink: 0 0 20px rgba(255, 94, 148, 0.25);
+  --glow-green: 0 0 20px rgba(0, 230, 118, 0.25);
+  --glow-gold: 0 0 20px rgba(255, 193, 7, 0.25);
+  --glow-purple: 0 0 20px rgba(124, 92, 191, 0.25);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 12px 56px rgba(0, 0, 0, 0.10);
+
+  /* Border */
+  --border-light: #e8ecf5;
+  --border-glow: rgba(0, 212, 255, 0.3);
+
+  /* Gradients – white to subtle tint */
+  --gradient-card-1: linear-gradient(135deg, #ffffff, #f5f8ff);
+  --gradient-card-2: linear-gradient(135deg, #ffffff, #f8f5ff);
+  --gradient-card-3: linear-gradient(135deg, #ffffff, #f5fffa);
+  --gradient-card-4: linear-gradient(135deg, #ffffff, #fff8f5);
+  --gradient-card-5: linear-gradient(135deg, #ffffff, #f5faff);
+  --gradient-card-6: linear-gradient(135deg, #ffffff, #fff5f8);
+  --gradient-card-7: linear-gradient(135deg, #fafaff, #ffffff);
 }
 
-/* Hover Effect for Card */
-.game-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0, 229, 255, 0.25);
+/* ----- BODY & CONTAINER ----- */
+body {
+  background: var(--bg-body) !important;
 }
 
-/* 2. Premium LED Cyan Download Button */
+.container {
+  background: var(--bg-card) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* ----- HEADER (white background, LED accents) ----- */
+.top-header {
+  background: var(--bg-header) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+.header-nav-link {
+  color: var(--text-secondary) !important;
+  background: var(--bg-input) !important;
+  border-color: var(--border-light) !important;
+  transition: all 0.3s ease !important;
+}
+
+.header-nav-link:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.header-nav-link.active {
+  background: var(--accent-cyan) !important;
+  color: var(--text-white) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+/* ----- LOGO – White with LED cyan glow ----- */
+.logo-cyan-round {
+  background: var(--bg-card) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  animation: cyanPulseWhite 2.5s ease-in-out infinite !important;
+}
+
+@keyframes cyanPulseWhite {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 212, 255, 0.25); }
+  50% { box-shadow: 0 0 35px rgba(0, 212, 255, 0.45), 0 0 60px rgba(0, 212, 255, 0.10); }
+}
+
+/* ----- SITE NAME – White LED border ----- */
+.site-name-led-round {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.site-name-led-round::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-cyan) 0deg 45deg, 
+    var(--accent-blue) 90deg 135deg, 
+    var(--accent-purple) 180deg 225deg, 
+    var(--accent-pink) 270deg 315deg, 
+    var(--accent-cyan) 360deg) !important;
+}
+
+.site-name-led-round::after {
+  background: conic-gradient(from 30deg, 
+    rgba(0, 212, 255, 0.10) 0deg 30deg, 
+    rgba(74, 138, 255, 0.10) 90deg 120deg, 
+    rgba(124, 92, 191, 0.10) 180deg 210deg, 
+    rgba(255, 94, 148, 0.10) 270deg 300deg, 
+    rgba(0, 212, 255, 0.10) 360deg) !important;
+}
+
+.site-name-led-round .site-name-text {
+  color: var(--text-primary) !important;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.08) !important;
+}
+
+.site-name-text .d1 { color: var(--accent-cyan) !important; }
+.site-name-text .d2 { color: var(--accent-blue) !important; }
+.site-name-text .d3 { color: var(--accent-purple) !important; }
+.site-name-text .d4 { color: var(--accent-pink) !important; }
+.site-name-text .sep { color: var(--text-muted) !important; }
+
+.site-name-led-round .led-dot-round {
+  box-shadow: 0 0 12px currentColor !important;
+}
+.site-name-led-round .led-dot-round.green { background: var(--accent-cyan) !important; color: var(--accent-cyan) !important; }
+.site-name-led-round .led-dot-round.cyan { background: var(--accent-blue) !important; color: var(--accent-blue) !important; }
+.site-name-led-round .led-dot-round.yellow { background: var(--accent-purple) !important; color: var(--accent-purple) !important; }
+.site-name-led-round .led-dot-round.pink { background: var(--accent-pink) !important; color: var(--accent-pink) !important; }
+
+/* ----- SHARE BUTTON – White with LED glow ----- */
+.share-btn {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+  transition: all 0.3s ease !important;
+}
+
+.share-btn:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.share-btn svg {
+  fill: var(--text-secondary) !important;
+}
+
+/* ----- TELEGRAM BUTTON – White with LED glow ----- */
+.telegram-btn {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.telegram-btn:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.telegram-btn::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-cyan) 0deg 35deg, 
+    var(--accent-blue) 90deg 125deg, 
+    var(--accent-pink) 180deg 215deg, 
+    var(--accent-purple) 270deg 305deg, 
+    var(--accent-cyan) 360deg) !important;
+}
+
+.telegram-btn .corner-led.tl { color: var(--accent-cyan) !important; background: var(--accent-cyan) !important; }
+.telegram-btn .corner-led.tr { color: var(--accent-blue) !important; background: var(--accent-blue) !important; }
+.telegram-btn .corner-led.bl { color: var(--accent-pink) !important; background: var(--accent-pink) !important; }
+.telegram-btn .corner-led.br { color: var(--accent-purple) !important; background: var(--accent-purple) !important; }
+
+/* ----- MARQUEE – White LED gradient ----- */
+.marquee-container {
+  background: linear-gradient(90deg, 
+    var(--accent-cyan) 0%, 
+    var(--accent-blue) 25%, 
+    var(--accent-purple) 50%, 
+    var(--accent-pink) 75%, 
+    var(--accent-cyan) 100%) !important;
+  background-size: 300% 100% !important;
+  animation: marqueeGradient 6s ease-in-out infinite !important;
+}
+
+@keyframes marqueeGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.marquee-container marquee {
+  color: var(--text-white) !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.marquee-container marquee .highlight {
+  background: rgba(255, 255, 255, 0.20) !important;
+  color: var(--text-white) !important;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05) !important;
+}
+
+/* ----- CARDS – White with LED accent borders ----- */
+.card {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+  transform: translateY(-2px) !important;
+}
+
+.card-number {
+  background: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  color: var(--text-white) !important;
+}
+
+.card-name {
+  color: var(--text-primary) !important;
+}
+
+.card-name .alt {
+  color: var(--text-muted) !important;
+}
+
+.card-bonus {
+  color: var(--accent-cyan) !important;
+}
+
+.card-withdraw {
+  color: var(--text-secondary) !important;
+}
+
+.card-download-sm {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card-download-sm:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+.card-download-sm .dl-icon svg {
+  stroke: var(--text-white) !important;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3)) !important;
+}
+
+/* ----- DETAIL VIEW – White with LED accents ----- */
+.game-detail-header {
+  background: var(--bg-surface) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.back-btn {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-light) !important;
+  transition: all 0.3s ease !important;
+}
+
+.back-btn:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.game-detail-title {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  color: var(--text-white) !important;
+}
+
+.detail-card {
+  background: var(--bg-card) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.detail-info .game-name {
+  color: var(--text-primary) !important;
+}
+
+.detail-info .game-name .alt {
+  color: var(--text-muted) !important;
+}
+
+.detail-info .game-sub .signup-bonus {
+  color: var(--accent-cyan) !important;
+}
+
+.detail-info .game-sub .min-withdraw {
+  color: var(--text-secondary) !important;
+}
+
+/* Meta badges – white with LED glow */
+.detail-info .game-meta-detail .rating {
+  background: rgba(0, 230, 118, 0.08) !important;
+  color: var(--accent-green) !important;
+  border-color: rgba(0, 230, 118, 0.25) !important;
+  box-shadow: 0 0 20px rgba(0, 230, 118, 0.12) !important;
+}
+
+.detail-info .game-meta-detail .size {
+  background: rgba(0, 212, 255, 0.08) !important;
+  color: var(--accent-cyan) !important;
+  border-color: rgba(0, 212, 255, 0.25) !important;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.12) !important;
+}
+
+.detail-info .game-meta-detail .votes {
+  background: rgba(255, 94, 148, 0.08) !important;
+  color: var(--accent-pink) !important;
+  border-color: rgba(255, 94, 148, 0.25) !important;
+  box-shadow: 0 0 20px rgba(255, 94, 148, 0.12) !important;
+}
+
+.detail-info .game-meta-detail .bonus-badge {
+  background: rgba(255, 193, 7, 0.08) !important;
+  color: var(--accent-gold) !important;
+  border-color: rgba(255, 193, 7, 0.25) !important;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.12) !important;
+}
+
+/* Version section */
+.version-section {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-light) !important;
+}
+
+.version-left {
+  color: var(--text-secondary) !important;
+}
+
+.version-left .refresh-icon {
+  color: var(--accent-cyan) !important;
+}
+
+.version-text {
+  color: var(--text-muted) !important;
+}
+
+.version-badge {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+/* ----- DOWNLOAD BUTTON – White with LED glow ----- */
 .download-btn {
-    background: linear-gradient(135deg, #00E5FF 0%, #0088FF 100%);
-    color: #ffffff !important;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    border: none;
-    border-radius: 12px;
-    padding: 14px 24px;
-    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.4);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-transform: uppercase;
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 2px solid var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Glow Effect on Button Hover / Tap */
-.download-btn:hover, .download-btn:active {
-    background: linear-gradient(135deg, #0088FF 0%, #00E5FF 100%);
-    box-shadow: 0 0 25px rgba(0, 229, 255, 0.8);
-    transform: scale(1.02);
+.download-btn:hover {
+  transform: scale(1.02) !important;
+  box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 212, 255, 0.25) !important;
 }
 
-/* 3. Subtle Cyan Glow for Text Highlights */
-.highlight-cyan {
-    color: #00A3C4;
-    font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+.download-btn .btn-icon svg {
+  stroke: var(--accent-cyan) !important;
+}
+
+.download-btn .btn-text {
+  color: var(--text-primary) !important;
+}
+
+.download-btn .btn-glow {
+  background: conic-gradient(from 0deg, 
+    var(--accent-cyan) 0deg 35deg, 
+    var(--accent-blue) 90deg 125deg, 
+    var(--accent-purple) 180deg 215deg, 
+    var(--accent-pink) 270deg 305deg, 
+    var(--accent-cyan) 360deg) !important;
+}
+
+.download-btn::after {
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.06) 0%, transparent 60%) !important;
+}
+
+/* ----- TAG SECTION – White with LED ----- */
+.tag-section {
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.tag-section .tag-title {
+  color: var(--text-primary) !important;
+}
+
+.tag-box {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.tag-box:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+}
+
+.tag-box .tag-head {
+  color: var(--text-primary) !important;
+}
+
+.tag-box .tag-content {
+  color: var(--text-secondary) !important;
+}
+
+/* ----- TOC SECTION – White with LED ----- */
+.toc-section {
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.toc-header {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.toc-header:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+}
+
+.toc-header .toc-left .toc-icon {
+  background: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.toc-header .toc-left .toc-icon .inner {
+  color: var(--text-white) !important;
+}
+
+.toc-header .toc-left .toc-title {
+  color: var(--text-primary) !important;
+}
+
+.toc-header .toc-right {
+  color: var(--text-muted) !important;
+}
+
+.toc-item {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.toc-item .toc-item-head {
+  color: var(--text-primary) !important;
+}
+
+.toc-item .toc-item-head .num {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  color: var(--text-white) !important;
+}
+
+.toc-item .toc-content {
+  color: var(--text-secondary) !important;
+}
+
+.toc-item .toc-content ul li::before {
+  color: var(--accent-cyan) !important;
+}
+
+/* ----- FAQ SECTION – White with LED ----- */
+.faq-section {
+  background: var(--bg-card) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.faq-section .faq-title {
+  color: var(--text-primary) !important;
+}
+
+.faq-box {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.faq-box:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+}
+
+.faq-box .faq-q {
+  color: var(--text-primary) !important;
+}
+
+.faq-box .faq-a {
+  color: var(--text-secondary) !important;
+}
+
+.faq-box .led-icon {
+  background: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.faq-box .led-icon .inner-icon {
+  color: var(--text-white) !important;
+}
+
+/* ----- GAME TAGS – White with LED ----- */
+.game-tags-section {
+  background: var(--bg-card) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.game-tags-section .game-tags-title {
+  color: var(--text-primary) !important;
+}
+
+.game-tag {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.game-tag:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.game-tag .tag-text {
+  color: var(--text-secondary) !important;
+}
+
+.game-tag .tag-loader .loader-ring {
+  stroke: var(--accent-cyan) !important;
+}
+
+/* ----- RELATED SECTION – White with LED ----- */
+.related-section {
+  background: var(--bg-card) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.related-title {
+  color: var(--text-primary) !important;
+}
+
+.related-item {
+  background: var(--bg-surface) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s ease !important;
+}
+
+.related-item:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--shadow-md), var(--glow-cyan) !important;
+}
+
+.related-item .rname {
+  color: var(--text-primary) !important;
+}
+
+.related-item .rname .alt {
+  color: var(--text-muted) !important;
+}
+
+.related-item .rbonus {
+  color: var(--accent-cyan) !important;
+}
+
+.related-item .rwithdraw {
+  color: var(--text-secondary) !important;
+}
+
+.related-item .rdownload {
+  background: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+  transition: all 0.3s ease !important;
+}
+
+.related-item .rdownload:hover {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.4) !important;
+  transform: scale(1.05) !important;
+}
+
+.related-item .rdownload .dl-icon-cyan svg {
+  stroke: var(--text-white) !important;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3)) !important;
+}
+
+/* ----- FOOTER – White with LED ----- */
+.footer-links {
+  background: var(--bg-surface) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+
+.footer-links a {
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+  background: var(--bg-card) !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer-links a:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.footer-note {
+  color: var(--text-muted) !important;
+  background: var(--bg-surface) !important;
+}
+
+/* ----- OVERLAY – White with LED ----- */
+.info-overlay {
+  background: rgba(0, 0, 0, 0.30) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.info-card {
+  background: var(--bg-card) !important;
+  box-shadow: var(--shadow-xl) !important;
+}
+
+.overlay-page-wrapper {
+  background: var(--bg-card) !important;
+}
+
+.overlay-page-wrapper .top-header {
+  background: var(--bg-header) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+.overlay-page-wrapper .overlay-content {
+  background: var(--bg-card) !important;
+}
+
+.overlay-page-wrapper .overlay-content h1 {
+  color: var(--text-primary) !important;
+}
+
+.overlay-page-wrapper .overlay-content p {
+  color: var(--text-secondary) !important;
+}
+
+.overlay-page-wrapper .overlay-content .game-tag {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+}
+
+.overlay-back-link {
+  background: var(--bg-input) !important;
+  color: var(--text-secondary) !important;
+  border-color: var(--border-light) !important;
+  transition: all 0.3s ease !important;
+}
+
+.overlay-back-link:hover {
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.overlay-back-link .back-led-icon {
+  background: var(--accent-cyan) !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: var(--glow-cyan) !important;
+}
+
+.overlay-back-link .back-led-icon .inner-icon svg {
+  stroke: var(--text-white) !important;
+}
+
+/* ----- LUCIDE ICONS – LED glow colors ----- */
+.lucide-icon.glow-green {
+  filter: drop-shadow(0 0 8px rgba(0, 230, 118, 0.3)) !important;
+  animation: iconGlowGreenWhite 2.5s ease-in-out infinite !important;
+}
+.lucide-icon.glow-cyan {
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3)) !important;
+  animation: iconGlowCyanWhite 2.5s ease-in-out infinite 0.3s !important;
+}
+.lucide-icon.glow-gold {
+  filter: drop-shadow(0 0 8px rgba(255, 193, 7, 0.3)) !important;
+  animation: iconGlowGoldWhite 2.5s ease-in-out infinite 0.6s !important;
+}
+.lucide-icon.glow-red {
+  filter: drop-shadow(0 0 8px rgba(255, 61, 61, 0.25)) !important;
+  animation: iconGlowRedWhite 2.5s ease-in-out infinite 0.9s !important;
+}
+.lucide-icon.glow-purple {
+  filter: drop-shadow(0 0 8px rgba(124, 92, 191, 0.3)) !important;
+  animation: iconGlowPurpleWhite 2.5s ease-in-out infinite 1.2s !important;
+}
+.lucide-icon.glow-blue {
+  filter: drop-shadow(0 0 8px rgba(74, 138, 255, 0.3)) !important;
+  animation: iconGlowBlueWhite 2.5s ease-in-out infinite 0.5s !important;
+}
+.lucide-icon.glow-pink {
+  filter: drop-shadow(0 0 8px rgba(255, 94, 148, 0.3)) !important;
+  animation: iconGlowPinkWhite 2.5s ease-in-out infinite 0.8s !important;
+}
+
+@keyframes iconGlowGreenWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(0, 230, 118, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(0, 230, 118, 0.4)); }
+}
+@keyframes iconGlowCyanWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(0, 212, 255, 0.4)); }
+}
+@keyframes iconGlowGoldWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 193, 7, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(255, 193, 7, 0.4)); }
+}
+@keyframes iconGlowRedWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 61, 61, 0.12)); }
+  50% { filter: drop-shadow(0 0 14px rgba(255, 61, 61, 0.35)); }
+}
+@keyframes iconGlowPurpleWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(124, 92, 191, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(124, 92, 191, 0.4)); }
+}
+@keyframes iconGlowBlueWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(74, 138, 255, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(74, 138, 255, 0.4)); }
+}
+@keyframes iconGlowPinkWhite {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(255, 94, 148, 0.15)); }
+  50% { filter: drop-shadow(0 0 16px rgba(255, 94, 148, 0.4)); }
+}
+
+/* ----- LED ICON STYLES – White background ----- */
+.led-icon {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.led-icon .inner-icon {
+  color: var(--accent-cyan) !important;
+}
+
+.led-icon.green-cyan::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-cyan) 0deg 60deg, 
+    var(--accent-green) 120deg 180deg, 
+    var(--accent-cyan) 240deg 300deg, 
+    var(--accent-cyan) 360deg) !important;
+}
+.led-icon.gold-pink::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-gold) 0deg 50deg, 
+    var(--accent-pink) 100deg 150deg, 
+    var(--accent-gold) 200deg 250deg, 
+    var(--accent-pink) 300deg 350deg, 
+    var(--accent-gold) 360deg) !important;
+}
+.led-icon.red-dark::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-red) 0deg 50deg, 
+    var(--accent-pink) 100deg 150deg, 
+    var(--accent-red) 200deg 250deg, 
+    var(--accent-pink) 300deg 350deg, 
+    var(--accent-red) 360deg) !important;
+}
+.led-icon.green-red-yellow::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-green) 0deg 40deg, 
+    var(--accent-red) 80deg 120deg, 
+    var(--accent-gold) 160deg 200deg, 
+    var(--accent-green) 240deg 280deg, 
+    var(--accent-red) 320deg 360deg) !important;
+}
+.led-icon.yellow-white-green::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-gold) 0deg 40deg, 
+    #ffffff 80deg 120deg, 
+    var(--accent-green) 160deg 200deg, 
+    var(--accent-gold) 240deg 280deg, 
+    #ffffff 320deg 360deg) !important;
+}
+.led-icon.red-yellow::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-red) 0deg 40deg, 
+    var(--accent-gold) 80deg 120deg, 
+    var(--accent-red) 160deg 200deg, 
+    var(--accent-gold) 240deg 280deg, 
+    var(--accent-red) 320deg 360deg) !important;
+}
+.led-icon.white-red::before {
+  background: conic-gradient(from 0deg, 
+    #ffffff 0deg 40deg, 
+    var(--accent-red) 80deg 120deg, 
+    #ffffff 160deg 200deg, 
+    var(--accent-red) 240deg 280deg, 
+    #ffffff 320deg 360deg) !important;
+}
+.led-icon.glow-bg {
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.08), 0 0 60px rgba(0, 212, 255, 0.04) !important;
+}
+
+/* ----- CLOSE ICON – White with LED ----- */
+.close-icon-wrap {
+  background: var(--bg-card) !important;
+  border-color: var(--border-light) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.close-icon-wrap::before {
+  background: conic-gradient(from 0deg, 
+    var(--accent-cyan) 0deg 40deg, 
+    var(--accent-blue) 80deg 120deg, 
+    var(--accent-cyan) 160deg 200deg, 
+    var(--accent-blue) 240deg 280deg, 
+    var(--accent-cyan) 320deg 360deg) !important;
+}
+
+.close-icon-wrap .close-icon-inner svg {
+  stroke: var(--accent-cyan) !important;
+}
+
+.close-icon-wrap .close-glow {
+  background: rgba(0, 212, 255, 0.05) !important;
+}
+
+/* ----- GRADIENT OVERRIDES – White theme ----- */
+.bg-gradient-1 .detail-card { background: var(--gradient-card-1) !important; }
+.bg-gradient-2 .detail-card { background: var(--gradient-card-2) !important; }
+.bg-gradient-3 .detail-card { background: var(--gradient-card-3) !important; }
+.bg-gradient-4 .detail-card { background: var(--gradient-card-4) !important; }
+.bg-gradient-5 .detail-card { background: var(--gradient-card-5) !important; }
+.bg-gradient-6 .detail-card { background: var(--gradient-card-6) !important; }
+.bg-gradient-7 .detail-card { background: var(--gradient-card-7) !important; }
+
+/* ----- BORDER STYLES – LED accents ----- */
+.border-style-1 .detail-card { border-left: 3px solid var(--accent-cyan) !important; }
+.border-style-2 .detail-card { border-right: 3px solid var(--accent-pink) !important; }
+.border-style-3 .detail-card { border-top: 3px solid var(--accent-green) !important; }
+.border-style-4 .detail-card { border-bottom: 3px solid var(--accent-purple) !important; }
+.border-style-5 .detail-card { border-left: 3px solid var(--accent-gold) !important; border-radius: 0 12px 12px 0 !important; }
+
+/* ----- LAYOUT BONUS COLORS – White theme ----- */
+.layout-left .detail-info .game-sub .signup-bonus { color: var(--accent-cyan) !important; }
+.layout-right .detail-info .game-sub .signup-bonus { color: var(--accent-purple) !important; }
+.layout-center .detail-info .game-sub .signup-bonus { color: var(--accent-gold) !important; }
+
+/* ============================================================
+   RESPONSIVE – White LED theme stays clean on mobile
+   ============================================================ */
+@media (max-width: 420px) {
+  .header-nav-link {
+    font-size: 0.45rem !important;
+    padding: 2px 8px !important;
+  }
+  .logo-cyan-round {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .site-name-led-round {
+    padding: 2px 8px 2px 6px !important;
+    min-height: 22px !important;
+  }
+  .site-name-led-round .site-name-text {
+    font-size: 0.35rem !important;
+  }
+  .site-name-led-round .led-dot-round {
+    width: 4px !important;
+    height: 4px !important;
+  }
+  .share-btn {
+    font-size: 0.35rem !important;
+    padding: 2px 6px !important;
+  }
+  .share-btn svg {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  .telegram-btn {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .header-bottom-row {
+    padding: 4px 0 !important;
+  }
+  .detail-img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .detail-info .game-name {
+    font-size: 0.9rem !important;
+  }
+  .card-name {
+    font-size: 0.6rem !important;
+  }
+  .card-name .alt {
+    font-size: 0.4rem !important;
+  }
+  .card-bonus {
+    font-size: 0.5rem !important;
+  }
+  .card-withdraw {
+    font-size: 0.45rem !important;
+  }
+  .marquee-container marquee {
+    font-size: 0.5rem !important;
+  }
+  .marquee-container marquee span {
+    margin: 0 8px !important;
+  }
+  .card-number {
+    width: 16px !important;
+    height: 16px !important;
+    font-size: 0.4rem !important;
+    top: 2px !important;
+    left: 2px !important;
+  }
+  .card-img {
+    margin-left: 14px !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .telegram-btn .corner-led {
+    width: 3px !important;
+    height: 3px !important;
+  }
+  .led-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .led-icon .inner-icon {
+    font-size: 0.45rem !important;
+  }
+  .game-tag {
+    font-size: 0.45rem !important;
+    padding: 4px 10px 4px 8px !important;
+    gap: 5px !important;
+  }
+  .game-tag .tag-loader {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .related-item .rname {
+    font-size: 0.5rem !important;
+  }
+  .footer-links a {
+    font-size: 0.45rem !important;
+    padding: 2px 8px !important;
+  }
+  .layout-center .detail-top { flex-direction: column !important; }
+  .layout-left .detail-top { flex-direction: row !important; }
+  .layout-right .detail-top { flex-direction: row-reverse !important; }
+  .lucide-icon {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  .download-btn {
+    padding: 12px 20px !important;
+    font-size: 0.85rem !important;
+    min-width: 140px !important;
+  }
+  .download-btn .btn-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .related-item .rdownload {
+    font-size: 0.4rem !important;
+    padding: 3px 8px !important;
+  }
+  .related-item .rdownload .dl-icon-cyan {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .overlay-page-wrapper .overlay-content {
+    padding: 16px 12px !important;
+  }
+  .overlay-page-wrapper .overlay-content h1 {
+    font-size: 1.1rem !important;
+  }
+  .overlay-page-wrapper .overlay-content p {
+    font-size: 0.8rem !important;
+  }
+  .overlay-back-link {
+    font-size: 0.6rem !important;
+    padding: 8px 14px !important;
+  }
+  .overlay-back-link .back-led-icon {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .overlay-back-link .back-led-icon .inner-icon svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  .info-card .close-top .close-icon-wrap {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  .info-card .close-top .close-icon-wrap .close-icon-inner {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .info-card {
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
 }
