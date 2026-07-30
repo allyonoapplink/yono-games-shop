@@ -1,4 +1,3 @@
-0000
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -127,7 +126,6 @@
       transition: 0.3s;
       cursor: pointer;
       white-space: nowrap;
-      margin-left: auto;
       box-shadow: 0 2px 10px rgba(0,136,204,0.3);
       letter-spacing: 0.3px;
     }
@@ -192,75 +190,126 @@
       border-color: #aaaadd;
     }
     
-    /* TOP NAV - Home left, Disclaimer right */
+    /* ===== TOP NAV - Single row, no wrap ===== */
     .top-nav { 
       background: #ffffff; 
-      padding: 6px 10px; 
+      padding: 4px 8px; 
       display: flex; 
       justify-content: space-between;
       align-items: center; 
-      flex-wrap: wrap; 
-      gap: 4px 8px;
+      gap: 6px;
       border-bottom: 2px solid #e2e8f0; 
       position: sticky; 
       top: 0; 
       z-index: 100; 
+      flex-wrap: nowrap;
+      overflow: visible;
+      min-height: 44px;
     }
-    .nav-logo { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
-    .nav-logo img { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; border: 2px solid #22c55e; }
-    .nav-logo .site-title { font-weight: 800; font-size: 0.7rem; color: #22c55e; letter-spacing: 0.3px; white-space: nowrap; }
+    .nav-logo { 
+      display: flex; 
+      align-items: center; 
+      gap: 4px; 
+      flex-shrink: 0; 
+    }
+    .nav-logo img { 
+      width: 28px; 
+      height: 28px; 
+      border-radius: 6px; 
+      object-fit: cover; 
+      border: 2px solid #22c55e; 
+    }
+    .nav-logo .site-title { 
+      font-weight: 800; 
+      font-size: 0.6rem; 
+      color: #22c55e; 
+      letter-spacing: 0.2px; 
+      white-space: nowrap; 
+    }
     
-    /* Navigation links - equal spacing, centered */
+    /* ===== NAV LINKS - Single row, equal spacing ===== */
     .nav-links { 
       display: flex; 
       align-items: center; 
       justify-content: center;
       flex: 1;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 0 8px;
-    }
-    @media (max-width: 480px) {
-      .nav-links { gap: 6px; }
-      .top-nav .nav-logo .site-title { font-size: 0.6rem; }
+      gap: 6px;
+      flex-wrap: nowrap;
+      padding: 0 4px;
+      min-width: 0;
     }
     .top-nav a { 
       color: #0a0a0a; 
       text-decoration: none; 
       font-weight: 700; 
-      font-size: 0.55rem; 
-      padding: 3px 8px; 
+      font-size: 0.5rem; 
+      padding: 2px 6px; 
       border-radius: 40px; 
       cursor: pointer; 
       background: transparent; 
       white-space: nowrap; 
       transition: 0.2s; 
-      letter-spacing: 0.2px;
+      letter-spacing: 0.1px;
       border: 1px solid transparent;
+      flex-shrink: 0;
     }
     .top-nav a:hover { background: #f1f5f9; border-color: #d0d9e8; }
     .top-nav a.active { background: #eef2ff; color: #1e293b; border-color: #b3c8e6; }
     body.dark-theme .top-nav a.active { background: #1e2d3d; color: #e8edf2; border-color: #4a6a8a; }
     
+    /* Nav separators */
+    .nav-sep {
+      color: #d0d9e8;
+      font-weight: 300;
+      font-size: 0.6rem;
+      flex-shrink: 0;
+    }
+    
     /* Right side controls */
     .nav-controls {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       flex-shrink: 0;
+    }
+    
+    /* Responsive adjustments - keep everything on one row */
+    @media (max-width: 500px) {
+      .nav-logo img { width: 22px; height: 22px; }
+      .nav-logo .site-title { font-size: 0.45rem; }
+      .top-nav a { font-size: 0.4rem; padding: 2px 4px; }
+      .top-nav a .nav-label { font-size: 0.4rem; }
+      .nav-icon { width: 16px; height: 16px; margin-right: 2px; }
+      .nav-icon svg { width: 14px; height: 14px; }
+      .nav-sep { font-size: 0.4rem; }
+      .telegram-nav-btn { font-size: 0.35rem; padding: 2px 6px; }
+      .telegram-nav-btn img { width: 12px; height: 12px; }
+      .dark-toggle-btn { font-size: 0.35rem; padding: 2px 6px; }
+      .dark-toggle-btn .moon-icon { font-size: 0.5rem; }
+      .top-nav { padding: 3px 4px; gap: 3px; min-height: 36px; }
+      .nav-links { gap: 2px; }
+    }
+    @media (max-width: 400px) {
+      .top-nav a { font-size: 0.35rem; padding: 1px 3px; }
+      .nav-logo .site-title { font-size: 0.4rem; }
+      .nav-logo img { width: 18px; height: 18px; }
+      .nav-icon { width: 14px; height: 14px; }
+      .nav-icon svg { width: 12px; height: 12px; }
+      .top-nav { padding: 2px 3px; gap: 2px; min-height: 32px; }
+      .nav-links { gap: 1px; }
     }
     
     /* APP TAGS */
     .app-tags-wrapper {
-      padding: 8px 12px;
+      padding: 6px 10px;
       background: #f8fafc;
       border-bottom: 1px solid #e2e8f0;
     }
     .app-tags-scroll {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       overflow-x: auto;
-      padding: 4px 0 8px 0;
+      padding: 3px 0 6px 0;
       scrollbar-width: thin;
       scrollbar-color: #22c55e transparent;
       -webkit-overflow-scrolling: touch;
@@ -275,7 +324,7 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
-    .app-tags-scroll::-webkit-scrollbar { height: 3px; }
+    .app-tags-scroll::-webkit-scrollbar { height: 2px; }
     .app-tags-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); border-radius: 4px; }
     .app-tags-scroll::-webkit-scrollbar-thumb { background: #22c55e; border-radius: 4px; }
     .app-tag-item {
@@ -283,16 +332,15 @@
       background: linear-gradient(135deg, #0a2e1d, #1a6e3a);
       border: 1px solid #ffcf8a;
       color: #e8f5e9;
-      padding: 4px 16px;
+      padding: 3px 12px;
       border-radius: 40px;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       font-weight: 700;
       white-space: nowrap;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      border-radius: 40px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
     .app-tag-item:hover {
       background: linear-gradient(135deg, #ffcf8a, #f5a623);
@@ -301,27 +349,27 @@
       box-shadow: 0 4px 12px rgba(255,207,138,0.3);
     }
     
-    .container { max-width: 100%; margin: 12px auto; padding: 0 8px; }
-    .cards-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; padding: 8px 0 16px; }
+    .container { max-width: 100%; margin: 10px auto; padding: 0 6px; }
+    .cards-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 6px 0 12px; }
     
     /* APP CARD */
     .app-card {
       background: white;
-      border-radius: 24px;
-      padding: 18px 14px 20px;
+      border-radius: 20px;
+      padding: 14px 12px 16px;
       width: 100%;
-      max-width: 340px;
+      max-width: 320px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       border: 1px solid #eef2f8;
       text-align: center;
       position: relative;
     }
-    .app-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); border-color: #ffcf8a; }
+    .app-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.10); border-color: #ffcf8a; }
     
-    .app-card .card-img { width: 64px; height: 64px; margin: 0 auto 10px; background: linear-gradient(145deg, #fff5e6, #ffe6cc); border-radius: 20px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.04); position: relative; }
+    .app-card .card-img { width: 56px; height: 56px; margin: 0 auto 8px; background: linear-gradient(145deg, #fff5e6, #ffe6cc); border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.04); position: relative; }
     .app-card .card-img img { width: 100%; height: 100%; object-fit: cover; }
-    .app-card .card-app-name { font-size: 1.1rem; font-weight: 800; background: linear-gradient(125deg, #1e562a, #2c4c3b); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 8px; }
+    .app-card .card-app-name { font-size: 1rem; font-weight: 800; background: linear-gradient(125deg, #1e562a, #2c4c3b); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 6px; }
     
     .card-stat-value.rating-green {
       color: #22c55e;
@@ -360,9 +408,9 @@
       letter-spacing: 0.5px;
     }
     .card-stat-label {
-      font-size: 0.55rem;
+      font-size: 0.45rem;
       font-weight: 800;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
       color: #1e293b;
       text-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -373,10 +421,10 @@
     .card-stat-label.bonus-label { color: #dc2626; text-shadow: 0 0 8px #dc2626; }
 
     .card-info-row .ci-label { 
-      font-size: 0.5rem; 
+      font-size: 0.4rem; 
       font-weight: 800; 
       text-transform: uppercase; 
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       color: #2563eb;
       text-shadow: 0 0 8px #2563eb;
     }
@@ -393,10 +441,10 @@
     .card-info-row .ci-label.bonus-label-c { color: #dc2626; text-shadow: 0 0 8px #dc2626; }
     .card-info-row .ci-label.withdraw-label-c { color: #2563eb; text-shadow: 0 0 8px #2563eb; }
 
-    .app-card .card-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; background: #fef4e6; padding: 8px 10px; border-radius: 40px; margin: 6px 0 10px; }
-    .app-card .card-stat { text-align: center; min-width: 48px; }
+    .app-card .card-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; background: #fef4e6; padding: 6px 8px; border-radius: 40px; margin: 4px 0 8px; }
+    .app-card .card-stat { text-align: center; min-width: 40px; }
     
-    .app-card .card-info-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; background: #f0f9f0; padding: 6px 10px; border-radius: 40px; border: 1px solid #d4e6d4; margin: 6px 0 10px; }
+    .app-card .card-info-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px; background: #f0f9f0; padding: 4px 8px; border-radius: 40px; border: 1px solid #d4e6d4; margin: 4px 0 8px; }
     .app-card .ci-item { text-align: center; }
     
     /* ===== DOWNLOAD BUTTON STYLES ===== */
@@ -404,18 +452,18 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 6px;
       width: auto;
-      min-width: 160px;
-      max-width: 220px;
-      margin: 10px auto 0;
-      padding: 8px 18px;
+      min-width: 130px;
+      max-width: 190px;
+      margin: 8px auto 0;
+      padding: 6px 14px;
       background: linear-gradient(135deg, #22c55e, #06b6d4);
       color: #fff;
       border: none;
       border-radius: 60px;
       font-weight: 800;
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       transition: all 0.3s ease;
       box-shadow: 0 0 20px rgba(6,182,212,0.3), 0 4px 12px rgba(0,0,0,0.15);
       cursor: pointer;
@@ -450,8 +498,8 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       flex-shrink: 0;
     }
     .app-card .download-btn .btn-icon svg {
@@ -465,8 +513,8 @@
       filter: drop-shadow(0 0 4px rgba(255,255,255,0.3));
     }
     
-    .app-card .card-spin-desc { font-size: 0.7rem; color: #2d3e2b; line-height: 1.5; margin: 6px 0 4px; text-align: left; padding: 0 2px; }
-    .app-card .card-benefits { font-size: 0.65rem; color: #1e562a; line-height: 1.5; margin: 4px 0 6px; text-align: left; padding: 6px 10px; background: #f0f9f0; border-radius: 12px; border-left: 3px solid #22c55e; }
+    .app-card .card-spin-desc { font-size: 0.6rem; color: #2d3e2b; line-height: 1.4; margin: 4px 0; text-align: left; padding: 0 2px; }
+    .app-card .card-benefits { font-size: 0.55rem; color: #1e562a; line-height: 1.4; margin: 4px 0; text-align: left; padding: 4px 8px; background: #f0f9f0; border-radius: 10px; border-left: 3px solid #22c55e; }
     .app-card .card-benefits strong { color: #0a2e1d; }
     
     .hidden { display: none !important; }
@@ -545,35 +593,50 @@
     .small-download:hover { background: #1a1a1a; transform: scale(0.97); }
     .footer-note { text-align: center; background: #ecf9f0; border-radius: 40px; padding: 10px; font-weight: 500; font-size: 0.6rem; margin-top: 14px; }
     
-    /* ===== INFO MODAL / PAGE CONTAINER ===== */
-    .info-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 300; justify-content: center; align-items: flex-start; overflow-y: auto; padding: 30px 20px; }
-    .info-modal-content { 
-      background: white; 
-      max-width: 800px; 
+    /* ===== INFO MODAL - Full page overlay ===== */
+    .info-modal { 
+      display: none; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
       width: 100%; 
-      border-radius: 28px; 
-      padding: 30px 28px; 
+      height: 100%; 
+      background: #f0f4fa; 
+      z-index: 300; 
+      justify-content: flex-start; 
+      align-items: flex-start; 
+      overflow-y: auto; 
+      padding: 0;
+    }
+    body.dark-theme .info-modal {
+      background: #0b1219;
+    }
+    .info-modal-content { 
+      background: transparent; 
+      max-width: 100%; 
+      width: 100%; 
+      border-radius: 0; 
+      padding: 60px 20px 30px; 
       text-align: left; 
-      animation: fadeInUp 0.3s ease; 
-      box-shadow: 0 30px 40px rgba(0,0,0,0.3); 
-      border: 1px solid #ffcf8a; 
+      animation: none; 
+      box-shadow: none; 
+      border: none; 
       max-height: none;
       overflow-y: visible;
       position: relative;
-      margin: 0 auto;
+      margin: 0;
+      min-height: 100vh;
     }
     .info-modal-content h4 { 
-      font-size: 1.2rem; 
-      margin-bottom: 12px; 
-      color: #1e562a; 
-      border-left: 4px solid #ff8c00; 
-      padding-left: 12px; 
-      padding-right: 30px;
       display: none;
     }
-    .info-modal-content p { font-size: 0.8rem; line-height: 1.5; margin: 10px 0; color: #2d3e2b; }
-    .info-modal-content ul { margin-left: 16px; margin-top: 6px; }
-    .info-modal-content li { margin: 4px 0; font-size: 0.75rem; }
+    
+    /* Page content wrapper */
+    .page-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
     
     /* Back button at bottom of page content */
     .page-back-btn-wrapper {
@@ -583,6 +646,9 @@
       padding: 30px 0 10px 0;
       margin-top: 20px;
       border-top: 2px dashed #d0d9e8;
+    }
+    body.dark-theme .page-back-btn-wrapper {
+      border-top-color: #4a5a3a;
     }
     .page-back-btn {
       display: flex;
@@ -622,38 +688,17 @@
       stroke: #22c55e;
     }
     
+    /* Close button hidden in full-page mode */
     .modal-close-btn {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: #000000;
-      color: white;
-      border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      display: none;
     }
-    .modal-close-btn:hover { transform: scale(1.1); background: #1a1a1a; }
-    .modal-close-btn:active { transform: scale(0.92); }
     
-    .modal-close-btn svg {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
+    /* Ensure page content fills properly */
+    .info-modal-content p { font-size: 0.85rem; line-height: 1.6; margin: 10px 0; color: #2d3e2b; }
+    .info-modal-content ul { margin-left: 16px; margin-top: 6px; }
+    .info-modal-content li { margin: 4px 0; font-size: 0.8rem; }
+    body.dark-theme .info-modal-content p { color: #c0d0c0; }
+    body.dark-theme .info-modal-content li { color: #c0d0c0; }
     
     .premium-toggle-about, .premium-toggle-contact, .premium-toggle-disclaimer {
       border-radius: 12px;
@@ -712,10 +757,14 @@
     .contact-email:hover { text-decoration: underline; }
     .contact-telegram { color: #0088cc; font-weight: 700; text-decoration: none; }
     .contact-telegram:hover { text-decoration: underline; }
+    body.dark-theme .contact-table td { background: #1a2632; color: #d0d9e8; border-bottom-color: #2a3a4a; }
+    body.dark-theme .contact-table th { background: #0a1a2a; color: #e8edf2; }
     
     .disclaimer-section { margin: 12px 0; padding: 10px 12px; border-radius: 12px; background: #f8f9fa; border-left: 4px solid #ff8c00; }
     .disclaimer-section h4 { color: #b45900; font-size: 0.95rem; margin-bottom: 4px; }
     .disclaimer-box { background: #fff7e8; padding: 8px 12px; border-radius: 10px; margin: 8px 0; border: 1px solid #ffcf8a; }
+    body.dark-theme .disclaimer-section { background: #0f1a24; border-left-color: #8a6a3a; }
+    body.dark-theme .disclaimer-box { background: #0f1a24; border-color: #4a5a3a; }
     
     .tag-template { display: none; }
     
@@ -930,11 +979,12 @@
     
     @media (min-width: 480px) {
       .app-card { max-width: 320px; }
-      .nav-logo .site-title { font-size: 0.85rem; }
-      .top-nav a { font-size: 0.65rem; padding: 4px 12px; }
-      .telegram-nav-btn { font-size: 0.6rem; padding: 3px 12px 3px 10px; }
-      .telegram-nav-btn img { width: 20px; height: 20px; }
-      .dark-toggle-btn { font-size: 0.6rem; padding: 3px 12px 3px 10px; }
+      .nav-logo .site-title { font-size: 0.8rem; }
+      .top-nav a { font-size: 0.6rem; padding: 4px 10px; }
+      .top-nav a .nav-label { font-size: 0.6rem; }
+      .telegram-nav-btn { font-size: 0.55rem; padding: 3px 10px; }
+      .telegram-nav-btn img { width: 18px; height: 18px; }
+      .dark-toggle-btn { font-size: 0.55rem; padding: 3px 10px; }
       .app-card .download-btn { min-width: 140px; padding: 7px 16px; font-size: 0.65rem; }
       .app-card .download-btn .btn-icon { width: 16px; height: 16px; }
     }
@@ -943,7 +993,7 @@
       .full-view-card { max-width: 480px; }
       .app-card .download-btn { min-width: 130px; padding: 6px 14px; font-size: 0.6rem; }
       .app-card .download-btn .btn-icon { width: 14px; height: 14px; }
-      .info-modal-content { padding: 40px 35px; }
+      .info-modal-content { padding: 70px 30px 30px; }
     }
 
     .next-page-top-title {
@@ -1088,7 +1138,7 @@
   <header>
     <nav class="top-nav" aria-label="Main navigation">
       <div class="nav-logo">
-        <img src="https://i.ibb.co/1Y43Cq5N/logo-icon.jpg" alt="Yonogames.shop logo" loading="eager" fetchpriority="high" width="32" height="32">
+        <img src="https://i.ibb.co/1Y43Cq5N/logo-icon.jpg" alt="Yonogames.shop logo" loading="eager" fetchpriority="high" width="28" height="28">
         <span class="site-title">YONO GAMES SHOP</span>
       </div>
       <div class="nav-links">
@@ -1098,18 +1148,21 @@
           </span>
           <span class="nav-label">Home</span>
         </a>
+        <span class="nav-sep">|</span>
         <a href="#" id="navAbout">
           <span class="nav-icon nav-icon-about" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
           </span>
           <span class="nav-label">About</span>
         </a>
+        <span class="nav-sep">|</span>
         <a href="#" id="navContact">
           <span class="nav-icon nav-icon-contact" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           </span>
           <span class="nav-label">Contact</span>
         </a>
+        <span class="nav-sep">|</span>
         <a href="#" id="navDisclaimer">
           <span class="nav-icon nav-icon-disclaimer" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -1135,9 +1188,6 @@
 
   <div id="customInfoModal" class="info-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="info-modal-content">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
-        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
       <h4 id="modalTitle">Information</h4>
       <div id="modalBody"></div>
     </div>
@@ -1547,7 +1597,7 @@
       // ===== PAGE LOADER FUNCTIONS =====
       function loadPageContent(pageFile, pageTitle) {
         // Show the modal with loading state
-        showInfoModal(pageTitle, '<div style="text-align:center;padding:40px 0;"><div style="font-size:1.2rem;color:#22c55e;">Loading...</div></div>');
+        showInfoModal(pageTitle, '<div style="text-align:center;padding:60px 0;"><div style="font-size:1.2rem;color:#22c55e;">Loading...</div></div>');
         
         fetch(pageFile)
           .then(res => {
@@ -1583,9 +1633,9 @@
           })
           .catch(() => {
             modalBody.innerHTML = `
-              <div style="text-align:center;padding:30px 0;">
+              <div style="text-align:center;padding:60px 0;">
                 <p style="font-size:1rem;color:#dc2626;">Unable to load ${pageTitle} page.</p>
-                <p style="font-size:0.8rem;color:#6c7a5a;margin-top:8px;">Please try again later.</p>
+                <p style="font-size:0.85rem;color:#6c7a5a;margin-top:12px;">Please try again later.</p>
                 <div class="page-back-btn-wrapper">
                   <div class="page-back-btn" id="pageBackBtn">
                     <svg viewBox="0 0 24 24">
@@ -1634,7 +1684,6 @@
       const customModal = document.getElementById('customInfoModal');
       const modalTitle = document.getElementById('modalTitle');
       const modalBody = document.getElementById('modalBody');
-      const modalCloseBtn = document.getElementById('modalCloseBtn');
 
       const homeNavLink = document.getElementById('homeNavLink');
       const navAbout = document.getElementById('navAbout');
@@ -1690,9 +1739,6 @@
         history.replaceState({ page: 'main' }, '', window.location.pathname);
       }
 
-      modalCloseBtn.addEventListener('click', closeModalAndResetHistory);
-      window.addEventListener('click', (e) => { if (e.target === customModal) closeModalAndResetHistory(); });
-
       function showInfoModal(title, contentHtml) {
         modalTitle.innerText = title;
         modalBody.innerHTML = contentHtml;
@@ -1715,7 +1761,7 @@
           html += `
             <div class="app-card" data-app-index="${idx}">
               <div class="card-img">
-                <img src="${app.img}" alt="${app.name} icon" loading="lazy" onerror="this.src='https://via.placeholder.com/64?text=App'">
+                <img src="${app.img}" alt="${app.name} icon" loading="lazy" onerror="this.src='https://via.placeholder.com/56?text=App'">
               </div>
               <div class="card-app-name">${app.name}</div>
               <div class="card-stats">
