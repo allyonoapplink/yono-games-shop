@@ -171,7 +171,6 @@
       white-space: nowrap;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       letter-spacing: 0.3px;
-      margin-left: 6px;
     }
     .dark-toggle-btn:hover {
       background: #2a2a4e;
@@ -190,55 +189,40 @@
       border-color: #aaaadd;
     }
     
-    /* ===== TOP NAV - Single row, no wrap ===== */
+    /* ===== NEW HEADER LAYOUT - Vertical, left-aligned ===== */
     .top-nav { 
       background: #ffffff; 
-      padding: 4px 8px; 
-      display: flex; 
-      justify-content: space-between;
-      align-items: center; 
-      gap: 6px;
+      padding: 8px 12px; 
       border-bottom: 2px solid #e2e8f0; 
       position: sticky; 
       top: 0; 
       z-index: 100; 
-      flex-wrap: nowrap;
-      overflow: visible;
-      min-height: 44px;
-    }
-    .nav-logo { 
-      display: flex; 
-      align-items: center; 
-      gap: 4px; 
-      flex-shrink: 0; 
-    }
-    .nav-logo img { 
-      width: 28px; 
-      height: 28px; 
-      border-radius: 6px; 
-      object-fit: cover; 
-      border: 2px solid #22c55e; 
-    }
-    .nav-logo .site-title { 
-      font-weight: 800; 
-      font-size: 0.6rem; 
-      color: #22c55e; 
-      letter-spacing: 0.2px; 
-      white-space: nowrap; 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
     }
     
-    /* ===== NAV LINKS - Single row, equal spacing ===== */
-    .nav-links { 
-      display: flex; 
-      align-items: center; 
-      justify-content: center;
-      flex: 1;
-      gap: 6px;
+    /* Row 1: Navigation - single horizontal row, left aligned, no wrap */
+    .nav-row-top {
+      display: flex;
+      align-items: center;
       flex-wrap: nowrap;
-      padding: 0 4px;
-      min-width: 0;
+      gap: 4px 8px;
+      width: 100%;
+      overflow-x: auto;
+      padding: 2px 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
-    .top-nav a { 
+    .nav-row-top::-webkit-scrollbar { display: none; }
+    .nav-links-top {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 2px 6px;
+    }
+    .nav-links-top a { 
       color: #0a0a0a; 
       text-decoration: none; 
       font-weight: 700; 
@@ -253,50 +237,111 @@
       border: 1px solid transparent;
       flex-shrink: 0;
     }
-    .top-nav a:hover { background: #f1f5f9; border-color: #d0d9e8; }
-    .top-nav a.active { background: #eef2ff; color: #1e293b; border-color: #b3c8e6; }
-    body.dark-theme .top-nav a.active { background: #1e2d3d; color: #e8edf2; border-color: #4a6a8a; }
-    
-    /* Nav separators */
+    .nav-links-top a:hover { background: #f1f5f9; border-color: #d0d9e8; }
+    .nav-links-top a.active { background: #eef2ff; color: #1e293b; border-color: #b3c8e6; }
+    body.dark-theme .nav-links-top a.active { background: #1e2d3d; color: #e8edf2; border-color: #4a6a8a; }
     .nav-sep {
       color: #d0d9e8;
       font-weight: 300;
-      font-size: 0.6rem;
+      font-size: 0.5rem;
       flex-shrink: 0;
     }
     
-    /* Right side controls */
-    .nav-controls {
+    /* Row 2: Logo + Title */
+    .nav-row-logo {
       display: flex;
       align-items: center;
-      gap: 3px;
-      flex-shrink: 0;
+      gap: 8px;
+      padding: 2px 0;
+    }
+    .nav-row-logo img { 
+      width: 32px; 
+      height: 32px; 
+      border-radius: 8px; 
+      object-fit: cover; 
+      border: 2px solid #22c55e; 
+    }
+    .nav-row-logo .site-title { 
+      font-weight: 800; 
+      font-size: 0.8rem; 
+      color: #22c55e; 
+      letter-spacing: 0.3px; 
+      white-space: nowrap; 
     }
     
-    /* Responsive adjustments - keep everything on one row */
+    /* Row 3: Telegram */
+    .nav-row-telegram {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 0;
+    }
+    .nav-row-telegram .telegram-label {
+      font-weight: 600;
+      font-size: 0.6rem;
+      color: #334155;
+    }
+    body.dark-theme .nav-row-telegram .telegram-label {
+      color: #b0c0d0;
+    }
+    .nav-row-telegram .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, #0088cc, #00acee);
+      border: none;
+      padding: 2px 10px 2px 8px;
+      border-radius: 40px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 2px 10px rgba(0,136,204,0.3);
+      letter-spacing: 0.3px;
+    }
+    .nav-row-telegram .telegram-btn:hover {
+      background: linear-gradient(135deg, #006699, #0099cc);
+      box-shadow: 0 4px 16px rgba(0,136,204,0.4);
+      transform: scale(1.03);
+    }
+    .nav-row-telegram .telegram-btn img {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+    
+    /* Row 4: Dark Toggle */
+    .nav-row-dark {
+      display: flex;
+      align-items: center;
+      padding: 2px 0;
+    }
+    
+    /* Responsive adjustments */
     @media (max-width: 500px) {
-      .nav-logo img { width: 22px; height: 22px; }
-      .nav-logo .site-title { font-size: 0.45rem; }
-      .top-nav a { font-size: 0.4rem; padding: 2px 4px; }
-      .top-nav a .nav-label { font-size: 0.4rem; }
+      .top-nav { padding: 6px 8px; gap: 4px; }
+      .nav-links-top a { font-size: 0.4rem; padding: 2px 4px; }
+      .nav-links-top a .nav-label { font-size: 0.4rem; }
       .nav-icon { width: 16px; height: 16px; margin-right: 2px; }
       .nav-icon svg { width: 14px; height: 14px; }
       .nav-sep { font-size: 0.4rem; }
-      .telegram-nav-btn { font-size: 0.35rem; padding: 2px 6px; }
-      .telegram-nav-btn img { width: 12px; height: 12px; }
-      .dark-toggle-btn { font-size: 0.35rem; padding: 2px 6px; }
+      .nav-row-logo img { width: 26px; height: 26px; }
+      .nav-row-logo .site-title { font-size: 0.65rem; }
+      .nav-row-telegram .telegram-label { font-size: 0.5rem; }
+      .nav-row-telegram .telegram-btn { font-size: 0.4rem; padding: 2px 6px; }
+      .nav-row-telegram .telegram-btn img { width: 12px; height: 12px; }
+      .dark-toggle-btn { font-size: 0.4rem; padding: 2px 6px; }
       .dark-toggle-btn .moon-icon { font-size: 0.5rem; }
-      .top-nav { padding: 3px 4px; gap: 3px; min-height: 36px; }
-      .nav-links { gap: 2px; }
     }
     @media (max-width: 400px) {
-      .top-nav a { font-size: 0.35rem; padding: 1px 3px; }
-      .nav-logo .site-title { font-size: 0.4rem; }
-      .nav-logo img { width: 18px; height: 18px; }
-      .nav-icon { width: 14px; height: 14px; }
-      .nav-icon svg { width: 12px; height: 12px; }
-      .top-nav { padding: 2px 3px; gap: 2px; min-height: 32px; }
-      .nav-links { gap: 1px; }
+      .nav-links-top a { font-size: 0.35rem; padding: 1px 3px; }
+      .nav-row-logo .site-title { font-size: 0.55rem; }
+      .nav-row-logo img { width: 22px; height: 22px; }
     }
     
     /* APP TAGS */
@@ -616,7 +661,7 @@
       max-width: 100%; 
       width: 100%; 
       border-radius: 0; 
-      padding: 60px 20px 30px; 
+      padding: 20px 16px 30px; 
       text-align: left; 
       animation: none; 
       box-shadow: none; 
@@ -979,11 +1024,12 @@
     
     @media (min-width: 480px) {
       .app-card { max-width: 320px; }
-      .nav-logo .site-title { font-size: 0.8rem; }
-      .top-nav a { font-size: 0.6rem; padding: 4px 10px; }
-      .top-nav a .nav-label { font-size: 0.6rem; }
-      .telegram-nav-btn { font-size: 0.55rem; padding: 3px 10px; }
-      .telegram-nav-btn img { width: 18px; height: 18px; }
+      .nav-links-top a { font-size: 0.6rem; padding: 3px 10px; }
+      .nav-links-top a .nav-label { font-size: 0.6rem; }
+      .nav-row-logo .site-title { font-size: 0.9rem; }
+      .nav-row-logo img { width: 36px; height: 36px; }
+      .nav-row-telegram .telegram-btn { font-size: 0.55rem; padding: 3px 10px; }
+      .nav-row-telegram .telegram-btn img { width: 16px; height: 16px; }
       .dark-toggle-btn { font-size: 0.55rem; padding: 3px 10px; }
       .app-card .download-btn { min-width: 140px; padding: 7px 16px; font-size: 0.65rem; }
       .app-card .download-btn .btn-icon { width: 16px; height: 16px; }
@@ -993,7 +1039,7 @@
       .full-view-card { max-width: 480px; }
       .app-card .download-btn { min-width: 130px; padding: 6px 14px; font-size: 0.6rem; }
       .app-card .download-btn .btn-icon { width: 14px; height: 14px; }
-      .info-modal-content { padding: 70px 30px 30px; }
+      .info-modal-content { padding: 30px 24px; }
     }
 
     .next-page-top-title {
@@ -1137,44 +1183,56 @@
 <body>
   <header>
     <nav class="top-nav" aria-label="Main navigation">
-      <div class="nav-logo">
-        <img src="https://i.ibb.co/1Y43Cq5N/logo-icon.jpg" alt="Yonogames.shop logo" loading="eager" fetchpriority="high" width="28" height="28">
+      <!-- Row 1: Navigation -->
+      <div class="nav-row-top">
+        <div class="nav-links-top">
+          <a href="#" class="active" id="homeNavLink" aria-current="page">
+            <span class="nav-icon nav-icon-home" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>
+            </span>
+            <span class="nav-label">Home</span>
+          </a>
+          <span class="nav-sep">|</span>
+          <a href="#" id="navAbout">
+            <span class="nav-icon nav-icon-about" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </span>
+            <span class="nav-label">About</span>
+          </a>
+          <span class="nav-sep">|</span>
+          <a href="#" id="navContact">
+            <span class="nav-icon nav-icon-contact" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </span>
+            <span class="nav-label">Contact</span>
+          </a>
+          <span class="nav-sep">|</span>
+          <a href="#" id="navDisclaimer">
+            <span class="nav-icon nav-icon-disclaimer" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </span>
+            <span class="nav-label">Disclaimer</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Row 2: Logo + Title -->
+      <div class="nav-row-logo">
+        <img src="https://i.ibb.co/1Y43Cq5N/logo-icon.jpg" alt="Yonogames.shop logo" loading="eager" fetchpriority="high" width="32" height="32">
         <span class="site-title">YONO GAMES SHOP</span>
       </div>
-      <div class="nav-links">
-        <a href="#" class="active" id="homeNavLink" aria-current="page">
-          <span class="nav-icon nav-icon-home" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10"/></svg>
-          </span>
-          <span class="nav-label">Home</span>
-        </a>
-        <span class="nav-sep">|</span>
-        <a href="#" id="navAbout">
-          <span class="nav-icon nav-icon-about" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-          </span>
-          <span class="nav-label">About</span>
-        </a>
-        <span class="nav-sep">|</span>
-        <a href="#" id="navContact">
-          <span class="nav-icon nav-icon-contact" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-          </span>
-          <span class="nav-label">Contact</span>
-        </a>
-        <span class="nav-sep">|</span>
-        <a href="#" id="navDisclaimer">
-          <span class="nav-icon nav-icon-disclaimer" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-          </span>
-          <span class="nav-label">Disclaimer</span>
-        </a>
-      </div>
-      <div class="nav-controls">
-        <a href="https://t.me/yonogamestite" target="_blank" rel="noopener noreferrer" class="telegram-nav-btn" id="telegramNavBtn">
+      
+      <!-- Row 3: Telegram -->
+      <div class="nav-row-telegram">
+        <span class="telegram-label">Telegram Channel for Yonogames.shop</span>
+        <a href="https://t.me/yonogamestite" target="_blank" rel="noopener noreferrer" class="telegram-btn" id="telegramNavBtn">
           <img src="https://i.ibb.co/S7P1xcCq/telegram-icon.jpg" alt="Telegram channel for Yonogames.shop" loading="eager" width="16" height="16">
           Telegram
         </a>
+      </div>
+      
+      <!-- Row 4: Dark Toggle -->
+      <div class="nav-row-dark">
         <div class="dark-toggle-btn" id="darkThemeToggle" role="button" tabindex="0" aria-label="Toggle dark theme">
           <span class="moon-icon" aria-hidden="true">🌙</span> Dark
         </div>
@@ -1659,7 +1717,7 @@
       function goBackToHome() {
         closeModalAndResetHistory();
         resetToMainGrid();
-        document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.nav-links-top a').forEach(el => el.classList.remove('active'));
         homeNavLink.classList.add('active');
         // Reset SEO
         document.getElementById('seoTitle').textContent = 'Yonogames.shop – All Yono Games APK Download';
@@ -1693,7 +1751,7 @@
       homeNavLink.addEventListener('click', (e) => { 
         e.preventDefault(); 
         resetToMainGrid(); 
-        document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active')); 
+        document.querySelectorAll('.nav-links-top a').forEach(el => el.classList.remove('active')); 
         homeNavLink.classList.add('active');
         document.getElementById('seoTitle').textContent = 'Yonogames.shop – All Yono Games APK Download';
         document.getElementById('seoDesc').setAttribute('content', 'Yonogames.shop – Download 55+ premium apps like Max Rummy, Rani Slots, 777 Game, 1GO Plus, Rummy Ultra, 789 Jackpots, Jaiho Win, Slots Spin, Neta VIP, Jaiho 777 VIP, Dhan Game, Diwa Game, Bet 54, All Yono Apps, T989, 765 Club, Spin Crush, Spin Lucky, Bingo 101, MKM Bet, 101Z and more. Get ₹45 bonus.');
@@ -1714,21 +1772,21 @@
 
       navAbout.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.nav-links-top a').forEach(el => el.classList.remove('active'));
         navAbout.classList.add('active');
         loadPageContent('about.html', 'About');
       });
 
       navContact.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.nav-links-top a').forEach(el => el.classList.remove('active'));
         navContact.classList.add('active');
         loadPageContent('contact.html', 'Contact');
       });
 
       navDisclaimer.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelectorAll('.top-nav a').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.nav-links-top a').forEach(el => el.classList.remove('active'));
         navDisclaimer.classList.add('active');
         loadPageContent('disclaimer.html', 'Disclaimer');
       });
