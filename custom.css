@@ -1,1 +1,738 @@
+/* ============================================
+   CUSTOM.CSS - PREMIUM HD WHITE THEME
+   ============================================ */
 
+/* ----- RESET & BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff !important;
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+
+/* ----- CONTAINERS & CARDS ----- */
+.container {
+    max-width: 100%;
+    margin: 12px auto;
+    padding: 0 8px;
+}
+
+.app-card {
+    background: #ffffff !important;
+    border-radius: 28px !important;
+    padding: 22px 16px 24px !important;
+    width: 100%;
+    max-width: 340px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    text-align: center;
+    position: relative;
+}
+
+.app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.app-card .card-app-name {
+    font-size: 1.15rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #1a8a3a, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+
+/* ----- CARD STATS (Premium White) ----- */
+.app-card .card-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 12px;
+    background: #f8faff !important;
+    padding: 10px 14px !important;
+    border-radius: 60px !important;
+    margin: 8px 0 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.app-card .card-stat-value {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.card-stat-value.rating-green {
+    color: #2ecc71 !important;
+    text-shadow: 0 0 12px rgba(46, 204, 113, 0.25) !important;
+}
+
+.card-stat-value.size-cyan {
+    color: #f1c40f !important;
+    text-shadow: 0 0 12px rgba(241, 196, 15, 0.25) !important;
+}
+
+.card-stat-value.votes-dark,
+.card-stat-value.votes-black {
+    color: #00bcd4 !important;
+    text-shadow: 0 0 12px rgba(0, 188, 212, 0.25) !important;
+}
+
+.card-stat-value.bonus-green,
+.card-stat-value.bonus-red {
+    color: #e74c3c !important;
+    text-shadow: 0 0 12px rgba(231, 76, 60, 0.25) !important;
+}
+
+.card-stat-label {
+    font-size: 0.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+    color: #8899aa !important;
+}
+
+/* ----- CARD INFO ROW ----- */
+.app-card .card-info-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+    background: #f8faff !important;
+    padding: 8px 14px !important;
+    border-radius: 60px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    margin: 8px 0 12px !important;
+}
+
+.card-info-row .ci-label {
+    font-size: 0.45rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.6px !important;
+    color: #667788 !important;
+}
+
+.card-info-row .ci-value.bonus-c {
+    color: #e74c3c !important;
+    font-weight: 900 !important;
+}
+
+.card-info-row .ci-value.withdraw-c {
+    color: #2ecc71 !important;
+    font-weight: 900 !important;
+}
+
+/* ----- DOWNLOAD BUTTON - CYAN LED PREMIUM ----- */
+.app-card .download-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    padding: 14px 0 !important;
+    background: linear-gradient(135deg, #00bcd4, #26c6da, #00acc1) !important;
+    background-size: 200% 200% !important;
+    animation: cyanPulse 3s ease-in-out infinite !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 60px !important;
+    font-weight: 800 !important;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 4px 20px rgba(0, 188, 212, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-card .download-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@keyframes cyanPulse {
+    0%, 100% { background-position: 0% 50%; box-shadow: 0 4px 20px rgba(0, 188, 212, 0.35); }
+    50% { background-position: 100% 50%; box-shadow: 0 4px 30px rgba(0, 188, 212, 0.55), 0 0 60px rgba(0, 188, 212, 0.15); }
+}
+
+.app-card .download-btn:hover {
+    transform: scale(0.98);
+    box-shadow: 0 8px 35px rgba(0, 188, 212, 0.5), 0 0 80px rgba(0, 188, 212, 0.1) !important;
+}
+
+/* ----- LED DOWNLOAD BUTTON (Full View) ----- */
+.led-download-btn {
+    display: block;
+    width: 100%;
+    padding: 16px 10px !important;
+    border: none !important;
+    border-radius: 60px !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.8px !important;
+    background: linear-gradient(135deg, #00bcd4, #26c6da, #00acc1, #00bcd4) !important;
+    background-size: 300% 300% !important;
+    animation: ledGlow 3s ease-in-out infinite !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.3), 0 0 60px rgba(0, 188, 212, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.led-download-btn::after {
+    content: '';
+    position: absolute;
+    top: -60%;
+    left: -60%;
+    width: 220%;
+    height: 220%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+    animation: ledShimmer 3s ease-in-out infinite;
+}
+
+@keyframes ledShimmer {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+}
+
+.led-download-btn:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 50px rgba(0, 188, 212, 0.5), 0 0 100px rgba(0, 188, 212, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+@keyframes ledGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ----- SMALL DOWNLOAD BUTTON ----- */
+.small-download {
+    background: linear-gradient(135deg, #00bcd4, #26c6da) !important;
+    background-size: 200% 200% !important;
+    animation: cyanPulse 3s ease-in-out infinite !important;
+    font-size: 0.6rem !important;
+    padding: 8px 0 !important;
+    margin-top: 8px;
+    text-decoration: none;
+    color: #ffffff !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 60px !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+    border: none !important;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 15px rgba(0, 188, 212, 0.25) !important;
+    letter-spacing: 0.3px;
+}
+
+.small-download:hover {
+    transform: scale(0.97);
+    box-shadow: 0 6px 25px rgba(0, 188, 212, 0.4) !important;
+}
+
+/* ----- FINAL DOWNLOAD BUTTON ----- */
+.final-download-btn {
+    background: linear-gradient(135deg, #00bcd4, #26c6da) !important;
+    background-size: 200% 200% !important;
+    animation: cyanPulse 3s ease-in-out infinite !important;
+    padding: 14px 20px !important;
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    border-radius: 60px !important;
+    display: block;
+    width: 100%;
+    margin: 16px 0 12px 0;
+    box-shadow: 0 8px 30px rgba(0, 188, 212, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    text-decoration: none;
+    color: #ffffff !important;
+    transition: all 0.25s ease;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    text-align: center;
+    border: none !important;
+}
+
+.final-download-btn:hover {
+    transform: scale(0.97);
+    box-shadow: 0 12px 45px rgba(0, 188, 212, 0.45) !important;
+}
+
+/* ----- APP TAGS - ORIGINAL WHITE PREMIUM ----- */
+.app-tags-wrapper {
+    padding: 12px 16px !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.app-tag-item {
+    flex: 0 0 auto;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    color: #1a2a3a !important;
+    padding: 6px 20px !important;
+    border-radius: 60px !important;
+    font-size: 0.6rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap;
+    letter-spacing: 0.4px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+}
+
+.app-tag-item:hover {
+    background: #f0f4ff !important;
+    border-color: #00bcd4 !important;
+    color: #00bcd4 !important;
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(0, 188, 212, 0.12) !important;
+}
+
+/* ----- FULL VIEW CARD ----- */
+.full-view-card {
+    background: #ffffff !important;
+    border-radius: 32px !important;
+    padding: 28px 20px 32px !important;
+    max-width: 480px;
+    margin: 0 auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    text-align: center;
+}
+
+.full-view-card .app-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    background: linear-gradient(135deg, #1a8a3a, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.full-view-card .app-sub {
+    font-size: 0.7rem;
+    color: #8899aa;
+    margin-bottom: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.full-view-card .stats-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 24px;
+    background: #f8faff !important;
+    padding: 12px 18px !important;
+    border-radius: 60px !important;
+    margin: 14px auto !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.full-view-card .stats-row .stat-value {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.full-view-card .stats-row .stat-label {
+    font-size: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #8899aa;
+}
+
+/* ----- OTHER APPS GRID ----- */
+.other-apps-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 12px;
+    background: #f8faff !important;
+    padding: 16px 14px !important;
+    border-radius: 28px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.other-card {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    padding: 14px 12px !important;
+    width: 160px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02) !important;
+}
+
+.other-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06) !important;
+    border-color: rgba(0, 188, 212, 0.15) !important;
+}
+
+.other-card .app-name {
+    font-size: 0.8rem;
+    margin: 6px 0 4px;
+    font-weight: 800;
+    color: #1a2a3a !important;
+}
+
+.other-card .withdraw-green {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: #2ecc71 !important;
+    display: block;
+    margin-top: 2px;
+}
+
+.other-card .signup-bonus-small {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: #e74c3c !important;
+    display: block;
+    margin-top: 1px;
+}
+
+/* ----- TAG BOXES (Premium White) ----- */
+.tag-box {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 16px 18px !important;
+    border-left: 4px solid #00bcd4 !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    border-left-width: 4px !important;
+}
+
+.tag-box .tag-content {
+    font-size: 0.78rem !important;
+    color: #1a2a3a !important;
+    line-height: 1.7 !important;
+}
+
+.tag-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.06), transparent);
+    margin: 4px 10px;
+}
+
+/* ----- FOOTER ----- */
+footer {
+    background: #ffffff !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.04) !important;
+    padding: 20px 16px !important;
+    text-align: center;
+}
+
+footer .marquee-bg {
+    background: #f8faff !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    border-radius: 60px !important;
+    padding: 10px 16px !important;
+    margin-bottom: 16px;
+}
+
+footer .footer-note {
+    text-align: center;
+    background: #f8faff !important;
+    border-radius: 60px !important;
+    padding: 12px 16px !important;
+    font-weight: 500;
+    font-size: 0.6rem;
+    margin-top: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ----- NAVIGATION (Premium White) ----- */
+.top-nav {
+    background: #ffffff !important;
+    padding: 8px 14px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02) !important;
+}
+
+.top-nav a {
+    color: #1a2a3a !important;
+    font-weight: 700 !important;
+    font-size: 0.55rem !important;
+    padding: 4px 12px !important;
+    border-radius: 60px !important;
+    border: 1px solid transparent !important;
+}
+
+.top-nav a:hover {
+    background: #f0f4ff !important;
+    border-color: rgba(0, 188, 212, 0.15) !important;
+}
+
+.top-nav a.active {
+    background: #f0f4ff !important;
+    color: #00bcd4 !important;
+    border-color: #00bcd4 !important;
+}
+
+.nav-logo .site-title {
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: #00bcd4 !important;
+    letter-spacing: 0.5px;
+}
+
+/* ----- MODAL ----- */
+.info-modal-content {
+    background: #ffffff !important;
+    border-radius: 32px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08) !important;
+}
+
+.info-modal-content h4 {
+    color: #1a2a3a !important;
+    border-left-color: #00bcd4 !important;
+}
+
+/* ----- FIVE OPTIONS ----- */
+.five-options .opt-item {
+    background: #f8faff !important;
+    padding: 5px 14px !important;
+    border-radius: 60px !important;
+    font-size: 0.6rem !important;
+    font-weight: 600 !important;
+    color: #1a2a3a !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.five-options .opt-item:hover {
+    background: #f0f4ff !important;
+    border-color: #00bcd4 !important;
+    color: #00bcd4 !important;
+    transform: scale(1.05);
+}
+
+.five-options .opt-item .opt-bonus {
+    color: #e74c3c !important;
+    font-weight: 700;
+}
+
+.five-options .opt-item .opt-app {
+    font-weight: 700;
+    color: #1a2a3a !important;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 480px) {
+    .app-card {
+        max-width: 100% !important;
+        padding: 18px 14px 20px !important;
+    }
+    
+    .app-card .download-btn {
+        padding: 12px 0 !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .full-view-card {
+        padding: 20px 14px 24px !important;
+    }
+    
+    .other-card {
+        width: 140px !important;
+    }
+}
+
+/* ----- MISC ----- */
+.hidden {
+    display: none !important;
+}
+
+.download-page {
+    background: #ffffff !important;
+    border-radius: 32px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.stats-row {
+    background: #f8faff !important;
+    border-radius: 60px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.app-description {
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.download-header {
+    border-bottom-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ----- DISCLAIMER & CONTACT TABLES (White Premium) ----- */
+.disclaimer-section {
+    background: #f8faff !important;
+    border-left-color: #00bcd4 !important;
+}
+
+.disclaimer-box {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+}
+
+.contact-table {
+    background: #f8faff !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+}
+
+.contact-table th {
+    background: #1a2a3a !important;
+    color: #ffffff !important;
+}
+
+.contact-table td {
+    background: #ffffff !important;
+    border-bottom-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ----- BUTTON TEXT COLOR OVERRIDE ----- */
+.app-card .download-btn,
+.led-download-btn,
+.final-download-btn,
+.small-download {
+    color: #ffffff !important;
+}
+
+/* ----- DARK THEME OVERRIDES (for premium white) ----- */
+body.dark-theme {
+    background: #0a0e14 !important;
+}
+
+body.dark-theme .app-card,
+body.dark-theme .full-view-card,
+body.dark-theme .download-page,
+body.dark-theme .tag-box,
+body.dark-theme .other-card,
+body.dark-theme .top-nav,
+body.dark-theme footer,
+body.dark-theme .info-modal-content {
+    background: #141a24 !important;
+    border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.dark-theme .app-tag-item {
+    background: #141a24 !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+    color: #d0d8e0 !important;
+}
+
+body.dark-theme .app-tag-item:hover {
+    background: #1a2230 !important;
+    border-color: #00bcd4 !important;
+    color: #00bcd4 !important;
+}
+
+body.dark-theme .app-card .card-stats,
+body.dark-theme .app-card .card-info-row,
+body.dark-theme .stats-row,
+body.dark-theme .other-apps-grid,
+body.dark-theme .footer-note,
+body.dark-theme .disclaimer-section {
+    background: #0e141e !important;
+    border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.dark-theme .app-card .card-app-name {
+    background: linear-gradient(135deg, #2ecc71, #58d68d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-theme .app-card .download-btn,
+body.dark-theme .led-download-btn,
+body.dark-theme .final-download-btn,
+body.dark-theme .small-download {
+    background: linear-gradient(135deg, #00bcd4, #26c6da) !important;
+    color: #ffffff !important;
+}
+
+body.dark-theme .top-nav a {
+    color: #d0d8e0 !important;
+}
+
+body.dark-theme .top-nav a.active {
+    background: #1a2230 !important;
+    color: #00bcd4 !important;
+    border-color: #00bcd4 !important;
+}
+
+body.dark-theme .nav-logo .site-title {
+    color: #00bcd4 !important;
+}
+
+body.dark-theme .tag-box .tag-content {
+    color: #c8d0d8 !important;
+}
+
+body.dark-theme .other-card .app-name {
+    color: #d0d8e0 !important;
+}
+
+body.dark-theme .five-options .opt-item {
+    background: #0e141e !important;
+    color: #c8d0d8 !important;
+    border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.dark-theme .five-options .opt-item:hover {
+    background: #1a2230 !important;
+    border-color: #00bcd4 !important;
+    color: #00bcd4 !important;
+}
+
+body.dark-theme .contact-table td {
+    background: #141a24 !important;
+    color: #c8d0d8 !important;
+    border-bottom-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+body.dark-theme .contact-table th {
+    background: #0a0e14 !important;
+    color: #ffffff !important;
+}
