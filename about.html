@@ -1,1 +1,399 @@
 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - YONO GAMES Shop</title>
+  
+  <!-- Custom CSS Linked -->
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+<!-- about.html content -->
+<div style="padding: 6px 4px; font-family: 'Segoe UI', 'Inter', sans-serif; max-width: 100%; position: relative;">
+
+  <!-- ===== PREMIUM AI-STYLE CSS ICONS (5 unique, left side) ===== -->
+  <style>
+    /* ----- Icon 1: Compass (blue) - for main heading ----- */
+    .ai-icon-compass {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(145deg, #3b82f6, #2563eb);
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(59,130,246,0.5), 0 0 50px rgba(59,130,246,0.2);
+      margin-right: 12px;
+      vertical-align: middle;
+      animation: iconFloatBlue 3.2s ease-in-out infinite;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-icon-compass::after {
+      content: "⬈";
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    }
+    @keyframes iconFloatBlue {
+      0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 0 20px rgba(59,130,246,0.5), 0 0 50px rgba(59,130,246,0.2); }
+      50% { transform: translateY(-4px) rotate(6deg); box-shadow: 0 0 35px rgba(59,130,246,0.8), 0 0 80px rgba(59,130,246,0.3); }
+    }
+
+    /* ----- Icon 2: Rocket (orange) - for Our Journey ----- */
+    .ai-icon-rocket {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(145deg, #f59e0b, #f97316);
+      border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
+      box-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 50px rgba(245,158,11,0.2);
+      margin-right: 12px;
+      vertical-align: middle;
+      animation: iconFloatOrange 3.6s ease-in-out infinite;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-icon-rocket::after {
+      content: "▲";
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    }
+    @keyframes iconFloatOrange {
+      0%, 100% { transform: translateY(0) scale(1); box-shadow: 0 0 20px rgba(245,158,11,0.5), 0 0 50px rgba(245,158,11,0.2); }
+      50% { transform: translateY(-6px) scale(1.06); box-shadow: 0 0 35px rgba(245,158,11,0.8), 0 0 80px rgba(245,158,11,0.3); }
+    }
+
+    /* ----- Icon 3: Shield (green) - for Our Community ----- */
+    .ai-icon-shield {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(145deg, #22c55e, #16a34a);
+      border-radius: 10px 2px 10px 2px;
+      box-shadow: 0 0 20px rgba(34,197,94,0.5), 0 0 50px rgba(34,197,94,0.2);
+      margin-right: 12px;
+      vertical-align: middle;
+      animation: iconFloatGreen 4.0s ease-in-out infinite;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-icon-shield::after {
+      content: "◆";
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+    }
+    @keyframes iconFloatGreen {
+      0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 0 20px rgba(34,197,94,0.5), 0 0 50px rgba(34,197,94,0.2); }
+      50% { transform: translateY(-4px) rotate(4deg); box-shadow: 0 0 35px rgba(34,197,94,0.8), 0 0 80px rgba(34,197,94,0.3); }
+    }
+
+    /* ----- Icon 4: Diamond (purple) - for Focus on Indian Apps ----- */
+    .ai-icon-diamond {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(145deg, #8b5cf6, #7c3aed);
+      border-radius: 50% 50% 50% 0;
+      box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 50px rgba(139,92,246,0.2);
+      margin-right: 12px;
+      vertical-align: middle;
+      animation: iconFloatPurple 3.8s ease-in-out infinite;
+      transform: rotate(45deg);
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-icon-diamond::after {
+      content: "✦";
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255,255,255,0.5);
+      transform: rotate(-45deg);
+    }
+    @keyframes iconFloatPurple {
+      0%, 100% { transform: rotate(45deg) scale(1); box-shadow: 0 0 20px rgba(139,92,246,0.5), 0 0 50px rgba(139,92,246,0.2); }
+      50% { transform: rotate(45deg) scale(1.08); box-shadow: 0 0 35px rgba(139,92,246,0.8), 0 0 80px rgba(139,92,246,0.3); }
+    }
+
+    /* ----- Icon 5: Star (cyan) - for Join Us / Our Mission ----- */
+    .ai-icon-star {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(145deg, #06b6d4, #0891b2);
+      border-radius: 2px 12px 2px 12px;
+      box-shadow: 0 0 20px rgba(6,182,212,0.5), 0 0 50px rgba(6,182,212,0.2);
+      margin-right: 12px;
+      vertical-align: middle;
+      animation: iconFloatCyan 4.2s ease-in-out infinite;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .ai-icon-star::after {
+      content: "★";
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      text-shadow: 0 0 14px rgba(255,255,255,0.6);
+    }
+    @keyframes iconFloatCyan {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(6,182,212,0.5), 0 0 50px rgba(6,182,212,0.2); }
+      50% { transform: scale(1.06); box-shadow: 0 0 35px rgba(6,182,212,0.8), 0 0 80px rgba(6,182,212,0.3); }
+    }
+
+    /* LED indicator for headings */
+    .led-indicator-about {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4);
+      margin-right: 8px;
+      vertical-align: middle;
+      animation: ledPulseAbout 2.2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes ledPulseAbout {
+      0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 12px #22c55e, 0 0 30px rgba(34,197,94,0.4); }
+      50% { opacity: 0.6; transform: scale(0.85); box-shadow: 0 0 20px #22c55e, 0 0 50px rgba(34,197,94,0.6); }
+    }
+
+    /* Flex container for icon + heading */
+    .about-heading-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .about-heading-with-icon h5 {
+      margin: 0;
+      font-size: 1.0rem;
+      font-weight: 700;
+      color: #0a2e1d;
+      border-bottom: 2px solid #ffcf8a;
+      padding-bottom: 6px;
+      flex: 1;
+      min-width: 120px;
+    }
+    .border-blue h5 { border-bottom-color: #3b82f6; }
+    .border-orange h5 { border-bottom-color: #f59e0b; }
+    .border-green h5 { border-bottom-color: #22c55e; }
+    .border-purple h5 { border-bottom-color: #8b5cf6; }
+    .border-cyan h5 { border-bottom-color: #06b6d4; }
+
+    @media (max-width: 480px) {
+      .ai-icon-compass, .ai-icon-rocket, .ai-icon-shield,
+      .ai-icon-diamond, .ai-icon-star {
+        width: 32px;
+        height: 32px;
+      }
+      .ai-icon-compass::after, .ai-icon-rocket::after, .ai-icon-shield::after,
+      .ai-icon-diamond::after, .ai-icon-star::after {
+        font-size: 15px;
+      }
+    }
+  </style>
+
+  <!-- ===== MAIN HEADING with Icon 1: Compass (blue) ===== -->
+  <div class="about-heading-with-icon border-blue">
+    <span class="ai-icon-compass"></span>
+    <h5 style="font-size:1.2rem; font-weight:800; color:#1e562a; border-bottom:3px solid #3b82f6; padding-bottom:4px; margin:0; flex:1; min-width:140px;">
+      <span class="led-indicator-about"></span> About - YONO GAMES Shop
+    </h5>
+  </div>
+
+  <!-- Welcome paragraph with LED indicator -->
+  <p style="font-size: 0.85rem; line-height: 1.6; color: #2d3e2b; background: #f8fafc; padding: 14px 16px; border-radius: 16px; border-left: 4px solid #3b82f6; margin-bottom: 14px;">
+    <span class="led-indicator-about" style="width:8px;height:8px;margin-right:6px;"></span>
+    Welcome to our platform, <strong>YONO GAMES Shop</strong> a comprehensive hub created update dedicated to enhancing digital experiences for everyone. At the heart of our mission lies the commitment to empower users with access to a wide range of applications, mirroring the global accessibility of platforms like the renowned app marketplaces, but with a unique focus on Indian users <strong>YONO GAMES Shop</strong>.
+  </p>
+
+  <!-- ===== Our Journey with Icon 2: Rocket (orange) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="about-heading-with-icon border-orange">
+      <span class="ai-icon-rocket"></span>
+      <h5><span class="led-indicator-about"></span> Our Journey</h5>
+    </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">Our journey began with a simple yet powerful vision: to revolutionize the way people discover and download apps. We recognize the evolving needs of the digital age and strive to meet them by offering an extensive selection of applications. From utility and productivity apps to entertainment and lifestyle options, our platform is a one-stop destination for all your app needs.</p>
+  </div>
+
+  <!-- ===== Our Community with Icon 3: Shield (green) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="about-heading-with-icon border-green">
+      <span class="ai-icon-shield"></span>
+      <h5><span class="led-indicator-about"></span> Our Community</h5>
+    </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">We are not just about providing access to apps; we are about fostering a community where knowledge about the latest digital tools is shared and celebrated. Our platform is designed to be user-friendly, ensuring a seamless experience for everyone, from tech-savvy individuals to those just starting their digital journey.</p>
+  </div>
+
+  <!-- ===== Focus on Indian Apps with Icon 4: Diamond (purple) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="about-heading-with-icon border-purple">
+      <span class="ai-icon-diamond"></span>
+      <h5><span class="led-indicator-about"></span> Focus on Indian Apps</h5>
+    </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">Our focus on Indian applications sets us apart, reflecting our dedication to cater to the unique needs and preferences of our audience. We believe in the power of local solutions for local challenges, and our platform is a testament to this belief.</p>
+  </div>
+
+  <!-- ===== Join Us with Icon 5: Star (cyan) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="about-heading-with-icon border-cyan">
+      <span class="ai-icon-star"></span>
+      <h5><span class="led-indicator-about"></span> Join Us</h5>
+    </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155;">Join us in our endeavor to bring the best of digital innovations to your fingertips. Explore, download, and stay ahead in the ever-evolving world of apps with us <strong>YONO GAMES Shop</strong>.</p>
+  </div>
+
+  <!-- ===== OUR MISSION Section (also uses Star icon) ===== -->
+  <div style="background: #ffffff; border-radius: 16px; padding: 14px 16px; margin-bottom: 12px; border: 1px solid #e9edf4; box-shadow: 0 2px 8px rgba(0,0,0,0.03); border-left: 4px solid #22c55e;">
+    <div class="about-heading-with-icon border-green">
+      <span class="ai-icon-star"></span>
+      <h5 style="border-bottom-color:#22c55e;"><span class="led-indicator-about"></span> Our Mission</h5>
+    </div>
+    <p style="font-size: 0.8rem; line-height: 1.6; color: #334155; margin-bottom: 8px;">To provide the best gaming and app experience for Indian users with secure downloads and reliable service.</p>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px;">
+      <div style="background: #f0f9f0; border-radius: 12px; padding: 10px 12px; border-left: 3px solid #22c55e;">
+        <span class="led-indicator-about" style="width:8px;height:8px;margin-right:6px;"></span>
+        <strong style="font-size:0.75rem; color:#0a2e1d;">Secure Downloads</strong>
+        <p style="font-size:0.7rem; color:#334155; margin:2px 0 0 0;">All apps are verified and safe</p>
+      </div>
+      <div style="background: #f0f9f0; border-radius: 12px; padding: 10px 12px; border-left: 3px solid #3b82f6;">
+        <span class="led-indicator-about" style="width:8px;height:8px;margin-right:6px; background:#3b82f6; box-shadow:0 0 12px #3b82f6,0 0 30px rgba(59,130,246,0.4);"></span>
+        <strong style="font-size:0.75rem; color:#0a2e1d;">Mobile Optimized</strong>
+        <p style="font-size:0.7rem; color:#334155; margin:2px 0 0 0;">Perfect experience on all devices</p>
+      </div>
+      <div style="background: #f0f9f0; border-radius: 12px; padding: 10px 12px; border-left: 3px solid #8b5cf6;">
+        <span class="led-indicator-about" style="width:8px;height:8px;margin-right:6px; background:#8b5cf6; box-shadow:0 0 12px #8b5cf6,0 0 30px rgba(139,92,246,0.4);"></span>
+        <strong style="font-size:0.75rem; color:#0a2e1d;">Community Focused</strong>
+        <p style="font-size:0.7rem; color:#334155; margin:2px 0 0 0;">Built for Indian users</p>
+      </div>
+      <div style="background: #f0f9f0; border-radius: 12px; padding: 10px 12px; border-left: 3px solid #f59e0b;">
+        <span class="led-indicator-about" style="width:8px;height:8px;margin-right:6px; background:#f59e0b; box-shadow:0 0 12px #f59e0b,0 0 30px rgba(245,158,11,0.4);"></span>
+        <strong style="font-size:0.75rem; color:#0a2e1d;">24/7 Support</strong>
+        <p style="font-size:0.7rem; color:#334155; margin:2px 0 0 0;">Always here to help you</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Final brand mention with all 5 icons in a row ===== -->
+  <div style="background: linear-gradient(145deg, #f8fafc, #eef2f6); border-radius: 16px; padding: 14px 16px; margin-top: 8px; border: 1px solid #d0d9e8; text-align: center;">
+    <div style="display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <span class="ai-icon-compass" style="width:32px;height:32px; animation-duration:2.8s;"></span>
+      <span class="ai-icon-rocket" style="width:32px;height:32px; animation-duration:3.2s;"></span>
+      <span class="ai-icon-shield" style="width:32px;height:32px; animation-duration:3.6s;"></span>
+      <span class="ai-icon-diamond" style="width:32px;height:32px; animation-duration:3.0s;"></span>
+      <span class="ai-icon-star" style="width:32px;height:32px; animation-duration:3.8s;"></span>
+    </div>
+    <p style="font-size: 0.75rem; font-weight: 700; color: #1e562a; margin: 6px 0 0 0;">
+      <span class="led-indicator-about" style="width:8px;height:8px;"></span> 
+      <strong>YONO GAMES Shop</strong> — Your Trusted App Destination
+      <span class="led-indicator-about" style="width:8px;height:8px;"></span>
+    </p>
+  </div>
+
+  <!-- ===== PREMIUM LED "BACK TO TOP" BUTTON (bottom-right) ===== -->
+  <style>
+    .back-to-top-led-about {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ffffff, #f0f4ff);
+      border: none;
+      box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #0a2e1d;
+      transition: all 0.25s ease;
+      animation: floatGlowAbout 3s ease-in-out infinite, pulseGlowAbout 2.8s ease-in-out infinite;
+      text-shadow: 0 0 12px rgba(255,255,255,0.9);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.6);
+      will-change: transform, box-shadow;
+      line-height: 1;
+    }
+    .back-to-top-led-about:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 0 35px rgba(255,255,255,0.9), 0 0 70px rgba(180, 220, 255, 0.7), 0 0 120px rgba(150, 200, 255, 0.4), 0 12px 40px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #ffffff, #e8f0ff);
+      color: #0a2e1d;
+    }
+    .back-to-top-led-about:active {
+      transform: scale(0.92);
+      box-shadow: 0 0 25px rgba(255,255,255,0.7), 0 0 50px rgba(180, 220, 255, 0.5);
+    }
+    @keyframes floatGlowAbout {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pulseGlowAbout {
+      0%, 100% { box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(180, 220, 255, 0.6), 0 0 80px rgba(150, 200, 255, 0.3), 0 8px 32px rgba(0,0,0,0.15); }
+      50% { box-shadow: 0 0 30px rgba(255,255,255,0.9), 0 0 60px rgba(180, 220, 255, 0.8), 0 0 100px rgba(150, 200, 255, 0.4), 0 8px 32px rgba(0,0,0,0.15); }
+    }
+    /* Mobile responsive */
+    @media (max-width: 480px) {
+      .back-to-top-led-about {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.6rem;
+      }
+    }
+    @media (max-width: 380px) {
+      .back-to-top-led-about {
+        width: 46px;
+        height: 46px;
+        bottom: 16px;
+        right: 16px;
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+
+  <button class="back-to-top-led-about" id="backToTopBtnAbout" aria-label="Back to Top" title="Back to Top">⬆</button>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('backToTopBtnAbout');
+      if (btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector('.info-modal-content') || document.documentElement;
+          target.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+
+</div>
+
+</body>
+</html>
