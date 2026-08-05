@@ -976,7 +976,7 @@
             color: #0a2e1d;
         }
 
-        /* NEW: App link for dedicated page */
+        /* NEW: App link for dedicated page - REMOVED from UI but keeping CSS for safety */
         .app-page-link {
             display: inline-block;
             margin-top: 4px;
@@ -2565,7 +2565,7 @@
                     `<ul><li><strong>1.</strong> ऊपर दिए गए बड़े डाउनलोड बटन पर टैप करें</li><li><strong>2.</strong> अज्ञात स्रोतों से इंस्टॉलेशन की अनुमति दें</li><li><strong>3.</strong> डाउनलोड की गई APK खोलें और Install पर टैप करें</li><li><strong>4.</strong> अपने मोबाइल नंबर से पंजीकरण करें</li><li><strong>5.</strong> अपना साइनअप बोनस तुरंत प्राप्त करें – ₹${bonusArr[10]} तक!</li></ul>` :
                     `<ul><li><strong>1.</strong> Tap the big Download button above</li><li><strong>2.</strong> Allow installation from unknown sources</li><li><strong>3.</strong> Open the downloaded APK and tap Install</li><li><strong>4.</strong> Register with your mobile number</li><li><strong>5.</strong> Claim your signup bonus instantly – up to ₹${bonusArr[10]}!</li></ul>`;
 
-                const safetyContent = useHindi ? `${appName} एक सुरक्षित और विश्वसनीय गेमिंग अनुभव प्रदान करता है。` :
+                const safetyContent = useHindi ? `${appName} एक सुरक्षित और विश्वसनीय गेमिंग अनुभव प्रदान करता है।` :
                     `${appName} provides a secure and reliable gaming experience.`;
 
                 const whyContent = useHindi ?
@@ -2822,7 +2822,6 @@
                     </span>
                     DOWNLOAD ${app.name}
                   </button>
-                  <a href="${app.page}" class="app-page-link" target="_blank">📄 View ${app.name} Page</a>
                   <div class="card-spin-desc">${spinDesc}</div>
                   <div class="card-benefits"><strong>Extra Benefits:</strong> ${extraBenefits}</div>
                 </article>
@@ -2898,10 +2897,6 @@
 
                 <button class="led-download-btn" onclick="window.open('${selectedApp.downloadUrl}','_blank')" aria-label="Download ${selectedApp.name} APK now">🚀 DOWNLOAD ${selectedApp.name}</button>
 
-                <div style="margin-top:8px; font-size:0.6rem; color:#6c7a5a;">
-                  🔗 <a href="${selectedApp.page}" target="_blank" style="color:#2563eb;text-decoration:underline;">Open ${selectedApp.name} Dedicated Page</a>
-                </div>
-
                 <div class="desc-box">
                   <strong>${description}</strong>
                 </div>
@@ -2941,7 +2936,6 @@
                         <div class="withdraw-green">Min Withdrawal: ${app.withdrawal}</div>
                         <div class="signup-bonus-small">Sign Up Bonus: ₹${relBonus}</div>
                         <button class="small-download" data-other-index="${originalIndex}" aria-label="Download ${app.name} APK">DOWNLOAD</button>
-                        <a href="${app.page}" target="_blank" style="font-size:0.4rem;color:#2563eb;text-decoration:none;display:block;margin-top:2px;">📄 Page</a>
                       </div>
                     `;
                   }).join('')}
