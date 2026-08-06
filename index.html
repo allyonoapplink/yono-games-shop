@@ -2841,18 +2841,13 @@
                 if (notice) notice.classList.remove('hidden');
             }
 
-            // ===== FIXED: navigateToDownloadPage now goes to the actual game HTML page =====
             function navigateToDownloadPage(selectedIndex) {
-                const selectedApp = appsData[selectedIndex];
-                if (!selectedApp) return;
-                // Navigate to the game's dedicated HTML page (e.g., max-rummy.html)
-                window.location.href = selectedApp.page;
+                currentSelectedIndex = selectedIndex;
+                history.pushState({ page: 'download', index: selectedIndex }, '', '#download');
+                showDownloadPage(selectedIndex);
             }
 
-            // ===== NOTE: showDownloadPage is kept for reference but no longer used for navigation =====
             function showDownloadPage(selectedIndex) {
-                // This function is intentionally kept but no longer called from navigateToDownloadPage.
-                // It remains for potential future use but is not needed for the fix.
                 const selectedApp = appsData[selectedIndex];
                 if (!selectedApp) return;
                 const stats = getAppStats(selectedApp.name);
@@ -3012,7 +3007,6 @@
                         "description": "Download 53+ premium apps like Max Rummy, Rani Slots, 777 Game, 1GO Plus, Rummy Ultra, 789 Jackpots, Jaiho Win, Slots Spin, Neta VIP, Jaiho 777 VIP, Dhan Game, Diwa Game, Bet 54, All Yono Apps, T989, 765 Club, Spin Lucky, MKM Bet, 101Z and more. Get ₹45 bonus."
                     });
                 } else if (event.state && event.state.page === 'download') {
-                    // For backward compatibility, if someone still lands here
                     showDownloadPage(event.state.index);
                 } else {
                     goToMainGrid();
