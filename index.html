@@ -1,4 +1,3 @@
-00000000
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2270,21 +2269,21 @@
                     <span class="nav-label">Home</span>
                 </a>
                 <span class="nav-sep">|</span>
-                <a href="#" id="navAbout">
+                <a href="about.html" id="navAbout">
                     <span class="nav-icon nav-icon-about" aria-hidden="true">
                         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
                     </span>
                     <span class="nav-label">About</span>
                 </a>
                 <span class="nav-sep">|</span>
-                <a href="#" id="navContact">
+                <a href="contact.html" id="navContact">
                     <span class="nav-icon nav-icon-contact" aria-hidden="true">
                         <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
                     </span>
                     <span class="nav-label">Contact</span>
                 </a>
                 <span class="nav-sep">|</span>
-                <a href="#" id="navDisclaimer">
+                <a href="disclaimer.html" id="navDisclaimer">
                     <span class="nav-icon nav-icon-disclaimer" aria-hidden="true">
                         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     </span>
@@ -2724,8 +2723,8 @@
                 // Find the app in appsData
                 const app = appsData.find(a => a.name === appName);
                 if (app) {
-                    // Use the page file specified in the data
-                    window.location.href = app.page + '?app=' + encodeURIComponent(appName);
+                    // Navigate directly to the app's HTML file
+                    window.location.href = app.page;
                 } else {
                     // Fallback: try to construct URL from app name
                     const slug = appName.toLowerCase().replace(/\s+/g, '-');
@@ -2877,25 +2876,8 @@
                 });
             }
 
-            // ===== CHECK FOR APP PARAMETER IN URL =====
-            function checkForAppParameter() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const appName = urlParams.get('app');
-                if (appName) {
-                    // Find the app in appsData
-                    const app = appsData.find(a => a.name === appName);
-                    if (app) {
-                        // Navigate to the app's dedicated page
-                        window.location.href = app.page + '?app=' + encodeURIComponent(appName);
-                    }
-                }
-            }
-
             // ===== INITIALIZATION =====
             function init() {
-                // Check for app parameter in URL
-                checkForAppParameter();
-
                 // Setup app tags
                 setupAppTags();
 
@@ -2925,11 +2907,11 @@
             </marquee>
         </div>
         <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:6px 12px;margin-bottom:8px;">
-            <a href="#" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">About</a>
+            <a href="about.html" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">About</a>
             <span style="color:#6c7a5a;">|</span>
-            <a href="#" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">Contact</a>
+            <a href="contact.html" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">Contact</a>
             <span style="color:#6c7a5a;">|</span>
-            <a href="#" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">Disclaimer</a>
+            <a href="disclaimer.html" style="color:#ffcf8a;text-decoration:none;font-weight:700;font-size:0.6rem;">Disclaimer</a>
         </div>
         <div style="font-size:0.6rem;color:#b9ddcb;">
             © 2026/2030 <strong style="color:#ffcf8a;">yonogames.shop</strong> — Play responsibly. 18+ only. | Official APK Downloads
