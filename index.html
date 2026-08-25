@@ -95,8 +95,7 @@ body{
   filter:blur(8px);
   opacity:.95;
 
-  animation:
-    energyRotate 2.1s linear infinite;
+  animation:energyRotate 2.1s linear infinite;
 }
 
 /* Red glass inner layer */
@@ -123,7 +122,7 @@ body{
 }
 
 /* ===============================
-   ATOMIC SVG
+   NORMAL ATOMIC SVG
 ================================ */
 
 .atomic-logo{
@@ -136,8 +135,7 @@ body{
     drop-shadow(0 0 10px #ff003c)
     drop-shadow(0 0 12px #00ff66);
 
-  animation:
-    atomicSpin 4s linear infinite;
+  animation:atomicSpin 4s linear infinite;
 }
 
 .atomic-orbit{
@@ -209,7 +207,7 @@ body{
 }
 
 /* ===============================
-   DOWNLOAD ICON
+   NORMAL DOWNLOAD ICON
 ================================ */
 
 .download-icon{
@@ -223,8 +221,152 @@ body{
     drop-shadow(0 0 5px #00ffff)
     drop-shadow(0 0 9px #00ff66);
 
+  animation:downloadMove 1s ease-in-out infinite;
+}
+
+/* ===============================
+   12 LINE ORIGINAL LOADING SVG
+================================ */
+
+.loading-spinner{
+  display:none;
+
+  width:58px;
+  height:58px;
+  flex-shrink:0;
+
+  overflow:visible;
+
+  filter:
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 9px #ff1744)
+    drop-shadow(0 0 12px #00ff66);
+
+  animation:spinnerRotate .9s linear infinite;
+}
+
+/* 12 rounded lines */
+.loading-line{
+  fill:none;
+  stroke-width:7;
+  stroke-linecap:round;
+
+  transform-origin:40px 40px;
+
   animation:
-    downloadMove 1s ease-in-out infinite;
+    lineColor 1.2s linear infinite,
+    linePulse 1.2s ease-in-out infinite;
+}
+
+/* 12 different timing positions */
+.loading-line:nth-child(1){
+  animation-delay:0s;
+}
+
+.loading-line:nth-child(2){
+  animation-delay:-.10s;
+}
+
+.loading-line:nth-child(3){
+  animation-delay:-.20s;
+}
+
+.loading-line:nth-child(4){
+  animation-delay:-.30s;
+}
+
+.loading-line:nth-child(5){
+  animation-delay:-.40s;
+}
+
+.loading-line:nth-child(6){
+  animation-delay:-.50s;
+}
+
+.loading-line:nth-child(7){
+  animation-delay:-.60s;
+}
+
+.loading-line:nth-child(8){
+  animation-delay:-.70s;
+}
+
+.loading-line:nth-child(9){
+  animation-delay:-.80s;
+}
+
+.loading-line:nth-child(10){
+  animation-delay:-.90s;
+}
+
+.loading-line:nth-child(11){
+  animation-delay:-1s;
+}
+
+.loading-line:nth-child(12){
+  animation-delay:-1.1s;
+}
+
+/* ===============================
+   BUTTON LOADING MODE
+================================ */
+
+.install-btn.is-loading{
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      115deg,
+      #720008,
+      #c40016,
+      #8e000c,
+      #d60019,
+      #650006
+    );
+
+  border-color:#00ffff;
+
+  box-shadow:
+    0 0 10px #00ffff,
+    0 0 22px #ff1744,
+    0 0 40px #00ff66,
+    0 0 70px rgba(255,0,40,.45),
+    inset 0 0 25px rgba(255,255,255,.16);
+}
+
+/* Hide original items during loading */
+.install-btn.is-loading .atomic-logo,
+.install-btn.is-loading .download-icon,
+.install-btn.is-loading .install-main-text{
+  display:none;
+}
+
+/* Show 12-line spinner */
+.install-btn.is-loading .loading-spinner{
+  display:block;
+}
+
+/* Loading text */
+.install-btn.is-loading .loading-text{
+  display:block;
+}
+
+.loading-text{
+  display:none;
+
+  position:relative;
+  z-index:5;
+
+  font-size:15px;
+  font-weight:1000;
+  letter-spacing:1px;
+
+  color:#fff;
+
+  text-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #ff1744,
+    0 0 15px #00ff66;
 }
 
 /* ===============================
@@ -249,10 +391,10 @@ body{
   content:"";
   position:absolute;
 
-  left:-40%;
+  left:-45%;
   top:0;
 
-  width:40%;
+  width:45%;
   height:100%;
 
   background:
@@ -272,8 +414,7 @@ body{
     0 0 15px #ff003c,
     0 0 20px #00ff66;
 
-  animation:
-    loadingMove 1.25s linear infinite;
+  animation:loadingMove 1.25s linear infinite;
 }
 
 /* ===============================
@@ -299,12 +440,11 @@ body{
   transform:skewX(-22deg);
   pointer-events:none;
 
-  animation:
-    shineMove 2.4s ease-in-out infinite;
+  animation:shineMove 2.4s ease-in-out infinite;
 }
 
 /* ===============================
-   HOVER / ACTIVE
+   HOVER
 ================================ */
 
 .install-btn:hover{
@@ -353,9 +493,6 @@ body{
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
-
-  text-shadow:
-    0 0 10px rgba(255,0,40,.15);
 }
 
 .welcome-description{
@@ -393,7 +530,6 @@ body{
   font-weight:1000;
 }
 
-/* About SVG */
 .about-icon{
   width:36px;
   height:36px;
@@ -411,7 +547,6 @@ body{
   font-weight:1000;
 }
 
-/* Information card */
 .about-content{
   position:relative;
 
@@ -486,17 +621,14 @@ body{
 
 .info-tag.cyan{
   border-color:#00cdd2;
-  box-shadow:0 0 8px rgba(0,255,255,.15);
 }
 
 .info-tag.red{
   border-color:#ff2344;
-  box-shadow:0 0 8px rgba(255,0,40,.12);
 }
 
 .info-tag.green{
   border-color:#00b94d;
-  box-shadow:0 0 8px rgba(0,255,100,.12);
 }
 
 /* ===============================
@@ -533,6 +665,47 @@ body{
   }
 }
 
+/* 12-line spinner rotation */
+@keyframes spinnerRotate{
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+/* Cyan → Red → Green → Cyan */
+@keyframes lineColor{
+  0%{
+    stroke:#00ffff;
+    filter:drop-shadow(0 0 5px #00ffff);
+  }
+
+  33%{
+    stroke:#ff1744;
+    filter:drop-shadow(0 0 6px #ff1744);
+  }
+
+  66%{
+    stroke:#00ff66;
+    filter:drop-shadow(0 0 6px #00ff66);
+  }
+
+  100%{
+    stroke:#00ffff;
+    filter:drop-shadow(0 0 5px #00ffff);
+  }
+}
+
+/* Moving brightness */
+@keyframes linePulse{
+  0%,100%{
+    opacity:.45;
+  }
+
+  50%{
+    opacity:1;
+  }
+}
+
 @keyframes loadingMove{
   0%{
     left:-45%;
@@ -564,7 +737,7 @@ body{
 }
 
 /* ===============================
-   MOBILE FULL HD LOOK
+   MOBILE
 ================================ */
 
 @media(max-width:600px){
@@ -597,6 +770,15 @@ body{
   .download-icon{
     width:31px;
     height:31px;
+  }
+
+  .loading-spinner{
+    width:54px;
+    height:54px;
+  }
+
+  .loading-text{
+    font-size:13px;
   }
 
   .welcome-title{
@@ -633,13 +815,15 @@ body{
 
 <a
   class="install-btn"
+  id="installWebsiteBtn"
   href="https://web2apkpro.com/public_download.php?project_id=21599&token=6bbe1b6892"
-  target="_blank"
-  rel="noopener noreferrer"
   aria-label="Install Website APK"
 >
 
-  <!-- PREMIUM ATOMIC SVG -->
+  <!-- =============================
+       NORMAL ATOMIC ICON
+  ============================== -->
+
   <svg class="atomic-logo" viewBox="0 0 80 80">
 
     <ellipse
@@ -692,20 +876,32 @@ body{
 
   </svg>
 
-  <!-- TEXT -->
+
+  <!-- =============================
+       NORMAL BUTTON TEXT
+  ============================== -->
+
   <span class="install-main-text">
+
     Install Website APK
+
     <span class="install-sub-text">
       FAST • SECURE • ONE CLICK INSTALL
     </span>
+
   </span>
 
-  <!-- DOWNLOAD SVG -->
+
+  <!-- =============================
+       NORMAL DOWNLOAD ICON
+  ============================== -->
+
   <svg
     class="download-icon"
     viewBox="0 0 24 24"
     aria-hidden="true"
   >
+
     <path
       d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"
       fill="none"
@@ -714,12 +910,118 @@ body{
       stroke-linecap="round"
       stroke-linejoin="round"
     />
+
   </svg>
 
-  <!-- MOVING LOADING -->
+
+  <!-- =============================
+       12 LINE LOADING ICON
+  ============================== -->
+
+  <svg
+    class="loading-spinner"
+    viewBox="0 0 80 80"
+    aria-hidden="true"
+  >
+
+    <!-- 1 -->
+    <line
+      class="loading-line"
+      x1="40" y1="7"
+      x2="40" y2="20"
+    />
+
+    <!-- 2 -->
+    <line
+      class="loading-line"
+      x1="56.5" y1="11.4"
+      x2="50" y2="22.7"
+    />
+
+    <!-- 3 -->
+    <line
+      class="loading-line"
+      x1="68.6" y1="23.5"
+      x2="57.3" y2="30"
+    />
+
+    <!-- 4 -->
+    <line
+      class="loading-line"
+      x1="73" y1="40"
+      x2="60" y2="40"
+    />
+
+    <!-- 5 -->
+    <line
+      class="loading-line"
+      x1="68.6" y1="56.5"
+      x2="57.3" y2="50"
+    />
+
+    <!-- 6 -->
+    <line
+      class="loading-line"
+      x1="56.5" y1="68.6"
+      x2="50" y2="57.3"
+    />
+
+    <!-- 7 -->
+    <line
+      class="loading-line"
+      x1="40" y1="73"
+      x2="40" y2="60"
+    />
+
+    <!-- 8 -->
+    <line
+      class="loading-line"
+      x1="23.5" y1="68.6"
+      x2="30" y2="57.3"
+    />
+
+    <!-- 9 -->
+    <line
+      class="loading-line"
+      x1="11.4" y1="56.5"
+      x2="22.7" y2="50"
+    />
+
+    <!-- 10 -->
+    <line
+      class="loading-line"
+      x1="7" y1="40"
+      x2="20" y2="40"
+    />
+
+    <!-- 11 -->
+    <line
+      class="loading-line"
+      x1="11.4" y1="23.5"
+      x2="22.7" y2="30"
+    />
+
+    <!-- 12 -->
+    <line
+      class="loading-line"
+      x1="23.5" y1="11.4"
+      x2="30" y2="22.7"
+    />
+
+  </svg>
+
+
+  <!-- Loading text -->
+  <span class="loading-text">
+    INSTALLING...
+  </span>
+
+
+  <!-- Bottom moving energy -->
   <span class="install-loading"></span>
 
-  <!-- SHINE -->
+
+  <!-- Shine -->
   <span class="install-shine"></span>
 
 </a>
@@ -739,10 +1041,9 @@ body{
 
   <p class="welcome-description">
     Welcome to the YONO GAMES Website APK download section.
-    Install the YONO GAMES website directly through the official
-    website APK installation link. The installation button above
-    provides a simple one-click experience so visitors can quickly
-    access the website on supported Android devices.
+    Install the YONO GAMES website directly through the website
+    APK installation link. The installation button provides a
+    simple one-click experience for supported Android devices.
   </p>
 
 </section>
@@ -756,7 +1057,6 @@ body{
 
   <div class="about-heading">
 
-    <!-- PREMIUM ABOUT SVG -->
     <svg
       class="about-icon"
       viewBox="0 0 48 48"
@@ -811,12 +1111,13 @@ body{
 
     </svg>
 
-    <span class="about-title">About</span>
+    <span class="about-title">
+      About
+    </span>
 
   </div>
 
 
-  <!-- POWERFUL INFORMATION -->
   <div class="about-content">
 
     <p>
@@ -827,8 +1128,9 @@ body{
 
     <p>
       Use the premium Install Website APK button above to continue
-      to the website APK download page. The download action opens
-      the configured installation page in a new browser tab.
+      to the website APK download page. After clicking the button,
+      the original 12-line loading animation appears first and
+      completes before the download page opens.
     </p>
 
     <p>
@@ -850,7 +1152,7 @@ body{
       the APK file.
     </p>
 
-    <!-- MANY USEFUL INFORMATION TAGS -->
+
     <div class="info-tags">
 
       <span class="info-tag cyan">YONO GAMES</span>
@@ -902,6 +1204,64 @@ body{
   </div>
 
 </section>
+
+
+<!-- =================================
+     CLICK → LOADING → LINK
+================================= -->
+
+<script>
+
+(function(){
+
+  const button = document.getElementById("installWebsiteBtn");
+
+  const downloadURL =
+    "https://web2apkpro.com/public_download.php?project_id=21599&token=6bbe1b6892";
+
+  let loadingStarted = false;
+
+  button.addEventListener("click", function(event){
+
+    /*
+      IMPORTANT:
+      Stop the normal link first.
+      This means the link will NOT open immediately.
+    */
+    event.preventDefault();
+
+    if(loadingStarted){
+      return;
+    }
+
+    loadingStarted = true;
+
+    /*
+      Start original 12-line loading.
+    */
+    button.classList.add("is-loading");
+
+    /*
+      Keep loading visible first,
+      then open the Web2APK link.
+      
+      2000ms = 2 seconds.
+    */
+    setTimeout(function(){
+
+      /*
+        Open the exact download URL
+        after loading animation.
+      */
+      window.location.href = downloadURL;
+
+    }, 2000);
+
+  });
+
+})();
+
+</script>
 
 </body>
 </html>
