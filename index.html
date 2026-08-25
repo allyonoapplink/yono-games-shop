@@ -1,509 +1,907 @@
-<!-- PREMIUM INSTALL WEBSITE APK BUTTON -->
-<a
-  href="https://web2apkpro.com/public_download.php?project_id=21599&token=6bbe1b6892"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="premium-install-btn"
->
-  <!-- Animated Atomic SVG -->
-  <svg class="premium-atomic" viewBox="0 0 80 80" aria-hidden="true">
-    <defs>
-      <linearGradient id="atomRed" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#ffffff"/>
-        <stop offset="35%" stop-color="#ff3b30"/>
-        <stop offset="70%" stop-color="#ff001f"/>
-        <stop offset="100%" stop-color="#ff8a80"/>
-      </linearGradient>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <filter id="premiumGlow">
-        <feGaussianBlur stdDeviation="2.5" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-      </filter>
-    </defs>
-
-    <g filter="url(#premiumGlow)">
-      <ellipse
-        cx="40"
-        cy="40"
-        rx="31"
-        ry="13"
-        fill="none"
-        stroke="#ffffff"
-        stroke-width="2.5"
-      />
-
-      <ellipse
-        cx="40"
-        cy="40"
-        rx="31"
-        ry="13"
-        transform="rotate(60 40 40)"
-        fill="none"
-        stroke="#ff172d"
-        stroke-width="2.7"
-      />
-
-      <ellipse
-        cx="40"
-        cy="40"
-        rx="31"
-        ry="13"
-        transform="rotate(120 40 40)"
-        fill="none"
-        stroke="#ff3b30"
-        stroke-width="2.7"
-      />
-
-      <circle
-        cx="40"
-        cy="40"
-        r="8"
-        fill="url(#atomRed)"
-        stroke="#ffffff"
-        stroke-width="2"
-      />
-
-      <circle cx="69" cy="40" r="3" fill="#ffffff"/>
-      <circle cx="25" cy="14" r="3" fill="#ff001f"/>
-      <circle cx="25" cy="66" r="3" fill="#ff6b60"/>
-    </g>
-  </svg>
-
-  <span class="install-title">
-    Install Website APK
-  </span>
-
-  <!-- Download SVG -->
-  <svg class="premium-download" viewBox="0 0 24 24" aria-hidden="true">
-    <path
-      d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </svg>
-
-  <!-- Premium Moving Loading -->
-  <span class="premium-loading">
-    <span></span>
-  </span>
-
-  <!-- Moving Shine -->
-  <span class="premium-shine"></span>
-</a>
-
+<title>YONO GAMES Website APK Download</title>
 
 <style>
-/* =========================================
-   PREMIUM INSTALL WEBSITE APK
-   ========================================= */
+*{
+  box-sizing:border-box;
+}
 
-.premium-install-btn {
-  position: relative;
+body{
+  margin:0;
+  padding:0;
+  background:#ffffff;
+  color:#171717;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ===============================
+   PREMIUM INSTALL BUTTON
+================================ */
 
-  width: 94%;
-  max-width: 520px;
-  min-height: 82px;
+.install-wrap{
+  width:100%;
+  padding:20px 14px 10px;
+  display:flex;
+  justify-content:center;
+}
 
-  margin: 30px auto 24px;
-  padding: 12px 24px;
+.install-btn{
+  position:relative;
+  width:min(100%,520px);
+  min-height:82px;
 
-  box-sizing: border-box;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
 
-  overflow: hidden;
-  isolation: isolate;
+  padding:13px 24px;
+  overflow:hidden;
+  isolation:isolate;
 
-  color: #ffffff;
-  text-decoration: none;
+  text-decoration:none;
+  color:#fff;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 21px;
-  font-weight: 900;
-  letter-spacing: .5px;
-
-  border-radius: 22px;
-
-  /* PREMIUM RED */
   background:
     linear-gradient(
-      135deg,
-      #9b0000 0%,
-      #d40000 20%,
-      #ff1616 45%,
-      #e00000 68%,
-      #a80000 100%
+      115deg,
+      #650008 0%,
+      #b30012 24%,
+      #ff102b 48%,
+      #a60010 72%,
+      #580006 100%
     );
 
-  border: 2px solid rgba(255,255,255,.75);
+  border:2px solid #ff263e;
+  border-radius:23px;
 
   box-shadow:
-    0 0 8px rgba(255,0,0,.95),
-    0 0 20px rgba(255,0,0,.8),
-    0 0 38px rgba(255,0,0,.6),
-    0 0 65px rgba(255,0,0,.35),
-    inset 0 2px 3px rgba(255,255,255,.65),
-    inset 0 -8px 18px rgba(90,0,0,.45);
+    0 0 8px #ff001f,
+    0 0 18px rgba(255,0,30,.85),
+    0 0 38px rgba(255,0,30,.55),
+    0 0 70px rgba(255,0,30,.25),
+    inset 0 0 20px rgba(255,255,255,.16);
 
   transition:
     transform .25s ease,
     box-shadow .25s ease;
 }
 
+/* Animated RGB outer energy */
+.install-btn::before{
+  content:"";
+  position:absolute;
+  z-index:-2;
+  inset:-7px;
 
-/* PREMIUM OUTER GLOW */
-.premium-install-btn::before {
-  content: "";
+  background:conic-gradient(
+    from 0deg,
+    #00ffff,
+    #ff0033,
+    #00ff66,
+    #ffe600,
+    #00ffff,
+    #ff0033,
+    #00ff66,
+    #00ffff
+  );
 
-  position: absolute;
-  inset: -5px;
-
-  z-index: -2;
-
-  border-radius: 27px;
-
-  background:
-    conic-gradient(
-      from 0deg,
-      #ff0000,
-      #ff5c5c,
-      #ffffff,
-      #ff0000,
-      #8b0000,
-      #ff2020,
-      #ffffff,
-      #ff0000
-    );
-
-  filter: blur(8px);
-
-  opacity: .9;
+  border-radius:30px;
+  filter:blur(8px);
+  opacity:.95;
 
   animation:
-    redBorderSpin 2.8s linear infinite;
+    energyRotate 2.1s linear infinite;
 }
 
+/* Red glass inner layer */
+.install-btn::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:3px;
 
-/* INNER PREMIUM GLASS */
-.premium-install-btn::after {
-  content: "";
-
-  position: absolute;
-  inset: 3px;
-
-  z-index: -1;
-
-  border-radius: 19px;
+  border-radius:19px;
 
   background:
     linear-gradient(
-      180deg,
-      rgba(255,255,255,.18),
-      rgba(255,0,0,.08) 30%,
-      rgba(120,0,0,.28) 100%
+      120deg,
+      rgba(105,0,8,.98),
+      rgba(245,0,28,.95),
+      rgba(128,0,10,.98),
+      rgba(255,20,45,.96),
+      rgba(90,0,6,.98)
     );
 
   box-shadow:
-    inset 0 1px 2px rgba(255,255,255,.5);
+    inset 0 0 25px rgba(255,255,255,.12);
 }
 
+/* ===============================
+   ATOMIC SVG
+================================ */
 
-/* ATOMIC SVG */
-.premium-atomic {
-  width: 52px;
-  height: 52px;
-
-  flex-shrink: 0;
-
-  margin-right: 12px;
+.atomic-logo{
+  width:52px;
+  height:52px;
+  flex-shrink:0;
 
   filter:
-    drop-shadow(0 0 5px #ffffff)
-    drop-shadow(0 0 10px #ff0000)
-    drop-shadow(0 0 18px #ff0000);
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 10px #ff003c)
+    drop-shadow(0 0 12px #00ff66);
 
   animation:
-    atomicMotion 4s linear infinite;
+    atomicSpin 4s linear infinite;
 }
 
+.atomic-orbit{
+  fill:none;
+  stroke-width:2.7;
+}
 
-/* BUTTON TEXT */
-.install-title {
-  position: relative;
-  z-index: 5;
+.orbit-cyan{
+  stroke:#00ffff;
+}
 
-  white-space: nowrap;
+.orbit-red{
+  stroke:#ff1744;
+}
+
+.orbit-green{
+  stroke:#00ff66;
+}
+
+.atomic-core{
+  fill:#fff;
+  stroke:#00ffff;
+  stroke-width:2;
+}
+
+.atomic-dot-cyan{
+  fill:#00ffff;
+}
+
+.atomic-dot-red{
+  fill:#ff1744;
+}
+
+.atomic-dot-green{
+  fill:#00ff66;
+}
+
+/* ===============================
+   BUTTON TEXT
+================================ */
+
+.install-main-text{
+  position:relative;
+  z-index:5;
+
+  font-size:20px;
+  line-height:1.15;
+  font-weight:1000;
+  letter-spacing:.3px;
+
+  text-align:center;
 
   text-shadow:
-    0 2px 3px rgba(80,0,0,.8),
-    0 0 5px rgba(255,255,255,.8),
-    0 0 12px rgba(255,255,255,.45);
+    0 0 5px #fff,
+    0 0 10px #00ffff,
+    0 0 16px rgba(255,255,255,.8);
 }
 
+.install-sub-text{
+  display:block;
+  margin-top:5px;
 
-/* DOWNLOAD ICON */
-.premium-download {
-  position: relative;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.1px;
 
-  z-index: 5;
+  color:#fff;
+  opacity:.95;
+}
 
-  width: 34px;
-  height: 34px;
+/* ===============================
+   DOWNLOAD ICON
+================================ */
 
-  margin-left: 14px;
+.download-icon{
+  width:36px;
+  height:36px;
+  flex-shrink:0;
 
-  flex-shrink: 0;
-
-  color: #ffffff;
+  color:#00ffff;
 
   filter:
-    drop-shadow(0 0 5px #ffffff)
-    drop-shadow(0 0 10px #ff0000);
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 9px #00ff66);
 
   animation:
-    downloadMove 1.1s ease-in-out infinite;
+    downloadMove 1s ease-in-out infinite;
 }
 
+/* ===============================
+   MOVING LOADING ENERGY
+================================ */
 
-/* FULL PREMIUM LOADING BAR */
-.premium-loading {
-  position: absolute;
+.install-loading{
+  position:absolute;
+  left:0;
+  bottom:0;
 
-  left: 0;
-  bottom: 0;
+  width:100%;
+  height:5px;
 
-  width: 100%;
-  height: 6px;
+  overflow:hidden;
 
-  overflow: hidden;
-
-  background:
-    rgba(70,0,0,.45);
-
-  box-shadow:
-    0 -1px 5px rgba(255,255,255,.3),
-    0 0 10px rgba(255,0,0,.8);
+  background:#650006;
+  z-index:6;
 }
 
+.install-loading::before{
+  content:"";
+  position:absolute;
 
-/* MOVING LOADING LIGHT */
-.premium-loading span {
-  position: absolute;
+  left:-40%;
+  top:0;
 
-  top: 0;
-  left: -35%;
-
-  width: 35%;
-  height: 100%;
-
-  border-radius: 20px;
+  width:40%;
+  height:100%;
 
   background:
     linear-gradient(
       90deg,
       transparent,
+      #00ffff,
       #ffffff,
-      #fff5f5,
-      #ffffff,
+      #ff003c,
+      #00ff66,
+      #00ffff,
       transparent
     );
 
   box-shadow:
-    0 0 8px #ffffff,
-    0 0 18px #ffffff,
-    0 0 28px #ff0000;
+    0 0 8px #00ffff,
+    0 0 15px #ff003c,
+    0 0 20px #00ff66;
 
   animation:
-    premiumLoadingMove 1.25s linear infinite;
+    loadingMove 1.25s linear infinite;
 }
 
+/* ===============================
+   SHINE
+================================ */
 
-/* PREMIUM MOVING SHINE */
-.premium-shine {
-  position: absolute;
+.install-shine{
+  position:absolute;
+  top:0;
+  left:-80%;
 
-  top: -20%;
-  left: -100%;
-
-  width: 45%;
-  height: 140%;
-
-  pointer-events: none;
+  width:42%;
+  height:100%;
 
   background:
     linear-gradient(
       90deg,
       transparent,
-      rgba(255,255,255,.25),
-      rgba(255,255,255,.75),
-      rgba(255,255,255,.25),
+      rgba(255,255,255,.55),
       transparent
     );
 
-  transform: skewX(-25deg);
+  transform:skewX(-22deg);
+  pointer-events:none;
 
   animation:
-    premiumShine 2.6s ease-in-out infinite;
+    shineMove 2.4s ease-in-out infinite;
 }
 
+/* ===============================
+   HOVER / ACTIVE
+================================ */
 
-/* =========================================
+.install-btn:hover{
+  transform:translateY(-3px) scale(1.025);
+
+  box-shadow:
+    0 0 10px #ff002b,
+    0 0 25px #ff002b,
+    0 0 48px rgba(255,0,35,.8),
+    0 0 75px rgba(0,255,255,.28),
+    inset 0 0 25px rgba(255,255,255,.2);
+}
+
+.install-btn:active{
+  transform:scale(.96);
+}
+
+/* ===============================
+   WELCOME SECTION
+================================ */
+
+.welcome-box{
+  width:min(100%,900px);
+  margin:16px auto 0;
+  padding:0 16px 20px;
+  text-align:center;
+}
+
+.welcome-title{
+  margin:8px 0 10px;
+
+  font-size:24px;
+  line-height:1.25;
+  font-weight:1000;
+
+  background:
+    linear-gradient(
+      90deg,
+      #b00015,
+      #ff0033,
+      #00aeb5,
+      #00a83b,
+      #b00015
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  text-shadow:
+    0 0 10px rgba(255,0,40,.15);
+}
+
+.welcome-description{
+  margin:0 auto;
+
+  max-width:780px;
+
+  font-size:14px;
+  line-height:1.75;
+  font-weight:600;
+
+  color:#444;
+}
+
+/* ===============================
+   ABOUT SECTION
+================================ */
+
+.about-section{
+  width:min(100%,900px);
+  margin:5px auto 30px;
+  padding:0 16px;
+}
+
+.about-heading{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+
+  margin:0 0 13px;
+
+  color:#111;
+  font-size:22px;
+  font-weight:1000;
+}
+
+/* About SVG */
+.about-icon{
+  width:36px;
+  height:36px;
+  flex-shrink:0;
+
+  filter:
+    drop-shadow(0 0 4px #00ffff)
+    drop-shadow(0 0 7px #ff1744);
+
+  animation:aboutPulse 2s ease-in-out infinite;
+}
+
+.about-title{
+  font-size:22px;
+  font-weight:1000;
+}
+
+/* Information card */
+.about-content{
+  position:relative;
+
+  padding:18px;
+
+  border-radius:18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff,
+      #fff7f8,
+      #f4ffff,
+      #f6fff8
+    );
+
+  border:1px solid rgba(180,0,20,.2);
+
+  box-shadow:
+    0 7px 25px rgba(0,0,0,.08),
+    inset 0 0 20px rgba(0,255,255,.035);
+}
+
+.about-content p{
+  margin:0 0 13px;
+
+  color:#333;
+
+  font-size:14px;
+  line-height:1.75;
+  font-weight:600;
+}
+
+.about-content p:last-child{
+  margin-bottom:0;
+}
+
+/* ===============================
+   POWER INFORMATION TAGS
+================================ */
+
+.info-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+
+  margin-top:16px;
+}
+
+.info-tag{
+  display:inline-flex;
+  align-items:center;
+
+  min-height:31px;
+  padding:7px 11px;
+
+  border-radius:10px;
+
+  font-size:11px;
+  line-height:1.25;
+  font-weight:900;
+
+  color:#171717;
+
+  background:#fff;
+
+  border:1px solid rgba(0,0,0,.1);
+
+  box-shadow:
+    0 3px 10px rgba(0,0,0,.06);
+}
+
+.info-tag.cyan{
+  border-color:#00cdd2;
+  box-shadow:0 0 8px rgba(0,255,255,.15);
+}
+
+.info-tag.red{
+  border-color:#ff2344;
+  box-shadow:0 0 8px rgba(255,0,40,.12);
+}
+
+.info-tag.green{
+  border-color:#00b94d;
+  box-shadow:0 0 8px rgba(0,255,100,.12);
+}
+
+/* ===============================
    ANIMATIONS
-   ========================================= */
+================================ */
 
-@keyframes redBorderSpin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
+@keyframes energyRotate{
+  to{
+    transform:rotate(360deg);
   }
 }
 
-
-@keyframes atomicMotion {
-  0% {
-    transform:
-      rotate(0deg)
-      scale(1);
+@keyframes atomicSpin{
+  0%{
+    transform:rotate(0deg) scale(1);
   }
 
-  50% {
-    transform:
-      rotate(180deg)
-      scale(1.08);
+  50%{
+    transform:rotate(180deg) scale(1.08);
   }
 
-  100% {
-    transform:
-      rotate(360deg)
-      scale(1);
+  100%{
+    transform:rotate(360deg) scale(1);
   }
 }
 
-
-@keyframes downloadMove {
-  0%,
-  100% {
-    transform: translateY(0);
-
-    filter:
-      drop-shadow(0 0 4px #ffffff)
-      drop-shadow(0 0 8px #ff0000);
+@keyframes downloadMove{
+  0%,100%{
+    transform:translateY(-2px);
   }
 
-  50% {
-    transform: translateY(5px);
-
-    filter:
-      drop-shadow(0 0 7px #ffffff)
-      drop-shadow(0 0 15px #ff0000);
+  50%{
+    transform:translateY(5px);
   }
 }
 
-
-@keyframes premiumLoadingMove {
-  0% {
-    left: -35%;
+@keyframes loadingMove{
+  0%{
+    left:-45%;
   }
 
-  100% {
-    left: 100%;
-  }
-}
-
-
-@keyframes premiumShine {
-  0%,
-  25% {
-    left: -100%;
-  }
-
-  65%,
-  100% {
-    left: 150%;
+  100%{
+    left:105%;
   }
 }
 
-
-/* =========================================
-   HOVER
-   ========================================= */
-
-.premium-install-btn:hover {
-  transform: translateY(-3px) scale(1.02);
-
-  box-shadow:
-    0 0 12px #ff0000,
-    0 0 25px #ff0000,
-    0 0 45px rgba(255,0,0,.8),
-    0 0 75px rgba(255,0,0,.5),
-    inset 0 2px 4px rgba(255,255,255,.75);
-}
-
-
-/* CLICK */
-.premium-install-btn:active {
-  transform: scale(.97);
-}
-
-
-/* MOBILE */
-@media (max-width: 480px) {
-
-  .premium-install-btn {
-    width: 94%;
-    min-height: 76px;
-
-    margin-top: 28px;
-
-    padding: 10px 16px;
-
-    border-radius: 20px;
-
-    font-size: 17px;
+@keyframes shineMove{
+  0%,25%{
+    left:-80%;
   }
 
-  .premium-atomic {
-    width: 45px;
-    height: 45px;
-
-    margin-right: 8px;
-  }
-
-  .premium-download {
-    width: 29px;
-    height: 29px;
-
-    margin-left: 8px;
-  }
-
-  .premium-loading {
-    height: 5px;
+  65%,100%{
+    left:150%;
   }
 }
 
+@keyframes aboutPulse{
+  0%,100%{
+    transform:scale(1);
+  }
 
-/* REDUCE MOTION ACCESSIBILITY */
-@media (prefers-reduced-motion: reduce) {
+  50%{
+    transform:scale(1.08);
+  }
+}
 
-  .premium-install-btn *,
-  .premium-install-btn::before,
-  .premium-install-btn::after {
-    animation: none !important;
+/* ===============================
+   MOBILE FULL HD LOOK
+================================ */
+
+@media(max-width:600px){
+
+  .install-wrap{
+    padding:14px 10px 8px;
+  }
+
+  .install-btn{
+    min-height:78px;
+    padding:10px 13px;
+    gap:9px;
+    border-radius:21px;
+  }
+
+  .atomic-logo{
+    width:45px;
+    height:45px;
+  }
+
+  .install-main-text{
+    font-size:17px;
+  }
+
+  .install-sub-text{
+    font-size:9px;
+    letter-spacing:.7px;
+  }
+
+  .download-icon{
+    width:31px;
+    height:31px;
+  }
+
+  .welcome-title{
+    font-size:21px;
+  }
+
+  .welcome-description{
+    font-size:13px;
+  }
+
+  .about-heading,
+  .about-title{
+    font-size:20px;
+  }
+
+  .about-content{
+    padding:15px;
+  }
+
+  .about-content p{
+    font-size:13px;
   }
 }
 </style>
+</head>
+
+<body>
+
+<!-- =================================
+     INSTALL WEBSITE APK BUTTON
+================================= -->
+
+<div class="install-wrap">
+
+<a
+  class="install-btn"
+  href="https://web2apkpro.com/public_download.php?project_id=21599&token=6bbe1b6892"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Install Website APK"
+>
+
+  <!-- PREMIUM ATOMIC SVG -->
+  <svg class="atomic-logo" viewBox="0 0 80 80">
+
+    <ellipse
+      class="atomic-orbit orbit-cyan"
+      cx="40" cy="40"
+      rx="32" ry="13"
+    />
+
+    <ellipse
+      class="atomic-orbit orbit-red"
+      cx="40" cy="40"
+      rx="32" ry="13"
+      transform="rotate(60 40 40)"
+    />
+
+    <ellipse
+      class="atomic-orbit orbit-green"
+      cx="40" cy="40"
+      rx="32" ry="13"
+      transform="rotate(120 40 40)"
+    />
+
+    <circle
+      class="atomic-core"
+      cx="40"
+      cy="40"
+      r="8"
+    />
+
+    <circle
+      class="atomic-dot-cyan"
+      cx="72"
+      cy="40"
+      r="3"
+    />
+
+    <circle
+      class="atomic-dot-red"
+      cx="24"
+      cy="12.3"
+      r="3"
+    />
+
+    <circle
+      class="atomic-dot-green"
+      cx="24"
+      cy="67.7"
+      r="3"
+    />
+
+  </svg>
+
+  <!-- TEXT -->
+  <span class="install-main-text">
+    Install Website APK
+    <span class="install-sub-text">
+      FAST • SECURE • ONE CLICK INSTALL
+    </span>
+  </span>
+
+  <!-- DOWNLOAD SVG -->
+  <svg
+    class="download-icon"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path
+      d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+
+  <!-- MOVING LOADING -->
+  <span class="install-loading"></span>
+
+  <!-- SHINE -->
+  <span class="install-shine"></span>
+
+</a>
+
+</div>
+
+
+<!-- =================================
+     WELCOME INFORMATION
+================================= -->
+
+<section class="welcome-box">
+
+  <h1 class="welcome-title">
+    Welcome to YONO GAMES Website APK Download
+  </h1>
+
+  <p class="welcome-description">
+    Welcome to the YONO GAMES Website APK download section.
+    Install the YONO GAMES website directly through the official
+    website APK installation link. The installation button above
+    provides a simple one-click experience so visitors can quickly
+    access the website on supported Android devices.
+  </p>
+
+</section>
+
+
+<!-- =================================
+     ABOUT
+================================= -->
+
+<section class="about-section">
+
+  <div class="about-heading">
+
+    <!-- PREMIUM ABOUT SVG -->
+    <svg
+      class="about-icon"
+      viewBox="0 0 48 48"
+      aria-hidden="true"
+    >
+
+      <defs>
+        <linearGradient
+          id="aboutGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" stop-color="#00ffff"/>
+          <stop offset="45%" stop-color="#ff1744"/>
+          <stop offset="100%" stop-color="#00ff66"/>
+        </linearGradient>
+      </defs>
+
+      <circle
+        cx="24"
+        cy="24"
+        r="20"
+        fill="none"
+        stroke="url(#aboutGradient)"
+        stroke-width="3"
+      />
+
+      <circle
+        cx="24"
+        cy="24"
+        r="15"
+        fill="none"
+        stroke="#111"
+        stroke-width="1.5"
+      />
+
+      <path
+        d="M24 21v11"
+        stroke="#111"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+
+      <circle
+        cx="24"
+        cy="15"
+        r="2"
+        fill="#ff1744"
+      />
+
+    </svg>
+
+    <span class="about-title">About</span>
+
+  </div>
+
+
+  <!-- POWERFUL INFORMATION -->
+  <div class="about-content">
+
+    <p>
+      YONO GAMES Website APK is designed to provide a convenient
+      website-based installation experience for visitors who want
+      quick access from their Android device.
+    </p>
+
+    <p>
+      Use the premium Install Website APK button above to continue
+      to the website APK download page. The download action opens
+      the configured installation page in a new browser tab.
+    </p>
+
+    <p>
+      The installation experience is optimized for mobile screens,
+      with a responsive interface, clear download controls,
+      animated loading effects, and easy-to-understand information.
+    </p>
+
+    <p>
+      For the best experience, use a stable internet connection,
+      keep sufficient device storage available, and follow the
+      installation instructions displayed by your Android device.
+    </p>
+
+    <p>
+      Always review the permissions and installation information
+      shown by your device before installing any application.
+      Only continue when you understand and trust the source of
+      the APK file.
+    </p>
+
+    <!-- MANY USEFUL INFORMATION TAGS -->
+    <div class="info-tags">
+
+      <span class="info-tag cyan">YONO GAMES</span>
+      <span class="info-tag red">Website APK</span>
+      <span class="info-tag green">APK Download</span>
+
+      <span class="info-tag cyan">Android Compatible</span>
+      <span class="info-tag red">Mobile Friendly</span>
+      <span class="info-tag green">Responsive Design</span>
+
+      <span class="info-tag cyan">One Click Install</span>
+      <span class="info-tag red">Fast Access</span>
+      <span class="info-tag green">Easy Installation</span>
+
+      <span class="info-tag cyan">Website Access</span>
+      <span class="info-tag red">Direct Download</span>
+      <span class="info-tag green">Simple Interface</span>
+
+      <span class="info-tag cyan">Premium UI</span>
+      <span class="info-tag red">Modern Design</span>
+      <span class="info-tag green">Smooth Experience</span>
+
+      <span class="info-tag cyan">Mobile Optimized</span>
+      <span class="info-tag red">Fast Loading</span>
+      <span class="info-tag green">Easy Navigation</span>
+
+      <span class="info-tag cyan">Secure Browser Flow</span>
+      <span class="info-tag red">Clear Download Button</span>
+      <span class="info-tag green">Installation Guide</span>
+
+      <span class="info-tag cyan">Android Website</span>
+      <span class="info-tag red">APK Installation</span>
+      <span class="info-tag green">Download Support</span>
+
+      <span class="info-tag cyan">Premium Atomic UI</span>
+      <span class="info-tag red">Glowing Button</span>
+      <span class="info-tag green">Animated Loading</span>
+
+      <span class="info-tag cyan">Cyan Glow</span>
+      <span class="info-tag red">Red Glow</span>
+      <span class="info-tag green">Green Glow</span>
+
+      <span class="info-tag cyan">Quick Install</span>
+      <span class="info-tag red">Easy Access</span>
+      <span class="info-tag green">Modern Mobile UI</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
