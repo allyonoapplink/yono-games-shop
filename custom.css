@@ -1,355 +1,471 @@
 /* =========================================================
-   YONO GAMES — ORIGINAL COLOR HD ENHANCEMENT
-   IMPORTANT:
-   This CSS does NOT assign new colors.
-   Existing HTML colors remain unchanged.
+   YONO GAMES — SUPER HD ORIGINAL COLOR BOOST
+   Add this at the VERY END of custom.css
+   Original colors stay in their own positions.
    ========================================================= */
 
 
-/* ---------------------------------------------------------
-   GLOBAL HD RENDERING
---------------------------------------------------------- */
+/* =========================================================
+   1. MAIN RED INSTALL BUTTON
+   Original RED -> deeper RED + HD red glow
+   ========================================================= */
 
-svg,
-svg *,
-img,
-button,
-a,
-[class*="icon"],
-[class*="logo"],
-[class*="atomic"] {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: geometricPrecision;
-}
-
-
-/* ---------------------------------------------------------
-   PRESERVE ORIGINAL SVG COLORS
-   Do NOT replace existing fill/stroke colors.
---------------------------------------------------------- */
-
-svg {
-  shape-rendering: geometricPrecision;
-}
-
-svg [fill]:not([fill="none"]) {
-  color: inherit;
-}
-
-svg [stroke]:not([stroke="none"]) {
-  vector-effect: non-scaling-stroke;
-}
-
-
-/* ---------------------------------------------------------
-   ORIGINAL COLOR HD GLOW
-   Uses the element's OWN existing color.
-   No new color is assigned.
---------------------------------------------------------- */
-
-svg [stroke]:not([stroke="none"]):not([stroke="transparent"]) {
-  filter:
-    drop-shadow(0 0 1px currentColor)
-    drop-shadow(0 0 2px currentColor)
-    drop-shadow(0 0 4px currentColor);
-}
-
-svg [fill]:not([fill="none"]):not([fill="transparent"]) {
-  filter:
-    drop-shadow(0 0 1px currentColor)
-    drop-shadow(0 0 2px currentColor)
-    drop-shadow(0 0 4px currentColor);
-}
-
-
-/* ---------------------------------------------------------
-   ATOMIC ELEMENTS
-   Keep every original color in its original position.
---------------------------------------------------------- */
-
-.atomic,
-.atomic-icon,
-.atomic-logo,
-.atomic-svg,
-.atomic-loader,
-.atomic-loading,
-[class*="atomic"] {
-  transform-origin: center center;
-  transform-box: fill-box;
-
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-  image-rendering: -webkit-optimize-contrast;
-}
-
-
-/* ---------------------------------------------------------
-   ATOMIC ORBITS
-   Enhance their OWN original color only.
---------------------------------------------------------- */
-
-.atomic-orbit,
-.orbit,
-.orbit-cyan,
-.orbit-red,
-.orbit-green,
-.orbit-blue,
-.orbit-yellow,
-.orbit-purple,
-[class*="orbit"] {
-  vector-effect: non-scaling-stroke;
-
-  filter:
-    drop-shadow(0 0 1px currentColor)
-    drop-shadow(0 0 3px currentColor)
-    drop-shadow(0 0 6px currentColor);
-}
-
-
-/* ---------------------------------------------------------
-   ATOMIC CORE
-   Never force a new fill/stroke.
---------------------------------------------------------- */
-
-.atomic-core,
-[class*="atomic-core"] {
-  filter:
-    drop-shadow(0 0 2px currentColor)
-    drop-shadow(0 0 5px currentColor)
-    drop-shadow(0 0 9px currentColor);
-}
-
-
-/* ---------------------------------------------------------
-   ATOMIC DOTS / ELECTRONS
---------------------------------------------------------- */
-
-.atomic-dot,
-.atomic-electron,
-.electron,
-[class*="atomic-dot"],
-[class*="electron"] {
-  filter:
-    drop-shadow(0 0 2px currentColor)
-    drop-shadow(0 0 4px currentColor)
-    drop-shadow(0 0 7px currentColor);
-}
-
-
-/* ---------------------------------------------------------
-   12-LINE LOADING ICON
-   Existing line colors remain exactly as HTML defines them.
---------------------------------------------------------- */
-
-.loading-spinner,
-.loading-icon,
-.spinner,
-.loader {
-  transform-origin: center center;
-  transform-box: fill-box;
-
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.loading-spinner line,
-.loading-spinner path,
-.loading-spinner circle,
-.loading-icon line,
-.loading-icon path,
-.loading-icon circle,
-.spinner line,
-.spinner path,
-.spinner circle,
-.loader line,
-.loader path,
-.loader circle {
-  vector-effect: non-scaling-stroke;
-
-  filter:
-    drop-shadow(0 0 1px currentColor)
-    drop-shadow(0 0 3px currentColor)
-    drop-shadow(0 0 5px currentColor);
-}
-
-
-/* ---------------------------------------------------------
-   ORIGINAL COLOR PRESERVATION
-   Prevent custom CSS from changing colors through opacity.
---------------------------------------------------------- */
-
-.atomic *,
-.atomic-icon *,
-.atomic-logo *,
-.atomic-svg *,
-.loading-spinner *,
-.loading-icon *,
-.spinner *,
-.loader * {
-  color: inherit;
-}
-
-
-/* ---------------------------------------------------------
-   PREMIUM HD TEXT
-   Text keeps its original color.
---------------------------------------------------------- */
-
-.install-btn,
-.install-main-text,
-.install-sub-text,
-.about-title,
-.welcome-title,
-.welcome-description {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-
-/* ---------------------------------------------------------
-   BUTTON ORIGINAL COLOR HD
-   No background/color replacement.
---------------------------------------------------------- */
-
-.install-btn {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-
-  transform: translateZ(0);
+.install-btn{
+  border-color:#ff263e !important;
 
   box-shadow:
-    0 0 1px currentColor,
-    0 0 4px currentColor,
-    0 0 10px rgba(255,255,255,.10);
+    0 0 5px #ff102b,
+    0 0 12px #ff102b,
+    0 0 24px rgba(255,16,43,.95),
+    0 0 42px rgba(255,0,31,.72),
+    0 0 70px rgba(255,0,31,.38),
+    inset 0 0 12px rgba(255,255,255,.16),
+    inset 0 0 30px rgba(255,0,31,.25) !important;
 }
 
 
-/* ---------------------------------------------------------
-   ORIGINAL COLORED BUTTON ELEMENTS
-   Each element keeps its own current color.
---------------------------------------------------------- */
+/* RED button surface — keep RED family */
+.install-btn::after{
+  background:
+    linear-gradient(
+      120deg,
+      #5c0007 0%,
+      #9e000f 18%,
+      #d9001d 38%,
+      #ff102b 50%,
+      #d9001d 62%,
+      #9e000f 82%,
+      #5c0007 100%
+    ) !important;
 
-.install-btn svg,
-.install-btn svg path,
-.install-btn svg circle,
-.install-btn svg ellipse,
-.install-btn svg line {
-  vector-effect: non-scaling-stroke;
+  box-shadow:
+    inset 0 0 12px rgba(255,255,255,.16),
+    inset 0 0 28px rgba(255,0,30,.35),
+    0 0 8px rgba(255,0,30,.45) !important;
 }
 
 
-/* ---------------------------------------------------------
-   ABOUT ICON
-   Keep original About SVG colors.
---------------------------------------------------------- */
+/* =========================================================
+   2. CYAN
+   Existing CYAN -> ultra bright HD CYAN
+   ========================================================= */
 
-.about-icon,
-.about-inner-svg,
-.about-icon-wrap svg {
-  shape-rendering: geometricPrecision;
-  transform-origin: center center;
-  transform-box: fill-box;
+.orbit-cyan{
+  stroke:#00ffff !important;
 
   filter:
-    drop-shadow(0 0 1px currentColor)
-    drop-shadow(0 0 3px currentColor)
-    drop-shadow(0 0 6px currentColor);
+    drop-shadow(0 0 2px #00ffff)
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 10px #00ffff)
+    drop-shadow(0 0 18px rgba(0,255,255,.95))
+    drop-shadow(0 0 28px rgba(0,255,255,.65)) !important;
+}
+
+.atomic-dot-cyan{
+  fill:#00ffff !important;
+
+  filter:
+    drop-shadow(0 0 3px #00ffff)
+    drop-shadow(0 0 7px #00ffff)
+    drop-shadow(0 0 14px #00ffff)
+    drop-shadow(0 0 22px rgba(0,255,255,.9)) !important;
+}
+
+.download-icon{
+  color:#00ffff !important;
+
+  filter:
+    drop-shadow(0 0 3px #00ffff)
+    drop-shadow(0 0 7px #00ffff)
+    drop-shadow(0 0 13px #00ffff)
+    drop-shadow(0 0 22px rgba(0,255,255,.95)) !important;
 }
 
 
-/* ---------------------------------------------------------
-   ABOUT ATOMIC RING
-   IMPORTANT:
-   Do not assign background/stroke color here.
-   Existing gradient/colors remain untouched.
---------------------------------------------------------- */
+/* =========================================================
+   3. RED ATOMIC
+   Existing RED -> HD RED
+   ========================================================= */
 
-.about-atomic-ring {
-  transform-origin: center center;
-  will-change: transform;
+.orbit-red{
+  stroke:#ff1744 !important;
+
+  filter:
+    drop-shadow(0 0 2px #ff1744)
+    drop-shadow(0 0 5px #ff1744)
+    drop-shadow(0 0 10px #ff1744)
+    drop-shadow(0 0 18px rgba(255,23,68,.95))
+    drop-shadow(0 0 28px rgba(255,23,68,.65)) !important;
+}
+
+.atomic-dot-red{
+  fill:#ff1744 !important;
+
+  filter:
+    drop-shadow(0 0 3px #ff1744)
+    drop-shadow(0 0 7px #ff1744)
+    drop-shadow(0 0 14px #ff1744)
+    drop-shadow(0 0 22px rgba(255,23,68,.9)) !important;
+}
+
+
+/* =========================================================
+   4. GREEN ATOMIC
+   Existing GREEN -> HD GREEN
+   ========================================================= */
+
+.orbit-green{
+  stroke:#00ff66 !important;
+
+  filter:
+    drop-shadow(0 0 2px #00ff66)
+    drop-shadow(0 0 5px #00ff66)
+    drop-shadow(0 0 10px #00ff66)
+    drop-shadow(0 0 18px rgba(0,255,102,.95))
+    drop-shadow(0 0 28px rgba(0,255,102,.65)) !important;
+}
+
+.atomic-dot-green{
+  fill:#00ff66 !important;
+
+  filter:
+    drop-shadow(0 0 3px #00ff66)
+    drop-shadow(0 0 7px #00ff66)
+    drop-shadow(0 0 14px #00ff66)
+    drop-shadow(0 0 22px rgba(0,255,102,.9)) !important;
+}
+
+
+/* =========================================================
+   5. ATOMIC CORE
+   Existing WHITE + CYAN -> HD
+   ========================================================= */
+
+.atomic-core{
+  fill:#ffffff !important;
+  stroke:#00ffff !important;
+
+  filter:
+    drop-shadow(0 0 2px #ffffff)
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 10px #00ffff)
+    drop-shadow(0 0 18px rgba(0,255,255,.9)) !important;
+}
+
+
+/* =========================================================
+   6. COMPLETE ATOMIC LOGO
+   Keep all original 3 colors.
+   ========================================================= */
+
+.atomic-logo{
+  filter:
+    drop-shadow(0 0 3px #00ffff)
+    drop-shadow(0 0 7px #00ffff)
+    drop-shadow(0 0 10px #ff1744)
+    drop-shadow(0 0 13px #00ff66)
+    drop-shadow(0 0 24px rgba(0,255,255,.65))
+    drop-shadow(0 0 30px rgba(255,23,68,.45))
+    drop-shadow(0 0 35px rgba(0,255,102,.4)) !important;
+}
+
+
+/* =========================================================
+   7. 12-LINE LOADING
+   Keep original rotating CYAN / RED / GREEN.
+   Make each line thicker-looking and brighter.
+   ========================================================= */
+
+.loading-spinner{
+  filter:
+    drop-shadow(0 0 3px #00ffff)
+    drop-shadow(0 0 7px #00ffff)
+    drop-shadow(0 0 10px #ff1744)
+    drop-shadow(0 0 13px #00ff66)
+    drop-shadow(0 0 24px rgba(0,255,255,.75))
+    drop-shadow(0 0 28px rgba(255,23,68,.55))
+    drop-shadow(0 0 32px rgba(0,255,102,.5)) !important;
+}
+
+.loading-line{
+  stroke-width:7.5 !important;
+  stroke-linecap:round !important;
 
   filter:
     drop-shadow(0 0 2px currentColor)
     drop-shadow(0 0 5px currentColor)
-    drop-shadow(0 0 9px currentColor);
+    drop-shadow(0 0 9px currentColor)
+    drop-shadow(0 0 15px currentColor) !important;
 }
 
 
-/* ---------------------------------------------------------
-   SMOOTH ATOMIC ROTATION
-   Does not change any color.
---------------------------------------------------------- */
+/* =========================================================
+   8. LOADING CYAN
+   ========================================================= */
+
+.loading-line:nth-child(1),
+.loading-line:nth-child(4),
+.loading-line:nth-child(7),
+.loading-line:nth-child(10){
+  filter:
+    drop-shadow(0 0 3px #00ffff)
+    drop-shadow(0 0 7px #00ffff)
+    drop-shadow(0 0 14px #00ffff)
+    drop-shadow(0 0 22px rgba(0,255,255,.9)) !important;
+}
+
+
+/* =========================================================
+   9. LOADING RED
+   ========================================================= */
+
+.loading-line:nth-child(2),
+.loading-line:nth-child(5),
+.loading-line:nth-child(8),
+.loading-line:nth-child(11){
+  filter:
+    drop-shadow(0 0 3px #ff1744)
+    drop-shadow(0 0 7px #ff1744)
+    drop-shadow(0 0 14px #ff1744)
+    drop-shadow(0 0 22px rgba(255,23,68,.9)) !important;
+}
+
+
+/* =========================================================
+   10. LOADING GREEN
+   ========================================================= */
+
+.loading-line:nth-child(3),
+.loading-line:nth-child(6),
+.loading-line:nth-child(9),
+.loading-line:nth-child(12){
+  filter:
+    drop-shadow(0 0 3px #00ff66)
+    drop-shadow(0 0 7px #00ff66)
+    drop-shadow(0 0 14px #00ff66)
+    drop-shadow(0 0 22px rgba(0,255,102,.9)) !important;
+}
+
+
+/* =========================================================
+   11. LOADING MODE BORDER
+   ========================================================= */
+
+.install-btn.is-loading{
+  border-color:#00ffff !important;
+
+  box-shadow:
+    0 0 6px #00ffff,
+    0 0 14px #00ffff,
+    0 0 25px #ff1744,
+    0 0 38px #00ff66,
+    0 0 60px rgba(255,23,68,.55),
+    0 0 80px rgba(0,255,255,.35) !important;
+}
+
+
+/* =========================================================
+   12. BOTTOM MOVING BAR
+   Original CYAN / RED / GREEN colors stay.
+   ========================================================= */
+
+.install-loading{
+  height:5px !important;
+
+  box-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #ff1744,
+    0 0 15px #00ff66 !important;
+}
+
+.install-loading::before{
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      #00ffff 18%,
+      #ffffff 30%,
+      #ff1744 48%,
+      #ffffff 58%,
+      #00ff66 76%,
+      #00ffff 90%,
+      transparent 100%
+    ) !important;
+
+  box-shadow:
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 15px #ff1744,
+    0 0 20px #00ff66,
+    0 0 30px rgba(0,255,255,.7) !important;
+}
+
+
+/* =========================================================
+   13. SHINE
+   ========================================================= */
+
+.install-shine{
+  opacity:.85;
+
+  filter:
+    blur(.2px)
+    drop-shadow(0 0 5px rgba(255,255,255,.7));
+}
+
+
+/* =========================================================
+   14. WELCOME TITLE
+   Keep its existing RED / CYAN / GREEN gradient,
+   increase visual brightness only.
+   ========================================================= */
+
+.welcome-title{
+  filter:
+    drop-shadow(0 0 1px rgba(176,0,21,.8))
+    drop-shadow(0 0 3px rgba(255,0,51,.35))
+    drop-shadow(0 0 5px rgba(0,174,181,.25))
+    drop-shadow(0 0 6px rgba(0,168,59,.25)) !important;
+}
+
+
+/* =========================================================
+   15. ABOUT OUTER ATOMIC RING
+   Existing CYAN / RED / GREEN stays exactly that family.
+   ========================================================= */
+
+.about-atomic-ring{
+  filter:
+    drop-shadow(0 0 2px #00ffff)
+    drop-shadow(0 0 5px #00ffff)
+    drop-shadow(0 0 8px #ff1744)
+    drop-shadow(0 0 11px #00ff66)
+    drop-shadow(0 0 18px rgba(0,255,255,.7))
+    drop-shadow(0 0 22px rgba(255,23,68,.55))
+    drop-shadow(0 0 25px rgba(0,255,102,.5)) !important;
+}
+
+
+/* =========================================================
+   16. ABOUT INNER SVG
+   Existing BLACK / RED stays unchanged.
+   ========================================================= */
+
+.about-inner-svg{
+  filter:
+    drop-shadow(0 0 1px #111)
+    drop-shadow(0 0 3px rgba(17,17,17,.7))
+    drop-shadow(0 0 5px rgba(255,23,68,.55)) !important;
+}
+
+
+/* =========================================================
+   17. ABOUT RED DOT
+   ========================================================= */
+
+.about-inner-svg circle[fill="#ff1744"]{
+  filter:
+    drop-shadow(0 0 2px #ff1744)
+    drop-shadow(0 0 5px #ff1744)
+    drop-shadow(0 0 10px #ff1744)
+    drop-shadow(0 0 16px rgba(255,23,68,.85)) !important;
+}
+
+
+/* =========================================================
+   18. INFO TAGS
+   RED remains RED
+   CYAN remains CYAN
+   GREEN remains GREEN
+   ========================================================= */
+
+.info-tag.cyan{
+  color:#008f95 !important;
+
+  border-color:#00cdd2 !important;
+
+  box-shadow:
+    0 0 3px rgba(0,205,210,.55),
+    0 0 8px rgba(0,255,255,.25),
+    inset 0 0 5px rgba(0,255,255,.08) !important;
+}
+
+.info-tag.red{
+  color:#c40022 !important;
+
+  border-color:#ff2344 !important;
+
+  box-shadow:
+    0 0 3px rgba(255,35,68,.55),
+    0 0 8px rgba(255,0,40,.25),
+    inset 0 0 5px rgba(255,0,40,.08) !important;
+}
+
+.info-tag.green{
+  color:#008c3b !important;
+
+  border-color:#00b94d !important;
+
+  box-shadow:
+    0 0 3px rgba(0,185,77,.55),
+    0 0 8px rgba(0,255,100,.25),
+    inset 0 0 5px rgba(0,255,100,.08) !important;
+}
+
+
+/* =========================================================
+   19. PREMIUM HD ANTI-BLUR
+   ========================================================= */
 
 .atomic-logo,
-.atomic-svg,
-.atomic-icon {
-  will-change: transform, filter;
+.loading-spinner,
+.about-icon-wrap,
+.about-atomic-ring,
+.about-inner-svg,
+.download-icon{
+  -webkit-backface-visibility:hidden;
+  backface-visibility:hidden;
+
+  -webkit-transform:translateZ(0);
+  transform:translateZ(0);
+
+  will-change:transform,filter;
 }
 
 
-/* ---------------------------------------------------------
-   HD GLOW WITHOUT COLOR REPLACEMENT
---------------------------------------------------------- */
+/* =========================================================
+   20. EXTRA MOBILE HD
+   ========================================================= */
 
-[stroke] {
-  vector-effect: non-scaling-stroke;
-}
+@media(max-width:600px){
 
-[stroke]:not([stroke="none"]) {
-  paint-order: stroke fill markers;
-}
-
-
-/* ---------------------------------------------------------
-   PREMIUM SHARP EDGES
---------------------------------------------------------- */
-
-.install-btn svg,
-.about-section svg,
-.loading-spinner {
-  shape-rendering: geometricPrecision;
-}
-
-
-/* ---------------------------------------------------------
-   MOBILE HD
---------------------------------------------------------- */
-
-@media (max-width: 600px) {
-
-  svg,
-  .atomic-logo,
-  .atomic-svg,
-  .atomic-icon,
-  .loading-spinner,
-  .about-icon {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    transform-style: preserve-3d;
+  .atomic-logo{
+    filter:
+      drop-shadow(0 0 3px #00ffff)
+      drop-shadow(0 0 7px #ff1744)
+      drop-shadow(0 0 10px #00ff66)
+      drop-shadow(0 0 18px rgba(0,255,255,.65))
+      drop-shadow(0 0 20px rgba(255,23,68,.45))
+      drop-shadow(0 0 22px rgba(0,255,102,.4)) !important;
   }
 
-  svg [stroke]:not([stroke="none"]) {
-    vector-effect: non-scaling-stroke;
+  .loading-spinner{
+    filter:
+      drop-shadow(0 0 3px #00ffff)
+      drop-shadow(0 0 7px #ff1744)
+      drop-shadow(0 0 10px #00ff66)
+      drop-shadow(0 0 20px rgba(0,255,255,.7))
+      drop-shadow(0 0 24px rgba(255,23,68,.5))
+      drop-shadow(0 0 26px rgba(0,255,102,.45)) !important;
   }
-}
 
-
-/* ---------------------------------------------------------
-   REDUCED MOTION ACCESSIBILITY
---------------------------------------------------------- */
-
-@media (prefers-reduced-motion: reduce) {
-
-  .atomic-logo,
-  .atomic-svg,
-  .atomic-icon,
-  .loading-spinner,
-  .about-atomic-ring {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+  .about-atomic-ring{
+    filter:
+      drop-shadow(0 0 3px #00ffff)
+      drop-shadow(0 0 6px #ff1744)
+      drop-shadow(0 0 9px #00ff66)
+      drop-shadow(0 0 18px rgba(0,255,255,.65))
+      drop-shadow(0 0 20px rgba(255,23,68,.5))
+      drop-shadow(0 0 22px rgba(0,255,102,.45)) !important;
   }
 }
