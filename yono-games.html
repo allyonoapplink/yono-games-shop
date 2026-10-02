@@ -1,0 +1,1017 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"><title>YONO GAMES — Download, Bonus & Information | YONO GAMES Data</title><meta name="description" content="YONO GAMES original details page with app image, signup bonus, minimum withdrawal, information, related games and download link."><meta name="robots" content="index, follow"><meta name="theme-color" content="#ffffff"><link rel="canonical" href="https://yonogames.shop/yono-games.html"><meta property="og:type" content="website"><meta property="og:title" content="YONO GAMES — Download, Bonus & Information"><meta property="og:description" content="YONO GAMES details, original app image, bonus, withdrawal information and related games."><meta property="og:url" content="https://yonogames.shop/yono-games.html"><meta property="og:image" content="https://i.ibb.co/Gf0fxYQ4/Screenshot-20260814-040510.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="YONO GAMES — Download, Bonus & Information"><meta name="twitter:description" content="YONO GAMES details, original app image, bonus, withdrawal information and related games."><meta name="twitter:image" content="https://i.ibb.co/Gf0fxYQ4/Screenshot-20260814-040510.jpg"><style>
+        /* ── reset & base ── */
+        :root {
+            --bg: #ffffff;
+            --bg2: #f7f8fa;
+            --card: #ffffff;
+            --text: #111827;
+            --text2: #6b7280;
+            --border: #e5e7eb;
+            --blue: #2563eb;
+            --blue-dark: #1d4ed8;
+            --green: #16a34a;
+            --gold: #f59e0b;
+            --radius: 14px;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background: var(--bg2);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        button {
+            font: inherit;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ── header ── */
+        header.topbar {
+            position: sticky;
+            top: 0;
+            z-index: 40;
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+        }
+        .brand {
+            font-weight: 800;
+            font-size: 17px;
+            color: var(--text);
+        }
+        .menu-btn {
+            background: none;
+            border: none;
+            padding: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .menu-btn:active {
+            background: var(--bg2);
+        }
+        .hamburger-icon .bar {
+            transition: transform .25s ease, opacity .2s ease;
+            transform-origin: center;
+        }
+        .menu-open .hamburger-icon .bar1 {
+            transform: translateY(6px) rotate(45deg);
+        }
+        .menu-open .hamburger-icon .bar2 {
+            opacity: 0;
+        }
+        .menu-open .hamburger-icon .bar3 {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+
+        /* ── menu drawer ── */
+        .menu-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 24, 39, .35);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .25s ease;
+            z-index: 50;
+        }
+        .menu-backdrop.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .menu-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: min(78vw, 320px);
+            background: #fff;
+            z-index: 51;
+            transform: translateX(100%);
+            transition: transform .16s ease-out;
+            box-shadow: -8px 0 24px rgba(17, 24, 39, .12);
+            display: flex;
+            flex-direction: column;
+            padding: 18px 0;
+        }
+        .menu-drawer.show {
+            transform: translateX(0);
+        }
+        .menu-drawer .menu-title {
+            font-weight: 800;
+            font-size: 15px;
+            padding: 0 14px 14px 20px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            min-height: 34px;
+        }
+        .menu-drawer .menu-title > span { display: none; }
+        .menu-close-btn {
+            background: none;
+            border: none;
+            padding: 7px;
+            margin: 0 0 0 auto;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .menu-close-btn:active {
+            background: var(--bg2);
+        }
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 13px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14.5px;
+            color: var(--text);
+        }
+        .menu-item:active {
+            background: var(--bg2);
+        }
+        .menu-item svg {
+            flex-shrink: 0;
+            color: #111827;
+        }
+
+        /* ── pages ── */
+        .page {
+            display: none;
+            padding: 16px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .page.active {
+            display: block;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text);
+            padding: 8px 4px;
+            margin-bottom: 8px;
+        }
+
+        /* ── home grid ── */
+        .home-hero {
+            padding: 6px 2px 16px 2px;
+        }
+        .home-hero h1 {
+            font-size: 20px;
+            margin: 0 0 4px 0;
+        }
+        .home-hero p {
+            font-size: 13px;
+            color: var(--text2);
+            margin: 0;
+        }
+        .home-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        @media (min-width: 640px) {
+            .home-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .app-card {
+            display: flex;
+            gap: 12px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 12px;
+            position: relative;
+        }
+        .app-card-img-wrap {
+            position: relative;
+            flex-shrink: 0;
+        }
+        .app-card-img {
+            width: 72px;
+            height: 72px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+        .app-card-num {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            background: var(--text);
+            color: #fff;
+            font-size: 10.5px;
+            font-weight: 800;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .app-card-body {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .app-card-name {
+            font-weight: 800;
+            font-size: 14px;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .app-card-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--text2);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .app-card-row strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+        .app-card-row svg {
+            flex-shrink: 0;
+        }
+        .app-download-btn {
+            margin-top: 2px;
+            background: var(--blue);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 9px 14px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: transform .15s ease, background .15s ease;
+        }
+        .app-download-btn:active {
+            transform: scale(.96);
+            background: var(--blue-dark);
+        }
+
+        /* ── details page ── */
+        .detail-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 10px;
+        }
+        .detail-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+        }
+        .detail-name {
+            font-size: 19px;
+            font-weight: 800;
+            margin: 2px 0 8px 0;
+        }
+        .detail-meta-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 14px 0;
+        }
+        .detail-meta-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .detail-meta-item svg {
+            flex-shrink: 0;
+            color: #111827;
+        }
+        .detail-meta-item .lbl {
+            font-size: 10.5px;
+            color: var(--text2);
+            font-weight: 600;
+            display: block;
+        }
+        .detail-meta-item .val {
+            font-size: 13.5px;
+            font-weight: 800;
+            color: var(--text);
+            display: block;
+        }
+        .detail-download-btn {
+            width: 100%;
+            background: var(--blue);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 15px;
+            font-weight: 800;
+            font-size: 15.5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin: 14px 0 18px 0;
+            transition: transform .15s ease;
+        }
+        .detail-download-btn:active {
+            transform: scale(.97);
+        }
+
+        .bag {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+            margin-bottom: 14px;
+        }
+        .bag h3 {
+            font-size: 14px;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .bag p {
+            font-size: 13.3px;
+            line-height: 1.65;
+            color: #374151;
+            margin: 0 0 6px 0;
+        }
+        .bag p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 800;
+            margin: 22px 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* ── reviews ── */
+        .reviews-carousel {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 4px 4px 10px 4px;
+            scroll-snap-type: x proximity;
+            -webkit-overflow-scrolling: touch;
+        }
+        .review-card {
+            flex: 0 0 auto;
+            width: min(80vw, 270px);
+            scroll-snap-align: start;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 14px;
+        }
+        .review-stars {
+            display: flex;
+            gap: 2px;
+            margin-bottom: 8px;
+        }
+        .review-text {
+            font-size: 12.8px;
+            line-height: 1.6;
+            color: #374151;
+            margin: 0 0 12px 0;
+        }
+        .review-divider {
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 12px;
+        }
+        .review-user {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+        .review-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            font-weight: 800;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .review-name {
+            font-size: 12.8px;
+            font-weight: 700;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .review-name svg {
+            flex-shrink: 0;
+            color: #6b7280;
+        }
+        .review-verified {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 10.8px;
+            color: var(--green);
+            font-weight: 700;
+            margin-top: 2px;
+        }
+
+        /* ── about / all games ── */
+        .about-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .about-block p {
+            font-size: 13.5px;
+            line-height: 1.7;
+            color: #374151;
+            margin: 0 0 10px 0;
+        }
+        .about-block p:last-child {
+            margin-bottom: 0;
+        }
+        .all-games-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .game-row {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .game-row-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 14px;
+            cursor: pointer;
+        }
+        .game-row-head .name {
+            font-size: 13.5px;
+            font-weight: 700;
+        }
+        .game-row-chevron {
+            transition: transform .2s ease;
+            flex-shrink: 0;
+            color: #6b7280;
+        }
+        .game-row.open .game-row-chevron {
+            transform: rotate(180deg);
+        }
+        .game-row-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .25s ease;
+        }
+        .game-row.open .game-row-body {
+            max-height: 260px;
+        }
+        .game-row-body p {
+            margin: 0;
+            padding: 0 14px 14px 14px;
+            font-size: 12.6px;
+            line-height: 1.6;
+            color: var(--text2);
+        }
+
+        footer.site-footer {
+            padding: 20px 16px 32px 16px;
+            text-align: center;
+            font-size: 11.5px;
+            color: var(--text2);
+        }
+        footer.site-footer a {
+            color: var(--blue);
+            font-weight: 600;
+            margin: 0 6px;
+            cursor: pointer;
+        }
+
+        /* ── TOP MODEL / BAR ── */
+        .top-model-bar {
+            position: sticky;
+            top: 60px;
+            z-index: 38;
+            background: transparent;
+            border: 0;
+            display: block;
+            padding: 0 12px;
+            height: 48px;
+            min-height: 48px;
+            box-shadow: none;
+            overflow: visible;
+        }
+        .top-model-bar.hidden-bar { opacity: 1; transform: none; pointer-events: auto; }
+
+        /* Download All App: one clean white strip, exact height only */
+        .dl-group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6px;
+            width: 100%;
+            height: 48px;
+            min-height: 48px;
+            padding: 4px 8px;
+            margin: 0;
+            background: #ffffff;
+            border: 0;
+            box-shadow: none;
+        }
+        .dl-group.hidden-download { display: none; }
+        .dl-label {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--text);
+            white-space: nowrap;
+        }
+        .dl-label .c1 { color: #06b6d4; }
+        .dl-label .c2 { color: #eab308; }
+        .dl-label .c3 { color: #16a34a; }
+
+        .dl-btn {
+            border: 0;
+            border-radius: 8px;
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(135deg, #06b6d4, #2563eb);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, .20);
+            cursor: pointer;
+            transition: transform .15s ease, box-shadow .15s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .dl-btn:active {
+            transform: scale(.95);
+            box-shadow: 0 1px 4px rgba(37, 99, 235, .15);
+        }
+
+        .dl-close {
+            margin-left: 2px;
+            flex: 0 0 28px;
+            width: 28px;
+            height: 28px;
+            border: 0;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 6px;
+            color: #6b7280;
+            transition: background .15s ease;
+            flex-shrink: 0;
+        }
+        .dl-close:active { background: var(--bg2); }
+        .dl-close svg { width: 18px; height: 18px; }
+
+        /* Telegram: lower than Download row, right side, no extra background */
+        .tg-row {
+            position: absolute;
+            top: 50px;
+            right: 12px;
+            width: auto;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+            background: transparent;
+        }
+        .tg-group {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            cursor: pointer;
+            transition: opacity .25s ease, transform .25s ease;
+            transform-origin: right center;
+            white-space: nowrap;
+        }
+        .telegram-logo { width: 34px; height: 34px; flex: 0 0 34px; display: block; }
+
+        .tg-group:active { transform: scale(.94); }
+        .tg-group.hide-tg {
+            opacity: 0;
+            transform: translateX(20px) scale(.92);
+            pointer-events: none;
+        }
+        .tg-group svg {
+            width: 21px;
+            height: 21px;
+            flex-shrink: 0;
+        }
+        .tg-group .tg-text {
+            font-size: 10px;
+            font-weight: 700;
+            color: #229ED9;
+            line-height: 1.15;
+        }
+
+        /* responsive */
+        @media (max-width: 480px) {
+            .top-model-bar {
+                top: 56px;
+                padding: 0 8px;
+                height: 42px;
+                min-height: 42px;
+            }
+            .dl-group {
+                height: 42px;
+                min-height: 42px;
+                padding: 3px 6px;
+            }
+            .dl-label { font-size: 10.5px; }
+            .dl-btn {
+                font-size: 10px;
+                padding: 5px 10px;
+            }
+            .dl-close { width: 24px; height: 24px; }
+            .dl-close svg { width: 16px; height: 16px; }
+            .tg-row { top: 44px; right: 8px; }
+            .tg-group svg { width: 18px; height: 18px; }
+            .tg-group .tg-text { font-size: 9.5px; }
+        }
+        @media (max-width: 380px) {
+            .dl-label { font-size: 9.5px; }
+            .dl-btn { font-size: 9px; padding: 4px 8px; }
+            .tg-group .tg-text { font-size: 9px; }
+            .tg-group svg { width: 17px; height: 17px; }
+        }
+
+        /* ── ORIGINAL PHOTO-STYLE ORANGE / RED PREMIUM THEME ── */
+        html { scroll-behavior: smooth; }
+        body {
+            background: linear-gradient(180deg, #ff8a00 0%, #ff5a00 48%, #ff2f4f 100%);
+            color: #102d63;
+            overflow-x: hidden;
+        }
+        header.topbar {
+            background: linear-gradient(135deg, #ff8a00 0%, #ff3d45 100%);
+            border-bottom: 4px solid #ffd51c;
+            box-shadow: 0 4px 14px rgba(100,35,0,.28);
+        }
+        .brand { color:#fff; text-shadow:0 2px 4px rgba(0,0,0,.28); }
+        .menu-btn { color:#fff; background:rgba(255,255,255,.14); border:2px solid rgba(255,255,255,.55); }
+        .menu-btn:active { background:rgba(255,255,255,.24); }
+        .menu-drawer {
+            background: linear-gradient(180deg,#fffaf0 0%,#fff 45%,#fff1e7 100%);
+            border-left: 4px solid #ff9b00;
+            box-shadow: -10px 0 30px rgba(0,0,0,.25);
+        }
+        .menu-drawer .menu-title { color:#12366e; border-bottom:2px solid #ff9b00; }
+        .menu-item { color:#12366e; }
+        .menu-item:active { background:#ffe9c7; }
+        .page { max-width:760px; }
+        .home-hero h1 { color:#fff; text-shadow:0 2px 5px rgba(0,0,0,.35); }
+        .home-hero p { color:#fff4d8; }
+        .home-grid {
+            display:grid;
+            grid-template-columns:repeat(3,minmax(0,1fr));
+            gap:12px;
+        }
+        #homeGrid .home-list-card { grid-column:1 / -1; }
+        .app-card {
+            background:linear-gradient(180deg,#ffffff 0%,#f7fff9 100%);
+            border:3px solid #dce8f5;
+            border-radius:22px;
+            box-shadow:0 5px 14px rgba(24,57,100,.18), inset 0 0 0 2px rgba(255,255,255,.8);
+            overflow:visible;
+        }
+        /* Home featured 3-column cards are explicit — never affected by app order. */
+        #homeGrid .home-featured-card {
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            text-align:center;
+            padding:12px 8px 14px;
+            gap:7px;
+            grid-column:auto;
+        }
+        #homeGrid .home-featured-card .app-card-img-wrap { width:100%; }
+        #homeGrid .home-featured-card .app-card-img {
+            width:min(100%,110px); height:110px; margin:0 auto; border-radius:18px; border:2px solid #c8d9ee;
+        }
+        #homeGrid .home-featured-card .app-card-body { width:100%; align-items:center; }
+        #homeGrid .home-featured-card .app-card-name { width:100%; white-space:normal; overflow:visible; text-overflow:clip; }
+        #homeGrid .home-featured-card .app-card-row { white-space:normal; overflow:visible; text-overflow:clip; justify-content:center; }
+        #homeGrid .home-featured-card .app-download-btn { width:100%; }
+        #homeGrid .home-list-card, #detailAllGames .app-card {
+            display:grid;
+            grid-template-columns:82px minmax(0,1fr) auto;
+            align-items:center;
+            gap:12px;
+            padding:10px 12px;
+            min-width:0;
+        }
+        #homeGrid .home-list-card .app-card-img,
+        #detailAllGames .app-card .app-card-img { width:76px; height:76px; border-radius:16px; border:2px solid #c8d9ee; }
+        #homeGrid .home-list-card .app-card-body,
+        #detailAllGames .app-card .app-card-body { min-width:0; gap:4px; }
+        #homeGrid .home-list-card .app-card-name,
+        #detailAllGames .app-card .app-card-name { white-space:normal; overflow:visible; text-overflow:clip; line-height:1.2; color:#173b73; }
+        #homeGrid .home-list-card .app-card-row,
+        #detailAllGames .app-card .app-card-row { white-space:normal; overflow:visible; text-overflow:clip; line-height:1.35; color:#31517f; }
+        .app-card-row strong { color:#173b73; }
+        .app-card-num { background:#f5b91e; color:#173b73; border:2px solid #fff; width:28px; height:28px; font-size:12px; box-shadow:0 2px 5px rgba(0,0,0,.18); }
+        .app-download-btn {
+            background:linear-gradient(135deg,#18b957,#087f39);
+            border:2px solid #8df0b2;
+            border-radius:14px;
+            padding:10px 15px;
+            box-shadow:0 4px 10px rgba(0,110,55,.25);
+            white-space:nowrap;
+            flex-shrink:0;
+        }
+        .app-download-btn:active { background:linear-gradient(135deg,#087f39,#18b957); }
+        .bag,.about-block,.detail-meta-item,.game-row,.review-card {
+            background:linear-gradient(180deg,#ffffff 0%,#f8fff9 100%);
+            border:3px solid #d5e5dc;
+            box-shadow:0 4px 12px rgba(20,60,45,.16);
+        }
+        .section-title { color:#fff; text-shadow:0 2px 4px rgba(0,0,0,.35); }
+        .detail-name { color:#173b73; }
+        .detail-download-btn {
+            width:100%;
+            background:linear-gradient(180deg,#39f47b 0%,#12c957 45%,#078a3d 100%);
+            border:2px solid #a8ffc7;
+            box-shadow:0 0 7px rgba(65,255,133,.95),0 0 18px rgba(18,201,87,.72),0 7px 18px rgba(0,90,38,.42),inset 0 1px 0 rgba(255,255,255,.55);
+            color:#fff; font-weight:900; border-radius:15px;
+            text-shadow:0 1px 2px rgba(0,70,30,.55);
+            letter-spacing:.15px;
+        }
+        .detail-download-btn:hover { box-shadow:0 0 10px rgba(65,255,133,1),0 0 25px rgba(18,201,87,.9),0 8px 20px rgba(0,90,38,.48),inset 0 1px 0 rgba(255,255,255,.6); }
+        .site-footer {
+            margin-top:18px;
+            background:linear-gradient(135deg,#ff8a00 0%,#ff3f45 52%,#e91e63 100%);
+            border-top:4px solid #ffe13b;
+            color:#fff !important;
+            box-shadow:0 -5px 18px rgba(70,20,0,.25);
+        }
+        footer.site-footer a { color:#fff; text-shadow:0 1px 3px rgba(0,0,0,.3); margin:0 5px; }
+        footer.site-footer p { color:#fff4d8 !important; }
+
+        .detail-top { align-items:center; gap:14px; }
+        .detail-top .detail-img { display:block; flex-shrink:0; object-fit:cover; }
+        .detail-top > div { min-width:0; }
+        .detail-name { line-height:1.18; overflow-wrap:anywhere; }
+        #quickNotesList .game-row-body p { line-height:1.65; white-space:normal; overflow:visible; }
+        .top-model-bar { background:transparent; }
+        .dl-group { background:rgba(255,255,255,.96); border:2px solid #ffd21e; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,.16); }
+        .dl-btn { background:linear-gradient(135deg,#18b957,#087f39); }
+        .tg-group .tg-text { color:#fff; text-shadow:0 1px 3px rgba(0,0,0,.35); }
+        .tg-group svg { filter:drop-shadow(0 1px 2px rgba(0,0,0,.3)); }
+        ::-webkit-scrollbar { width:8px; height:8px; }
+        ::-webkit-scrollbar-track { background:#ffb300; }
+        ::-webkit-scrollbar-thumb { background:linear-gradient(#ff263d,#ff8a00,#e91e63); border-radius:10px; border:2px solid #ffd94a; }
+        * { scrollbar-color:#ff3b45 #ffb300; scrollbar-width:thin; }
+        /* Requested app-card colors: only gift/bonus and withdrawal styling. */
+        .app-card .gift-led-red { color:#ff1744 !important; filter:drop-shadow(0 0 4px rgba(255,23,68,.75)); }
+        .app-card .bonus-led-red { color:#e6002d !important; text-shadow:0 0 5px rgba(255,23,68,.38); font-weight:800; }
+        .app-card .wallet-led-green { color:#16a34a !important; }
+        .app-card .withdraw-led-green { color:#168a43 !important; font-weight:800; }
+        #homeGrid .home-featured-card .app-card-row { overflow:visible; }
+        #detailAllGames .app-card .app-card-row { overflow:visible; }
+        #detailAllGames { grid-template-columns:1fr !important; }
+        #detailAllGames .app-card { grid-column:1 / -1 !important; }
+        /* Details: all 73 related apps stay in the clean single-row layout. */
+        #detailAllGames .app-card:nth-child(-n+3) {
+            display:grid;
+            grid-template-columns:82px minmax(0,1fr) auto;
+            align-items:center;
+            text-align:left;
+            padding:10px 12px;
+            gap:12px;
+        }
+        #detailAllGames .app-card:nth-child(-n+3) .app-card-img-wrap { width:auto; }
+        #detailAllGames .app-card:nth-child(-n+3) .app-card-img { width:76px; height:76px; margin:0; }
+        #detailAllGames .app-card:nth-child(-n+3) .app-card-body { width:auto; align-items:stretch; }
+        #detailAllGames .app-card:nth-child(-n+3) .app-card-name { width:auto; white-space:normal; }
+        #detailAllGames .app-card:nth-child(-n+3) .app-card-row { justify-content:flex-start; white-space:normal; }
+        #detailAllGames .app-card:nth-child(-n+3) .app-download-btn { width:auto; }
+
+        @media (max-width:480px) {
+            .page { padding:10px 8px 16px; }
+            .home-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; }
+            #homeGrid .home-featured-card { padding:9px 5px 11px; border-radius:18px; }
+            #homeGrid .home-featured-card .app-card-img { width:76px; height:76px; border-radius:14px; }
+            #homeGrid .home-featured-card .app-card-name { font-size:11px; }
+            #homeGrid .home-featured-card .app-card-row { font-size:9.5px; gap:3px; }
+            #homeGrid .home-featured-card .app-download-btn { font-size:10px; padding:8px 4px; border-radius:11px; }
+            #homeGrid .home-list-card, #detailAllGames .app-card { grid-template-columns:66px minmax(0,1fr) auto; gap:8px; padding:9px 7px; border-radius:17px; }
+            #detailAllGames .app-card:nth-child(-n+3) { grid-template-columns:66px minmax(0,1fr) auto; gap:8px; padding:9px 7px; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-card-img { width:60px; height:60px; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-card-name { font-size:13px; text-align:left; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-card-row { font-size:10.5px; justify-content:flex-start; text-align:left; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-download-btn { font-size:10px; padding:8px 8px; }
+
+            #homeGrid .home-list-card .app-card-img, #detailAllGames .app-card .app-card-img { width:60px; height:60px; }
+            #homeGrid .home-list-card .app-card-name, #detailAllGames .app-card .app-card-name { font-size:13px; }
+            #homeGrid .home-list-card .app-card-row, #detailAllGames .app-card .app-card-row { font-size:10.5px; }
+            #homeGrid .home-list-card .app-download-btn, #detailAllGames .app-download-btn { font-size:10px; padding:8px 8px; border-radius:11px; }
+        }
+        @media (max-width:360px) {
+            #homeGrid .home-list-card, #detailAllGames .app-card { grid-template-columns:58px minmax(0,1fr) auto; gap:6px; }
+            #detailAllGames .app-card:nth-child(-n+3) { grid-template-columns:58px minmax(0,1fr) auto; gap:6px; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-card-img { width:54px; height:54px; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-card-row { font-size:9.5px; }
+            #detailAllGames .app-card:nth-child(-n+3) .app-download-btn { font-size:9px; padding:7px 6px; }
+
+            #homeGrid .home-list-card .app-card-img, #detailAllGames .app-card .app-card-img { width:54px; height:54px; }
+            #homeGrid .home-list-card .app-card-row, #detailAllGames .app-card .app-card-row { font-size:9.5px; }
+            #homeGrid .home-list-card .app-download-btn, #detailAllGames .app-download-btn { font-size:9px; padding:7px 6px; }
+        }
+
+        /* Fixed scroll-to-top control */
+        #scrollTopBtn {
+            position:fixed;
+            right:12px;
+            bottom:14px;
+            width:42px;
+            height:42px;
+            padding:0;
+            border:1px solid rgba(255,217,74,.95);
+            border-radius:50%;
+            background:linear-gradient(145deg,#ff263d,#ff8a00,#e91e63);
+            box-shadow:0 0 8px #ff263d,0 0 16px rgba(255,138,0,.9),inset 0 0 8px rgba(255,255,255,.35);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            cursor:pointer;
+            z-index:9999;
+            opacity:0;
+            visibility:hidden;
+            transform:translateY(8px);
+            transition:opacity .2s ease,visibility .2s ease,transform .2s ease;
+        }
+        #scrollTopBtn.show { opacity:1; visibility:visible; transform:translateY(0); }
+        #scrollTopBtn svg { width:22px; height:22px; display:block; }
+
+    </style></head><body><!-- ─── HEADER ─── -->
+    <header class="topbar">
+        <span class="brand">YONO GAMES Data</span>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+            <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2" stroke-linecap="round">
+                <line class="bar bar1" x1="4" y1="7" x2="20" y2="7" />
+                <line class="bar bar2" x1="4" y1="12" x2="20" y2="12" />
+                <line class="bar bar3" x1="4" y1="17" x2="20" y2="17" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- ─── TOP MODEL BAR ─── -->
+    <div class="top-model-bar" id="topModelBar">
+        <!-- Left: Download All App group -->
+        <div class="dl-group">
+            <span class="dl-label"><span class="c1">Download</span> <span class="c2">All</span> <span class="c3">App</span></span>
+            <button class="dl-btn" id="downloadAllBtn">Download</button>
+            <button class="dl-close" id="modelCloseBtn" aria-label="Close bar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Right: Telegram group, directly below the download row -->
+        <div class="tg-row">
+        <div class="tg-group" id="telegramGroup" aria-label="Join Telegram">
+            <svg class="telegram-logo" viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="23" fill="#229ED9"/>
+                <path d="M36.9 11.9 10.2 22.2c-1.4.54-1.38 2.52.03 3.03l6.86 2.48 2.5 7.77c.4 1.25 1.99 1.56 2.84.55l4.03-4.75 7.2 5.28c1.15.84 2.8.22 3.08-1.18l4.32-21.46c.34-1.7-1.35-2.66-2.16-2.02Zm-3.54 5.38-12.42 9.12-.57 5.11-1.85-5.56 13.65-9.62c.65-.46 1.7.34 1.19.95Z" fill="#fff"/>
+            </svg>
+            <span class="tg-text">Join Telegram</span>
+        </div>
+        </div>
+    </div>
+
+    <!-- ─── MENU ─── -->
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+    <nav class="menu-drawer" id="menuDrawer" aria-label="Main menu">
+        <div class="menu-title">
+            <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="5" x2="19" y2="19" />
+                    <line x1="19" y1="5" x2="5" y2="19" />
+                </svg>
+            </button>
+            <span>Menu</span>
+        </div>
+        <a class="menu-item" href="index.html">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11l9-8 9 8" />
+                <path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" />
+            </svg>
+            Home
+        </a>
+        <a class="menu-item" href="about.html">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <line x1="12" y1="16" x2="12" y2="11" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+            </svg>
+            About
+        </a>
+        <a class="menu-item" href="contact.html">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m4 6 8 7 8-7" />
+            </svg>
+            Contact
+        </a>
+        <a class="menu-item" href="disclaimer.html">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3v2" />
+                <path d="M5 8h4l-2 5a2.5 2.5 0 0 0 4 0l-2-5" />
+                <path d="M15 8h4l-2 5a2.5 2.5 0 0 0 4 0l-2-5" />
+                <path d="M5 8l7-2 7 2" />
+                <path d="M6 21h12" />
+                <path d="M12 13v8" />
+            </svg>
+            Disclaimer
+        </a>
+        <a class="menu-item" href="privacy-policy.html">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="11" width="14" height="9" rx="2" />
+                <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+            </svg>
+            Privacy Policy
+        </a>
+    </nav>
+
+    <main><section class="page active" id="page-details"><div id="detailsContent"><a class="back-btn" href="index.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6" /></svg> Back to Games</a><div class="detail-top"><img class="detail-img" src="https://i.ibb.co/Gf0fxYQ4/Screenshot-20260814-040510.jpg" alt="YONO GAMES" decoding="async" fetchpriority="high"><div><div class="detail-name">YONO GAMES</div></div></div><div class="detail-meta-row"><div class="detail-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg><span><span class="lbl">Downloads</span><span class="val">82,075+</span></span></div><div class="detail-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg><span><span class="lbl">Sign Up Bonus</span><span class="val">₹200</span></span></div><div class="detail-meta-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h5"/><path d="M9 13h6M9 17h6"/></svg><span><span class="lbl">APK Size</span><span class="val">24.0 MB</span></span></div><div class="detail-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><span><span class="lbl">Votes</span><span class="val">20,357+</span></span></div></div><div class="detail-meta-item" style="margin-bottom:14px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg><span><span class="lbl">Min. Withdrawal</span><span class="val">₹100</span></span></div><a class="detail-download-btn" href="https://yonogamesm.com/?code=LHS49AEHVMR&t=1784314209" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download YONO GAMES</a><div class="bag"><h3>YONO GAMES — Information</h3><p>YONO GAMES is built around a mix of casual activities bundled within one app. The interface keeps navigation to a small number of taps, so moving between the main screen and an activity does not require much back-and-forth. New accounts on YONO GAMES are currently shown a signup bonus of ₹200, and the minimum withdrawal threshold listed is ₹100 — both figures come directly from the app and are not altered here.</p></div><div class="bag"><h3><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="16" x2="12" y2="11"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg> About</h3><p>YONO GAMES is presented here with the same listing information used throughout the directory. The app’s current interface and available features can depend on the version you use. Because YONO GAMES manages its own accounts, current bonus, account and support terms should be confirmed inside the app.</p></div><div class="section-title"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="4"/><line x1="7" y1="12" x2="7" y2="12.01"/><line x1="7" y1="10" x2="7" y2="14"/><line x1="5" y1="12" x2="9" y2="12"/><circle cx="16" cy="10.5" r="1"/><circle cx="18" cy="13.5" r="1"/></svg> Games — 76+ Apps Name</div><div class="home-grid" id="detailAllGames"><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">1</span><img class="app-card-img" src="https://i.ibb.co/0RZPw4wH/Screenshot-20260814-093236.jpg" alt="YONO NEW APP" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO NEW APP</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹20</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-new-app.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">2</span><img class="app-card-img" src="https://i.ibb.co/QWVBtNG/Screenshot-20260814-045334.jpg" alt="567 SLOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">567 SLOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹60</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="567-slots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">3</span><img class="app-card-img" src="https://i.ibb.co/k20yYCYZ/Screenshot-20260814-045747.jpg" alt="SAGA SLOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SAGA SLOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹100</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="saga-slots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">4</span><img class="app-card-img" src="https://i.ibb.co/Hpk3dp9X/Screenshot-20260814-053030.jpg" alt="GOOD SLOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">GOOD SLOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹150</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="good-slots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">6</span><img class="app-card-img" src="https://i.ibb.co/m5sHK3ys/Screenshot-20260814-052420.jpg" alt="TEEN PATTI GOLD" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">TEEN PATTI GOLD</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹120</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="teen-patti-gold.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">7</span><img class="app-card-img" src="https://i.ibb.co/bnQfcCV/Screenshot-20260814-045233.jpg" alt="JAIHO 91" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JAIHO 91</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹75</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="jaiho-91.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">8</span><img class="app-card-img" src="https://i.ibb.co/JR326qDL/Screenshot-20260814-050655.jpg" alt="RUMMY LUDO" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY LUDO</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹180</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-ludo.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">9</span><img class="app-card-img" src="https://i.ibb.co/CKxFgdKB/Screenshot-20260814-050911.jpg" alt="ABC RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">ABC RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹45</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="abc-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">10</span><img class="app-card-img" src="https://i.ibb.co/ymwjhMwy/Screenshot-20260814-051214.jpg" alt="RUMMY 91" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY 91</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹135</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-91.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">11</span><img class="app-card-img" src="https://i.ibb.co/FkzpZCrk/Screenshot-20260814-051426.jpg" alt="LOVE RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">LOVE RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹90</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="love-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">12</span><img class="app-card-img" src="https://i.ibb.co/M5cLBLc1/Screenshot-20260814-034836.jpg" alt="SPIN CRUSH" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SPIN CRUSH</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹165</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="spin-crush.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">13</span><img class="app-card-img" src="https://i.ibb.co/9mwHZbCp/Screenshot-20260814-051751.jpg" alt="TOP RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">TOP RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹55</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="top-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">14</span><img class="app-card-img" src="https://i.ibb.co/ksXtjTVp/Screenshot-20260814-052023.jpg" alt="Hello Rummy" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Hello Rummy</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹210</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="hello-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">15</span><img class="app-card-img" src="https://i.ibb.co/jvpGswXD/Screenshot-20260814-052223.jpg" alt="RUMMY 365" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY 365</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹80</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-365.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">16</span><img class="app-card-img" src="https://i.ibb.co/cXkXTDPR/Screenshot-20260814-052628.jpg" alt="TEEN PATTI MASTER" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">TEEN PATTI MASTER</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹145</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="teen-patti-master.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">17</span><img class="app-card-img" src="https://i.ibb.co/b5THXzC7/Screenshot-20260814-040920.jpg" alt="YONO RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹110</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">18</span><img class="app-card-img" src="https://i.ibb.co/wNT5cZ1k/Screenshot-20260814-041656.jpg" alt="SLOTS WINNER" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SLOTS WINNER</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹195</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="slots-winner.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">19</span><img class="app-card-img" src="https://i.ibb.co/2zv2Nyy/Screenshot-20260814-053408.jpg" alt="Diwa Slot" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa Slot</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹65</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-slot.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">20</span><img class="app-card-img" src="https://i.ibb.co/RTwyQ4tF/Screenshot-20260814-053625.jpg" alt="GOGO RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">GOGO RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹125</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="gogo-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">21</span><img class="app-card-img" src="https://i.ibb.co/SCc42Cp/Screenshot-20260814-053827.jpg" alt="JOY RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JOY RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹175</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="joy-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">22</span><img class="app-card-img" src="https://i.ibb.co/0yd0J3dy/Screenshot-20260814-030656.jpg" alt="SPIN GOLD" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SPIN GOLD</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹85</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="spin-gold.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">23</span><img class="app-card-img" src="https://i.ibb.co/Xk2wP9Nk/Screenshot-20260814-034121.jpg" alt="BINGO 101" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">BINGO 101</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹140</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="bingo-101.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">24</span><img class="app-card-img" src="https://i.ibb.co/60hFLZzw/Screenshot-20260814-054324.jpg" alt="YES SPIN" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YES SPIN</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹50</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yes-spin.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">25</span><img class="app-card-img" src="https://i.ibb.co/R4QMbqBt/Screenshot-20260814-040720.jpg" alt="YONO ARCADE" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO ARCADE</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹160</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-arcade.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">26</span><img class="app-card-img" src="https://i.ibb.co/MyQvt1R2/Screenshot-20260814-054554.jpg" alt="SVIP 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SVIP 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹70</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="svip-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">27</span><img class="app-card-img" src="https://i.ibb.co/xKhB5qzg/Screenshot-20260814-054736.jpg" alt="OK RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">OK RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹130</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="ok-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">28</span><img class="app-card-img" src="https://i.ibb.co/pvtCPtTT/Screenshot-20260814-055304.jpg" alt="HINDI 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">HINDI 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹95</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="hindi-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">29</span><img class="app-card-img" src="https://i.ibb.co/6c3k7wdG/Screenshot-20260814-055545.jpg" alt="BET 213" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">BET 213</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹185</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="bet-213.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">30</span><img class="app-card-img" src="https://i.ibb.co/jvwscPDf/Screenshot-20260814-055812.jpg" alt="BOSS RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">BOSS RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹115</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="boss-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">31</span><img class="app-card-img" src="https://i.ibb.co/v4G1fQtr/Screenshot-20260814-060203.jpg" alt="YONO 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹155</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">32</span><img class="app-card-img" src="https://i.ibb.co/6RQ2tGnw/Screenshot-20260814-060417.jpg" alt="Diwa VIP" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa VIP</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹205</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-vip.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">33</span><img class="app-card-img" src="https://i.ibb.co/hFNKBdvq/Screenshot-20260814-060707.jpg" alt="Diwa 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹105</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">34</span><img class="app-card-img" src="https://i.ibb.co/hJpHMvPg/Screenshot-20260814-061018.jpg" alt="INR RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">INR RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹170</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="inr-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">35</span><img class="app-card-img" src="https://i.ibb.co/0j53Gb5W/Screenshot-20260814-042359.jpg" alt="MBM BET" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">MBM BET</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹190</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="mbm-bet.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">36</span><img class="app-card-img" src="https://i.ibb.co/jkQ5z96x/Screenshot-20260814-033551.jpg" alt="GOA SPIN" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">GOA SPIN</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹1350</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="goa-spin.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">37</span><img class="app-card-img" src="https://i.ibb.co/tMJ0L7L8/1786658176260.jpg" alt="777 GAME" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">777 GAME</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹910</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="777-game.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">38</span><img class="app-card-img" src="https://i.ibb.co/fzmMFV0F/Screenshot-20260814-061532.jpg" alt="TEEN PATTI" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">TEEN PATTI</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹220</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="teen-patti.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">39</span><img class="app-card-img" src="https://i.ibb.co/cKc56vJj/Screenshot-20260814-061719.jpg" alt="All YONO GAMES" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">All YONO GAMES</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹240</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="all-yono-games.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">40</span><img class="app-card-img" src="https://i.ibb.co/R4hkwzbW/Screenshot-20260814-062237.jpg" alt="NEW YONO GAMES" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">NEW YONO GAMES</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹260</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="new-yono-games.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">41</span><img class="app-card-img" src="https://i.ibb.co/DfQgSYrP/Screenshot-20260814-061950.jpg" alt="YONO APPS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO APPS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹280</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-apps.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">42</span><img class="app-card-img" src="https://i.ibb.co/PZNRbCwk/Screenshot-20260814-034801.jpg" alt="SPIN WINNER" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SPIN WINNER</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹300</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="spin-winner.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">43</span><img class="app-card-img" src="https://i.ibb.co/TMJwF88r/Screenshot-20260814-031654.jpg" alt="YONO All GAMES" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO All GAMES</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹320</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-all-games.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">44</span><img class="app-card-img" src="https://i.ibb.co/Q7YCZLWP/Screenshot-20260814-041943.jpg" alt="SPIN LUCKY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SPIN LUCKY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹340</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="spin-lucky.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">45</span><img class="app-card-img" src="https://i.ibb.co/xKH8Zz6C/Screenshot-20260814-032014.jpg" alt="MAX RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">MAX RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹360</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="max-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">46</span><img class="app-card-img" src="https://i.ibb.co/jZMq58Pc/Screenshot-20260814-063312.jpg" alt="RANI SLOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RANI SLOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹380</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rani-slots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">47</span><img class="app-card-img" src="https://i.ibb.co/PzV7FRHT/Screenshot-20260814-063537.jpg" alt="1GO PLUS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">1GO PLUS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹400</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="1go-plus.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">48</span><img class="app-card-img" src="https://i.ibb.co/pjWGb0ty/Screenshot-20260814-034858.jpg" alt="RUMMY ULTRA" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY ULTRA</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹420</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-ultra.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">49</span><img class="app-card-img" src="https://i.ibb.co/5WV6Z60y/Screenshot-20260814-063848.jpg" alt="789 JACKPOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">789 JACKPOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹440</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="789-jackpots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">50</span><img class="app-card-img" src="https://i.ibb.co/qFmG8b9q/Screenshot-20260814-041444.jpg" alt="JAIHO WIN" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JAIHO WIN</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹460</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="jaiho-win.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">51</span><img class="app-card-img" src="https://i.ibb.co/0pSskjBY/Screenshot-20260814-032904.jpg" alt="SLOTS SPIN" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SLOTS SPIN</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹480</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="slots-spin.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">52</span><img class="app-card-img" src="https://i.ibb.co/yBKhXW7S/Screenshot-20260814-032933.jpg" alt="NETA VIP" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">NETA VIP</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹500</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="neta-vip.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">53</span><img class="app-card-img" src="https://i.ibb.co/xVcCbWY/1786669966384.jpg" alt="JAIHO 777 VIP" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JAIHO 777 VIP</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹520</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="jaiho-777-vip.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">54</span><img class="app-card-img" src="https://i.ibb.co/JRshnS3z/Screenshot-20260814-033641.jpg" alt="DHAN GAME" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">DHAN GAME</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹540</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="dhan-game.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">55</span><img class="app-card-img" src="https://i.ibb.co/zVvgvPpL/Screenshot-20260814-040014.jpg" alt="DIWA GAME" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">DIWA GAME</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹560</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-game.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">56</span><img class="app-card-img" src="https://i.ibb.co/zWrDwLPt/Screenshot-20260814-033239.jpg" alt="BET 54 GAMES" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">BET 54 GAMES</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹580</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="bet-54-games.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">57</span><img class="app-card-img" src="https://i.ibb.co/Qq9Zn7f/Screenshot-20260814-064907.jpg" alt="ALL YONO APPS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">ALL YONO APPS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹600</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="all-yono-apps.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">58</span><img class="app-card-img" src="https://i.ibb.co/bR8bB9qn/Screenshot-20260814-041927.jpg" alt="T989 APPS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">T989 APPS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹620</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="t989-apps.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">59</span><img class="app-card-img" src="https://i.ibb.co/LDF3sXTx/Screenshot-20260814-065302.jpg" alt="765 CLUB" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">765 CLUB</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹640</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="765-club.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">60</span><img class="app-card-img" src="https://i.ibb.co/wZxK5XGr/Screenshot-20260814-032720.jpg" alt="MKM BET APK" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">MKM BET APK</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹660</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="mkm-bet-apk.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">61</span><img class="app-card-img" src="https://i.ibb.co/v6GbHJ95/Screenshot-20260814-040445.jpg" alt="YN 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YN 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹680</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yn-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">62</span><img class="app-card-img" src="https://i.ibb.co/ccGr69gJ/Screenshot-20260814-033520.jpg" alt="SPIN 777" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">SPIN 777</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹700</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="spin-777.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">63</span><img class="app-card-img" src="https://i.ibb.co/bMgzZNPd/Screenshot-20260814-033315.jpg" alt="RUMMY 888" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY 888</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹720</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-888.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">64</span><img class="app-card-img" src="https://i.ibb.co/BXKxwDX/Screenshot-20260814-035041.jpg" alt="RUMMY 77" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMMY 77</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹740</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rummy-77.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">65</span><img class="app-card-img" src="https://i.ibb.co/nqbdMSST/Screenshot-20260814-035011.jpg" alt="MQM BET" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">MQM BET</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹760</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="mqm-bet.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">66</span><img class="app-card-img" src="https://i.ibb.co/nNmMgR25/Screenshot-20260814-034026.jpg" alt="MAHA GAMES" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">MAHA GAMES</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹780</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="maha-games.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">67</span><img class="app-card-img" src="https://i.ibb.co/BKSZbZMt/Screenshot-20260814-091502.jpg" alt="IND RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">IND RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹800</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="ind-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">68</span><img class="app-card-img" src="https://i.ibb.co/27r99T47/Screenshot-20260814-091836.jpg" alt="Hi RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Hi RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹820</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="hi-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">69</span><img class="app-card-img" src="https://i.ibb.co/rfc5rdpv/Screenshot-20260814-041105.jpg" alt="JAIHO SPIN" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JAIHO SPIN</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹840</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="jaiho-spin.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">70</span><img class="app-card-img" src="https://i.ibb.co/TD7mQ4Qw/Screenshot-20260814-035539.jpg" alt="JAIHO RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">JAIHO RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹860</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="jaiho-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">71</span><img class="app-card-img" src="https://i.ibb.co/TDF7VJ1w/Screenshot-20260814-092416.jpg" alt="YONO SLOTS" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO SLOTS</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹880</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-slots.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">72</span><img class="app-card-img" src="https://i.ibb.co/XfXsfDrh/Screenshot-20260814-032430.jpg" alt="Diwa Win" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa Win</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹915</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-win.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">73</span><img class="app-card-img" src="https://i.ibb.co/S7VgC8Cr/Screenshot-20260814-035804.jpg" alt="RUMBLE RUMMY" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">RUMBLE RUMMY</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹970</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="rumble-rummy.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">74</span><img class="app-card-img" src="https://i.ibb.co/zTH4HqXT/Screenshot-20260814-041418.jpg" alt="YONO VIP" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">YONO VIP</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹1000</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="yono-vip.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">75</span><img class="app-card-img" src="https://i.ibb.co/FtQvnWY/Screenshot-20260913-225943.jpg" alt="Diwa Play" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa Play</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-play.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">76</span><img class="app-card-img" src="https://i.ibb.co/fVkQDxQF/Screenshot-20260913-225237.jpg" alt="Diwa King" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa King</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-king.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div><div class="app-card"><div class="app-card-img-wrap"><span class="app-card-num">77</span><img class="app-card-img" src="https://i.ibb.co/Qv25RHQP/Screenshot-20260913-225822.jpg" alt="Diwa X" loading="lazy" decoding="async" width="54" height="54"></div><div class="app-card-body"><div class="app-card-name">Diwa X</div><div class="app-card-row"><span class="gift-led-red"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8"/><path d="M16.5 8a2.5 2.5 0 0 0 0-5C14 3 12 8 12 8"/></svg></span> <span class="bonus-led-red">Bonus ₹</span></div><div class="app-card-row"><span class="wallet-led-green"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h13a1 1 0 0 1 1 1v3"/><path d="M3 7v11a2 2 0 0 0 2 2h14a1 1 0 0 0 1-1v-7a1 1 0 0 0-1-1h-4a2 2 0 1 0 0 4h5"/></svg></span> <span class="withdraw-led-green">Withdraw ₹100</span></div><a class="app-download-btn" href="diwa-x.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg> Download</a></div></div></div><div class="section-title">Quick Notes</div><div class="all-games-list" id="quickNotesList"><div class="game-row"><div class="game-row-head"><span class="name">Security</span><svg class="game-row-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="game-row-body"><p>Security for YONO GAMES focuses on login protection. Check the current installation source, requested permissions and account-protection details before use. Keep passwords and OTPs private.</p></div></div><div class="game-row"><div class="game-row-head"><span class="name">Support</span><svg class="game-row-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="game-row-body"><p>Support for YONO GAMES is related to account help. Use the app’s own support/help route when a problem appears and keep the relevant transaction reference ready without sharing private credentials.</p></div></div><div class="game-row"><div class="game-row-head"><span class="name">Withdrawals</span><svg class="game-row-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="game-row-body"><p>Withdrawals for YONO GAMES should be checked under the app’s current withdrawal method information. Available methods, limits, verification and processing rules can vary.</p></div></div><div class="game-row"><div class="game-row-head"><span class="name">Sign up</span><svg class="game-row-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="game-row-body"><p>Sign up for YONO GAMES follows its current mobile registration flow. Review every field and verification request shown on the registration screen, and do not provide an OTP or password to anyone outside the app.</p></div></div><div class="game-row"><div class="game-row-head"><span class="name">Bonus</span><svg class="game-row-chevron" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></div><div class="game-row-body"><p>Bonus information for YONO GAMES is shown here as ₹200. Eligibility, expiry, deposit or play conditions may apply and should be confirmed from the current app terms.</p></div></div></div><div class="section-title"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Player Reviews</div><div class="reviews-carousel"><div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg></div><p class="review-text">YONO GAMES felt responsive from the first session, and the layout stayed easy to follow throughout.</p><div class="review-divider"></div><div class="review-user"><span class="review-avatar">B</span><span><div class="review-name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Baharul Pande</div><div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified Gamer</div></span></div></div><div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg></div><p class="review-text">Trying out a few different modes inside YONO GAMES was straightforward — nothing felt hidden away in menus.</p><div class="review-divider"></div><div class="review-user"><span class="review-avatar">A</span><span><div class="review-name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Anjali Mehta</div><div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified Gamer</div></span></div></div><div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg></div><p class="review-text">I reached out to support about a question and got a clear answer without much back-and-forth.</p><div class="review-divider"></div><div class="review-user"><span class="review-avatar">R</span><span><div class="review-name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Rohit Sharma</div><div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified Gamer</div></span></div></div><div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg></div><p class="review-text">Navigation around YONO GAMES stayed smooth even during a longer session, without noticeable slowdown.</p><div class="review-divider"></div><div class="review-user"><span class="review-avatar">P</span><span><div class="review-name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Priya Nair</div><div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified Gamer</div></span></div></div><div class="review-card"><div class="review-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1.5"><polygon points="12 2 15 9 22 9 16.5 13.5 18.5 21 12 16.8 5.5 21 7.5 13.5 2 9 9 9"/></svg></div><p class="review-text">The signup bonus of ₹200 on YONO GAMES was a nice touch on top of an otherwise solid app.</p><div class="review-divider"></div><div class="review-user"><span class="review-avatar">K</span><span><div class="review-name"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15.8 13a5.2 5.2 0 0 1 5.7 5.2"/></svg> Karan Malhotra</div><div class="review-verified"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Verified Gamer</div></span></div></div></div></div></section></main><footer class="site-footer"><div><a href="index.html">Home</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a> · <a href="disclaimer.html">Disclaimer</a> · <a href="privacy-policy.html">Privacy</a></div><p style="margin-top:10px;">Please play responsibly. Real-money features carry financial risk and are not suitable for everyone.</p></footer><button id="scrollTopBtn" aria-label="Scroll to top" title="Scroll to top"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></button><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "YONO GAMES — Download, Bonus & Information", "description": "YONO GAMES details, original app image, bonus, withdrawal information and related games.", "url": "https://yonogames.shop/yono-games.html", "image": "https://i.ibb.co/Gf0fxYQ4/Screenshot-20260814-040510.jpg", "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://yonogames.shop/"}, {"@type": "ListItem", "position": 2, "name": "YONO GAMES", "item": "https://yonogames.shop/yono-games.html"}]}}</script><script>const mb=document.getElementById('menuBtn'),bd=document.getElementById('menuBackdrop'),dr=document.getElementById('menuDrawer'),cl=document.getElementById('menuCloseBtn');function openMenu(){bd.classList.add('show');dr.classList.add('show');mb.classList.add('menu-open')}function closeMenu(){bd.classList.remove('show');dr.classList.remove('show');mb.classList.remove('menu-open')}mb.addEventListener('click',()=>dr.classList.contains('show')?closeMenu():openMenu());bd.addEventListener('click',closeMenu);cl.addEventListener('click',closeMenu);document.querySelectorAll('.game-row-head').forEach(h=>h.addEventListener('click',()=>h.closest('.game-row').classList.toggle('open')));document.getElementById('downloadAllBtn')?.addEventListener('click',()=>window.open('https://web2apkpro.com/public_download.php?project_id=21599&token=6bbe1b6892','_blank'));document.getElementById('telegramGroup')?.addEventListener('click',()=>window.open('https://t.me/allyonogamesinfo','_blank'));const st=document.getElementById('scrollTopBtn');window.addEventListener('scroll',()=>st.classList.toggle('show',scrollY>220),{passive:true});st.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));</script></body></html>
